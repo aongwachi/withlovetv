@@ -401,5 +401,19 @@ function System_ShowDateEN($myDate) {
 		$myYear = $myDateArray[0];
         return($myDay . " " . $myMonth . " " . $myYear);
 }
+###############################
+function System_ShowWeekDayEasy($myWeekDay) {
+###############################
+	switch($myWeekDay) {
+		case "1" : $myDayEasy = "วันจันทร์";  break;
+		case "2" : $myDayEasy = "วันอังคาร";  break;
+		case "3" : $myDayEasy = "วันพุธ"; break;
+		case "4" : $myDayEasy = "วันพฤหัสบดี"; break;
+		case "5" : $myDayEasy = "วันศุกร์";   break;
+		case "6" : $myDayEasy = "วันเสาร์";  break;
+		case "7" : $myDayEasy = "วันอาทิตย์";   break;
+	}
+	return $myDayEasy;
+}
 
 ?>

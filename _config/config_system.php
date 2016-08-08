@@ -42,7 +42,7 @@ define('CONFIG_ADD_HOUR',0); // Show Record per page
 
 $System_RelativePath=Sytem_FindRelativePath();
 // Config Path -------------------------------------------------------
-define('SYSTEM_DOC_ROOT','');
+define('SYSTEM_DOC_ROOT',$System_RelativePath);
 define('SYSTEM_WEBPATH_TEMPLATES',SYSTEM_WEBPATH_ROOT."/templates/".SYSTEM_WEB_TEMPLATE); 
 $System_RelativePath_template=str_replace('//','/',SYSTEM_DOC_ROOT.SYSTEM_WEBPATH_TEMPLATES);
 if(SYSTEM_WEBPATH_ROOT<>'') { $System_RelativePath_template=str_replace(SYSTEM_WEBPATH_ROOT.'/','/',$System_RelativePath_template); }
