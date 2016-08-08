@@ -1,0 +1,1 @@
+<?php MYSQL_CLOSE(); ?>

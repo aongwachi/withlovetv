@@ -1,0 +1,175 @@
+
+/* ################################################## */
+/* Regular Checkbox 				      */
+/* ################################################## */
+
+.label-choice { font-size:12px; color:#333; font-weight:bold;}
+.regular-checkbox {
+    display: none;
+}
+.regular-checkbox-r {
+    display: none;
+}
+.regular-checkbox-p {
+    display: none;
+}
+.regular-checkbox-g {
+    display: none;
+}
+.regular-checkbox-y {
+    display: none;
+}
+.regular-checkbox-y + label {
+    background-color: yellow;
+    border: 2px solid #000000;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05);
+    padding: 9px;
+    border-radius: 3px;
+    display: inline-block;
+    position: relative;
+}
+.regular-checkbox-y:checked + label {
+    background-color: yellow;
+    border: 2px solid #000000;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05), inset 15px 10px -12px rgba(255,255,255,0.1);
+    color: #99a1a7;
+}
+.regular-checkbox-y:checked + label:after {
+    content: '\2715';
+    font-size: 16px;
+    font-weight: bold;
+    position: absolute;
+    top: -2px;
+    left: 3px;
+    color: #000000;
+}
+
+.regular-checkbox-g + label {
+    background-color: purple;
+    border: 2px solid #000000;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05);
+    padding: 9px;
+    border-radius: 3px;
+    display: inline-block;
+    position: relative;
+}
+.regular-checkbox-g:checked + label {
+    background-color: yellow;
+    border: 2px solid #000000;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05), inset 15px 10px -12px rgba(255,255,255,0.1);
+    color: #99a1a7;
+}
+.regular-checkbox-g:checked + label:after {
+    content: '\2715';
+    font-size: 16px;
+    font-weight: bold;
+    position: absolute;
+    top: 0px;
+    left: 3px;
+    color: #000000;
+}
+
+.regular-checkbox-p + label {
+    background-color: purple;
+    border: 2px solid #000000;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05);
+    padding: 9px;
+    border-radius: 3px;
+    display: inline-block;
+    position: relative;
+}
+.regular-checkbox-p:checked + label {
+    background-color: purple;
+    border: 2px solid #000000;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05), inset 15px 10px -12px rgba(255,255,255,0.1);
+    color: #99a1a7;
+}
+.regular-checkbox-p:checked + label:after {
+    content: '\2715';
+    font-size: 16px;
+    font-weight: bold;
+    position: absolute;
+    top: 0px;
+    left: 3px;
+    color: #000000;
+}
+
+.regular-checkbox-r + label {
+    background-color: red;
+    border: 2px solid #000000;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05);
+    padding: 9px;
+    border-radius: 3px;
+    display: inline-block;
+    position: relative;
+}
+.regular-checkbox-r:checked + label {
+    background-color: red;
+    border: 2px solid #000000;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05), inset 15px 10px -12px rgba(255,255,255,0.1);
+    color: #99a1a7;
+}
+.regular-checkbox-r:checked + label:after {
+    content: '\2715';
+    font-size: 16px;
+    font-weight: bold;
+    position: absolute;
+    top: 0px;
+    left: 3px;
+    color: #000000;
+}
+.regular-checkbox-g + label {
+    background-color: green;
+    border: 2px solid #000000;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05);
+    padding: 9px;
+    border-radius: 3px;
+    display: inline-block;
+    position: relative;
+}
+.regular-checkbox-g:checked + label {
+    background-color: green;
+    border: 2px solid #000000;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05), inset 15px 10px -12px rgba(255,255,255,0.1);
+    color: #99a1a7;
+}
+.regular-checkbox-g:checked + label:after {
+    content: '\2715';
+    font-size: 16px;
+    font-weight: bold;
+    position: absolute;
+    top: 0px;
+    left: 3px;
+    color: #000000;
+}
+
+.regular-checkbox + label {
+    background-color: #ffffff;
+    border: 2px solid #000000;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05);
+    padding: 9px;
+    border-radius: 3px;
+    display: inline-block;
+    position: relative;
+}
+ 
+.regular-checkbox + label:active, .regular-checkbox:checked + label:active {
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px 1px 3px rgba(0,0,0,0.1);
+}
+ 
+.regular-checkbox:checked + label {
+    background-color: #ffff00;
+    border: 2px solid #000000;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05), inset 15px 10px -12px rgba(255,255,255,0.1);
+    color: #99a1a7;
+}
+ 
+.regular-checkbox:checked + label:after {
+    content: '\2715';
+    font-size: 16px;
+    font-weight: bold;
+    position: absolute;
+    top: 0px;
+    left: 3px;
+    color: #000000;
+}

@@ -1,0 +1,21 @@
+/* ################################################## */
+/* Footer Design */
+/* ################################################## */
+.footer-bg1 { background-color: #e90553; height:60px; }
+.footer-border1 { border:0px; border-color: #d84b7c; border-style: solid; border-left-width: 1px; height:60px; color:#f69bba; font-size:35px; font-weight:bold; padding-left:10px; padding-top:3px; }
+.footer-bg2 { background-color: #292a2c; height:230px; }
+.footer-border2 { border:0px; border-color: #555659; border-style: solid; border-left-width: 1px; height:230px; color:#808285; font-size:12px; padding:10px; }
+.footer-bg3 { background-color: #000000; }
+.footer-bg3 span { color:#808285; font-size:16px; }
+.footerlogo { background-image: url('../img/footer-logo1.png'); width: 195px; height:48px; padding:0px; margin:0px; margin-top:4px; }
+a.footerlink:link { color: #808285!important; text-decoration: none; font-size:16px; }
+a.footerlink:visited { color: #808285!important; text-decoration: none; font-size:16px; }
+a.footerlink:active { color: #FFFFFF!important; text-decoration: none; font-size:16px; }
+a.footerlink:hover { color: #FFFFFF!important; text-decoration: none; font-size:16px; }
+.footicon1 { width:27px; height:26px; display:block; background:transparent url('../img/footicon1.png') center top no-repeat; margin-left:20px; }
+.footicon1:hover { background-image: url('../img/footicon1a.png'); }
+.footicon2 { width:27px; height:26px; display:block; background:transparent url('../img/footicon2.png') center top no-repeat; margin-left:20px; }
+.footicon2:hover { background-image: url('../img/footicon2a.png'); }
+.footicon3 { width:27px; height:26px; display:block; background:transparent url('../img/footicon3.png') center top no-repeat; margin-left:20px; }
+.footicon3:hover { background-image: url('../img/footicon3a.png'); }
+.footertags { padding:3px; background-color: #151515; margin-left:5px; margin-top:5px; padding-left:10px; padding-right:10px; }

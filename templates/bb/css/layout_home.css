@@ -1,0 +1,103 @@
+/* ################################################## */
+/* font-face */
+/* ################################################## */
+@font-face {
+    font-family: 'ThaiSansNeueRegular';
+    src: url('../font/thaisansneue-regular.eot');
+    src: url('../font/thaisansneue-regular.eot') format('embedded-opentype'),
+         url('../font/thaisansneue-regular.woff') format('woff'),
+         url('../font/thaisansneue-regular.ttf') format('truetype'),
+         url('../font/thaisansneue-regular.svg#ThaiSansNeueRegular') format('svg');
+}
+.webfont { font-family: ThaiSansNeueRegular; }
+
+/* ################################################## */
+/* Top Bar 1 */
+/* ################################################## */
+.navbar-brand { background-image: url('../img/logo1.png'); width: 131px; height:72px; padding:0px; margin:0px; margin-left: 25px; margin-top:8px; }
+.Object_NavBarTop { background-image: url('../img/top-home-bg1.png'); height:95px; color:#000000; font-size:12px; position: fixed; top: 0px; left: 0; z-index: 102; width: 100%; padding:0px; border: 0px; }
+.content-top-padding { height:100px; }
+.Object_NavBarLeft { display:inline-block; height:75px; width: 1000px; margin-left:10px; }
+.Object_NavBarRight { display:none; height:50px; width: 50px; }
+.Object_NavBarTop2 { background-image: url('../img/top-home-bg1.png'); height:95px; color:#000000; font-size:12px; position: fixed; top: -100px; left: 0; z-index: 102; width: 100%; padding:0px; border: 0px; }
+.Object_ScrollToTop { height:60px; width:60px; position: fixed; bottom: 10px; right: 10px; z-index: 102; padding:0px; border: 0px; }
+.Object_ScrollToTop2 { height:60px; width:60px; position: fixed; bottom: -80px; right: 10px; z-index: 102; padding:0px; border: 0px; }
+.Object_HideMenu { width:30px; height:19px; display:block; background:transparent url('../img/menu1-icon.png') center top no-repeat; margin-left:10px; margin-top:13px; }
+.Object_HideMenu:hover { background-image: url('../img/menu1-icona.png'); }
+.Object_NavBarHideMenu { background-color:#444444; color:#777777; font-size:18px; position: fixed; top: 0px; left: 0; z-index: 102; width: 100%; height:100%; padding:0px; border: 0px; }
+.Object_NavBarHideMenuRow { padding:1px; border-style: solid; border-color: #777777; border-width: 0px 0px 1px 0px; padding-left:30px; }
+a.Object_NavBarHideMenuLink:link { color: #777777!important; text-decoration: none; font-size:18px; }
+a.Object_NavBarHideMenuLink:visited { color: #777777!important; text-decoration: none; font-size:18px; }
+a.Object_NavBarHideMenuLink:active { color: #FFFFFF!important; text-decoration: none; font-size:18px; }
+a.Object_NavBarHideMenuLink:hover { color: #FFFFFF!important; text-decoration: none; font-size:18px; }
+
+/* ################################################## */
+/* Menu */
+/* ################################################## */
+#header-menu li { display:inline-block; margin:0px; margin-left:20px; color: #646464; border-style: solid; border-color: #dfdfdf; border-width: 0px 0px 3px 0px; }
+#header-menu li.active { color: #e90552; border-style: solid; border-color: #e90552; border-width: 0px 0px 3px 0px; }
+#header-menu li a { font-size: 22px; text-decoration:none; color: #646464; }
+#header-menu li.active a:hover{ color: #e90552; }
+#header-menu li:hover { color: #e90552; border-style: solid; border-color: #e90552; border-width: 0px 0px 3px 0px; }
+#header-menu li:hover a { color: #e90552; }
+#header-menu li a,
+#header-menu li.active a { padding: 2px 0px; display:block; }
+#header-menu li.active a { color:#e90552; }
+#header-menu { padding: 0; margin-top: 18px; }
+
+/* ############################################################################################### */
+/* Portrait - Tablet - Desktop */
+/* ############################################################################################### */
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px) {
+    .navbar-brand { background-image: url('../img/logo2.png'); width: 109px; height:60px; padding:0px; margin:0px; margin-left: 25px; margin-top:8px; }
+    .Object_NavBarTop  { background-image: url('../img/top-home-bg2.png'); height:80px; }
+    .Object_NavBarLeft { display:inline-block; height:60px; width: 830px; }
+    #header-menu li { margin-left:15px; }
+    #header-menu li a { font-size: 18px; }
+    #header-menu { padding: 0; margin-top: 15px; }
+    .Object_NavBarRight { display:none; }
+    .Object_HideMenu { width:30px; height:19px; display:block; background:transparent url('../img/menu1-icon.png') center top no-repeat; margin-left:10px; margin-top:13px; }
+    .Object_HideMenu:hover { background-image: url('../img/menu1-icona.png'); }
+}
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+    .navbar-brand { background-image: url('../img/logo3.png'); width: 91px; height:50px; padding:0px; margin:0px; margin-left: 25px; margin-top:8px; }
+    .Object_NavBarTop  { background-image: url('../img/top-home-bg3.png'); height:70px; }
+    .Object_NavBarLeft { display:inline-block; height:55px; width: 620px; }
+    #header-menu li { margin-left: 5px; }
+    #header-menu li a { font-size: 16px; }
+    #header-menu { padding: 0; margin-top: 12px; }
+    .Object_NavBarRight { display:none; }
+    .Object_HideMenu { width:30px; height:19px; display:block; background:transparent url('../img/menu1-icon.png') center top no-repeat; margin-left:10px; margin-top:13px; }
+    .Object_HideMenu:hover { background-image: url('../img/menu1-icona.png'); }
+}
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+    .navbar-brand { background-image: url('../img/logo4.png'); width: 73px; height:40px; padding:0px; margin:0px; margin-left: 20px; margin-top:6px; }
+    .Object_NavBarTop  { background-image: url('../img/top-home-bg4.png'); height:60px; }
+    .Object_NavBarLeft { display:none; height:35px; width: 100px; }
+    #header-menu { display:none; }
+    .Object_NavBarRight { display:inline-block; }
+    .Object_HideMenu { width:30px; height:19px; display:block; background:transparent url('../img/menu1-icon.png') center top no-repeat; margin-left:10px; margin-top:13px; }
+    .Object_HideMenu:hover { background-image: url('../img/menu1-icona.png'); }
+}
+@media only screen and (max-width : 625px) {
+    .navbar-brand { background-image: url('../img/logo4.png'); width: 73px; height:40px; padding:0px; margin:0px; margin-left: 20px; margin-top:6px; }
+    .Object_NavBarTop  { background-image: url('../img/top-home-bg4.png'); height:60px; }
+    .Object_NavBarLeft { display:none; height:35px; width: 100px; }
+    #header-menu { display:none; }
+    .Object_NavBarRight { display:inline-block; }
+    .Object_HideMenu { width:30px; height:19px; display:block; background:transparent url('../img/menu1-icon.png') center top no-repeat; margin-left:10px; margin-top:13px; }
+    .Object_HideMenu:hover { background-image: url('../img/menu1-icona.png'); }
+}
+/* Extra Small Devices, Phones */ 
+@media only screen and (max-width : 480px) {
+    .navbar-brand { background-image: url('../img/logo5.png'); width: 55px; height:30px; padding:0px; margin:0px; margin-left: 10px; margin-top:6px; }
+    .Object_NavBarTop  { background-image: url('../img/top-home-bg5.png'); height:50px; }
+    .Object_NavBarLeft { display:none; height:35px; width: 100px; }
+    #header-menu { display:none; }
+    .Object_NavBarRight { display:inline-block; }
+    .Object_HideMenu { width:25px; height:17px; display:block; background:transparent url('../img/menu3-icon.png') center top no-repeat; margin-left:10px; margin-top:10px; }
+    .Object_HideMenu:hover { background-image: url('../img/menu3-icona.png'); }
+}
