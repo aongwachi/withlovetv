@@ -77,7 +77,7 @@ if($task=="load-add") {
 		$Row = mysql_fetch_array($Query);
 		$myUnCompleteID=$Row[0];
 		// ---------------------------------------
-		if($myUnCompleteID>0) { } else{ // insert new user
+		if($myUnCompleteID>0) { } else{ // insert new program
 			$sql=" SELECT MAX(".TABLE_PROGRAM."_ID) FROM ".TABLE_PROGRAM." WHERE 1 ";
 			$Query=MYSQL_QUERY($sql,$System_Connection1) OR DIE("Error: ".$sql."<br>n");
 			$Row = mysql_fetch_array($Query);

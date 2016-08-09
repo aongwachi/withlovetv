@@ -40,7 +40,7 @@ if($SystemSession_Staff_ID>0 && $SystemSession_Staff_Level=="Admin") {
         <div class="panel panel-custom" style=" border-width:0px; ">
             <div class="panel-heading panel-custom-heading font-white" style=" background-color:<?php echo $myBGColor; ?>; color:#FFFFFF; text-align:left; height:80px; position:relative; ">
                 <i class="fa fa-film pull-left padding-10" style="font-size:40px; padding-right:20px;"></i>
-                <h2 class="font-white"><strong>Tv Programs</strong></h2> <span> รายการทีวี</span>
+                <h2 class="font-white"><strong>Recommend Video</strong></h2> <span> รายการแนะนำ</span>
                 <div class="pull-right" style=" color:#FFFF00; "><span class="hidden-xs">ค้นพบ</span>
                     <!--------------------------------------------------------------------------------------------->
                     <!--- 2/5 Total record will display here ------------------------------------------------------>
