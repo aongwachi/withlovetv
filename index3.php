@@ -30,27 +30,50 @@ if ($query_reccommend->execute()) {
                 <br>
                 <div id="homeVideo"></div>
                 <script>
-                    jwplayer("homeVideo").setup({
-                        sources: [
-                            {file: 'http://media1.adventist.no:1935/live/smil:switch.smil/jwplayer.smil'},
-                            {file: 'http://media1.adventist.no:1935/live/smil:switch.smil/playlist.m3u8'}
-                        ],
-                        <?php if(0) { ?>image: "./images/video.png",<?php } ?>
-                        width: "100%",
-                        autostart: true,
-                        aspectratio: "16:10",
-                        fallback: false,
-                        skin: {
-                            name: "seven"
-                        }
+                    $(window).load(function () {
+                        getLiveListVideo();
                     });
+                    function getLiveListVideo() {
+                        $('.list-playlist').empty();
+                        $.ajax({
+                            method: "POST",
+                            url: "lib/ajax/ajax_return_live_video.php"
+                        }).done(function (data) {
+                            var list_live = '<li class="active">'+
+                                                '<a><div class="label">'+
+                                                data[0].title+
+                                                '</div>'+
+                                                '<div class="desc">'+
+                                                    ''+
+                                                '</div>'+
+                                                '<div class="clearfix"></div>'+
+                                                '</a>'+
+                                                '</li>';
+                            $('.list-playlist').append(list_live);
+                            $('.header-title').find('h1').text(data[0].title);
+                            jwplayer("homeVideo").setup({
+                                sources: [
+                                    {file: data[0].link},
+                                    {file: data[0].link_mobile}
+                                ],
+                                <?php if(0) { ?>image: "./images/video.png",<?php } ?>
+                                width: "100%",
+                                autostart: true,
+                                aspectratio: "16:10",
+                                fallback: false,
+                                skin: {
+                                    name: "seven"
+                                }
+                            });
+                        });
+                    }
                 </script>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-5 nopadding-left-sm">
                 <br>
                 <div class="video-info bg-black">
                     <div class="header-title">
-                        <h1>AIS Futsal Thailand Leaque 2016</h1>
+                        <h1></h1>
                         <h4><span class="text-yellow">LIVE!</span> &nbsp;
                             วันที่ <?php echo System_ShowDateLongTh(SYSTEM_DATENOW); ?>
                             เวลา <?php echo substr(SYSTEM_TIMENOW, 0, 5); ?></h4>
@@ -74,8 +97,7 @@ if ($query_reccommend->execute()) {
                     </div>
                     <ul class="list-playlist">
                         <li class="active">
-                            <a href="#">
-                                <div class="label">
+                            <a><div class="label">
                                     17:58
                                 </div>
                                 <div class="desc">
@@ -85,8 +107,7 @@ if ($query_reccommend->execute()) {
                             </a>
                         </li>
                         <li>
-                            <a href="#">
-                                <div class="label">
+                            <a><div class="label">
                                     18:00
                                 </div>
                                 <div class="desc">
@@ -96,8 +117,7 @@ if ($query_reccommend->execute()) {
                             </a>
                         </li>
                         <li>
-                            <a href="#">
-                                <div class="label">
+                            <a><div class="label">
                                     18:01
                                 </div>
                                 <div class="desc">
@@ -107,8 +127,7 @@ if ($query_reccommend->execute()) {
                             </a>
                         </li>
                         <li>
-                            <a href="#">
-                                <div class="label">
+                            <a><div class="label">
                                     18:30
                                 </div>
                                 <div class="desc">
@@ -118,8 +137,7 @@ if ($query_reccommend->execute()) {
                             </a>
                         </li>
                         <li>
-                            <a href="#">
-                                <div class="label">
+                            <a><div class="label">
                                     19:30
                                 </div>
                                 <div class="desc">

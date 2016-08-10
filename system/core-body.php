@@ -14,6 +14,8 @@ if(0) { ?><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><
 <script type="text/javascript" src="<?php echo SYSTEM_WEBPATH_ROOT; ?>/lib/js/jquery.mCustomScrollbar.concat.min.js"></script>
 <script type="text/javascript" src="<?php echo SYSTEM_WEBPATH_ROOT; ?>/lib/js-pace/pace.min.js"></script>
 <script type="text/javascript" src="<?php echo SYSTEM_WEBPATH_ROOT; ?>/lib/js-toastr/toastr.js"></script>
+<script type="text/javascript" src="<?php echo SYSTEM_WEBPATH_ROOT; ?>/lib/js/jquery.datetimepicker.js"></script>
+<link rel="stylesheet" href="<?php echo SYSTEM_WEBPATH_ROOT; ?>/lib/js/jquery.datetimepicker.css">
 <link rel="stylesheet" href="<?php echo SYSTEM_WEBPATH_ROOT; ?>/lib/bootstrap/bootstrap.min.css">
 <link rel="stylesheet" href="<?php echo SYSTEM_WEBPATH_ROOT; ?>/lib/bootstrap/bootstrap-theme.css">
 <link rel="stylesheet" href="<?php echo SYSTEM_WEBPATH_ROOT; ?>/lib/bootstrap/bootstrap.theme.icon.more.css">

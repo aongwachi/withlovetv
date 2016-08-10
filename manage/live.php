@@ -80,8 +80,11 @@ if($SystemSession_Staff_ID>0 && $SystemSession_Staff_Level=="Admin") {
 		<!---------------------------------------------------------------------------------------------------------------->
 		<th data-toggle="true" style="max-width:60px;">
                 <a href="javascript:void(0)" class="Link_FooTable" data-sort="<?php echo TABLE_LIVE."_ID"; ?>"><i></i>#</a></th>
+		<th><a href="javascript:void(0)" class="Link_FooTable" data-sort="<?php echo TABLE_LIVE."_Title"; ?>"><i></i>Title</a></th>
 		<th><a href="javascript:void(0)" class="Link_FooTable" data-sort="<?php echo TABLE_LIVE."_Link"; ?>"><i></i>Link</a></th>
+		<th><a href="javascript:void(0)" class="Link_FooTable" data-sort="<?php echo TABLE_LIVE."_LinkMobile"; ?>"><i></i>Link Mobile</a></th>
 		<th><a href="javascript:void(0)" class="Link_FooTable" data-sort="<?php echo TABLE_LIVE."_Resolution"; ?>"><i></i>Resolution</a></th>
+		<th><a href="javascript:void(0)" class="Link_FooTable" data-sort="<?php echo TABLE_LIVE."_Datetime"; ?>"><i></i>Play Time</a></th>
 		<th style=" width:60px; padding: 0px; ">&nbsp;</th>
 		<!----------------------------------------------------------------------------------------------------------------------->
 		</tr>

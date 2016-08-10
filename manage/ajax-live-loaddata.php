@@ -65,9 +65,47 @@ if($task=="load-edit" && $myAjaxID>0) {
 	<!-------------------------------------------------------------------------------->
 	<div class="form-group width-100">
 		<!--------------------------->
+		<?php $myField=TABLE_LIVE."_Title"; ?>
+		<label class="col-xs-12 col-sm-4 col-md-4 col-lg-4 control-label">
+		<span class="label-main">Title</span>
+		</label>
+		<div class="col-xs-12 col-sm-8 col-md-8 col-lg-8 custom-text-position">
+		<?php
+		//--------------------------------------------
+		$Config_UniqueID=$myField.$myID;
+		$Config_DefaultValue=$Row[$myField];
+		$Config_DB="UPDATE#".$myTable."#SET#".$myField."#=xxx#WHERE#".$myKeyField."#=#".$myID;
+		//--------------------------------------------
+		$Config_MaxChar=500;
+		$Config_Width="300px";
+		$Config_TextAlign="left";
+		//--------------------------------------------
+		include(SYSTEM_DOC_ROOT."object/oneinput/obj_oneinput_text.php");
+		?>
+		</div>
+		<!--------------------------->
 		<?php $myField=TABLE_LIVE."_Link"; ?>
 		<label class="col-xs-12 col-sm-4 col-md-4 col-lg-4 control-label">
 		<span class="label-main">Link</span>
+		</label>
+		<div class="col-xs-12 col-sm-8 col-md-8 col-lg-8 custom-text-position">
+		<?php
+		//--------------------------------------------
+		$Config_UniqueID=$myField.$myID;
+		$Config_DefaultValue=$Row[$myField];
+		$Config_DB="UPDATE#".$myTable."#SET#".$myField."#=xxx#WHERE#".$myKeyField."#=#".$myID;
+		//--------------------------------------------
+		$Config_MaxChar=500;
+		$Config_Width="300px";
+		$Config_TextAlign="left";
+		//--------------------------------------------
+		include(SYSTEM_DOC_ROOT."object/oneinput/obj_oneinput_text.php");
+		?>
+		</div>
+		<!--------------------------->
+		<?php $myField=TABLE_LIVE."_LinkMobile"; ?>
+		<label class="col-xs-12 col-sm-4 col-md-4 col-lg-4 control-label">
+		<span class="label-main">Link Mobile</span>
 		</label>
 		<div class="col-xs-12 col-sm-8 col-md-8 col-lg-8 custom-text-position">
 		<?php
@@ -101,6 +139,28 @@ if($task=="load-edit" && $myAjaxID>0) {
 		//--------------------------------------------
 		include(SYSTEM_DOC_ROOT."object/oneinput/obj_oneinput_text.php");
 		?>
+		</div>
+		<!--------------------------->
+		<?php $myField=TABLE_LIVE."_Datetime"; ?>
+		<label class="col-xs-12 col-sm-4 col-md-4 col-lg-4 control-label">
+		<span class="label-main">Play Time</span>
+		</label>
+		<div class="col-xs-12 col-sm-8 col-md-8 col-lg-8 custom-text-position">
+		<?php
+		//--------------------------------------------
+		$Config_UniqueID=$myField.$myID;
+		$Config_DefaultValue=$Row[$myField];
+		$Config_DB="UPDATE#".$myTable."#SET#".$myField."#=xxx#WHERE#".$myKeyField."#=#".$myID;
+		//--------------------------------------------
+		$Config_MaxChar=15;
+		$Config_Width="200px";
+		$Config_TextAlign="center";
+		//--------------------------------------------
+		include(SYSTEM_DOC_ROOT."object/oneinput/obj_oneinput_text.php");
+		?>
+		<script>
+			$('#input<?=$Config_UniqueID?>').datetimepicker();
+		</script>
 		</div>
 		<!--------------------------->
 	</div>
@@ -148,9 +208,47 @@ if($task=="load-add") {
 	<!-------------------------------------------------------------------------------->
 	<div class="form-group width-100">
 		<!--------------------------->
+		<?php $myField=TABLE_LIVE."_Title"; ?>
+		<label class="col-xs-12 col-sm-4 col-md-4 col-lg-4 control-label">
+		<span class="label-main">Title</span>
+		</label>
+		<div class="col-xs-12 col-sm-8 col-md-8 col-lg-8 custom-text-position">
+		<?php
+		//--------------------------------------------
+		$Config_UniqueID=$myField.$myID;
+		$Config_DefaultValue=$Row[$myField];
+		$Config_DB="UPDATE#".$myTable."#SET#".$myField."#=xxx#WHERE#".$myKeyField."#=#".$myID;
+		//--------------------------------------------
+		$Config_MaxChar=100;
+		$Config_Width="300px";
+		$Config_TextAlign="left";
+		//--------------------------------------------
+		include(SYSTEM_DOC_ROOT."object/oneinput/obj_oneinput_text.php");
+		?>
+		</div>
+		<!--------------------------->
 		<?php $myField=TABLE_LIVE."_Link"; ?>
 		<label class="col-xs-12 col-sm-4 col-md-4 col-lg-4 control-label">
 		<span class="label-main">Link</span>
+		</label>
+		<div class="col-xs-12 col-sm-8 col-md-8 col-lg-8 custom-text-position">
+		<?php
+		//--------------------------------------------
+		$Config_UniqueID=$myField.$myID;
+		$Config_DefaultValue=$Row[$myField];
+		$Config_DB="UPDATE#".$myTable."#SET#".$myField."#=xxx#WHERE#".$myKeyField."#=#".$myID;
+		//--------------------------------------------
+		$Config_MaxChar=100;
+		$Config_Width="300px";
+		$Config_TextAlign="left";
+		//--------------------------------------------
+		include(SYSTEM_DOC_ROOT."object/oneinput/obj_oneinput_text.php");
+		?>
+		</div>
+		<!--------------------------->
+		<?php $myField=TABLE_LIVE."_LinkMobile"; ?>
+		<label class="col-xs-12 col-sm-4 col-md-4 col-lg-4 control-label">
+		<span class="label-main">Link Mobile</span>
 		</label>
 		<div class="col-xs-12 col-sm-8 col-md-8 col-lg-8 custom-text-position">
 		<?php
@@ -186,6 +284,29 @@ if($task=="load-add") {
 		?>
 		</div>
 		<!--------------------------->
+		<?php $myField=TABLE_LIVE."_Datetime"; ?>
+		<label class="col-xs-12 col-sm-4 col-md-4 col-lg-4 control-label">
+		<span class="label-main">Play Time</span>
+		</label>
+		<div class="col-xs-12 col-sm-8 col-md-8 col-lg-8 custom-text-position">
+		<?php
+		//--------------------------------------------
+		$Config_UniqueID=$myField.$myID;
+		$Config_DefaultValue=$Row[$myField];
+		$Config_DB="UPDATE#".$myTable."#SET#".$myField."#=xxx#WHERE#".$myKeyField."#=#".$myID;
+		//--------------------------------------------
+		$Config_MaxChar=10;
+		$Config_Width="250px";
+		$Config_TextAlign="center";
+		//--------------------------------------------
+		include(SYSTEM_DOC_ROOT."object/oneinput/obj_oneinput_text.php");
+		$datetimeId = $Config_UniqueID;
+		?>
+		<script>
+			$('#input<?=$Config_UniqueID?>').datetimepicker();
+		</script>
+		</div>
+		<!--------------------------->
 	</div>
 	<div class="form-group width-100">
 	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 padding-2">
@@ -211,8 +332,11 @@ if($doaction=="result") {
 		onmouseout=" $('#idActionBT<?php echo $Row[TABLE_LIVE."_ID"];?>').hide(); "
 		id="idTableRow<?php echo $Row[TABLE_LIVE."_ID"];?>">
 		<td><?php echo $Row[TABLE_LIVE."_ID"];?></td>
+		<td><?php echo $Row[TABLE_LIVE."_Title"];?></td>
 		<td><?php echo $Row[TABLE_LIVE."_Link"];?></td>
+		<td><?php echo $Row[TABLE_LIVE."_LinkMobile"];?></td>
 		<td><?php echo $Row[TABLE_LIVE."_Resolution"];?>k</td>
+		<td><?php echo $Row[TABLE_LIVE."_Datetime"];?></td>
 		<td style=" width:60px; padding: 0px; ">
 		<div id="idActionBT<?php echo $Row[TABLE_LIVE."_ID"];?>"
 		style=" height: 30px; padding: 4px; width: 140px; position: absolute; margin-top: -14px; margin-left: -80px; text-align: right; display: none; ">
