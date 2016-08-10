@@ -31,7 +31,10 @@ if ($query_reccommend->execute()) {
                 <div id="homeVideo"></div>
                 <script>
                     jwplayer("homeVideo").setup({
-                        file: "<?php echo $myLiveLink; ?>",
+                        sources: [
+                            {file: 'http://media1.adventist.no:1935/live/smil:switch.smil/jwplayer.smil'},
+                            {file: 'http://media1.adventist.no:1935/live/smil:switch.smil/playlist.m3u8'}
+                        ],
                         <?php if(0) { ?>image: "./images/video.png",<?php } ?>
                         width: "100%",
                         autostart: true,
@@ -39,12 +42,6 @@ if ($query_reccommend->execute()) {
                         fallback: false,
                         skin: {
                             name: "seven"
-                        },
-                        flashplayer: "/jwplayer.flash.swf",
-                        html5player: "/jwplayer.html5.js",
-                        advertising: {
-                            client: "vast",
-                            tag: "//adserver.com/vastResponse.xml"
                         }
                     });
                 </script>
