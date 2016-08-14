@@ -8,7 +8,7 @@ if ($query1->execute()) {
     $myLiveResolution = $Row1[TABLE_LIVE . "_Resolution"];
 }
 ####################################################################################
-$sql_recommend_video = " SELECT * FROM " . TABLE_PROGRAM . " WHERE 1  LIMIT 3 ";
+$sql_recommend_video = " SELECT * FROM " . TABLE_PROGRAM . " WHERE 1  ORDER BY tv_program_ID DESC LIMIT 3 ";
 $query_reccommend = $dbh->prepare($sql_recommend_video);
 $vidRecommend = [];
 if ($query_reccommend->execute()) {
@@ -139,6 +139,35 @@ if ($query_reccommend->execute()) {
                         var dt = dateString.split(/\-|\s/);
                         return new Date(dt.slice(0, 3).join('-') + ' ' + dt[3]);
                     }
+                </script>
+                <script>
+                    window.fbAsyncInit = function() {
+                        FB.init({
+                            appId      : '518232568365263',
+                            xfbml      : true,
+                            version    : 'v2.5'
+                        });
+                    };
+
+                    (function(d, s, id){
+                        var js, fjs = d.getElementsByTagName(s)[0];
+                        if (d.getElementById(id)) {return;}
+                        js = d.createElement(s); js.id = id;
+                        js.src = "//connect.facebook.net/en_US/sdk.js";
+                        fjs.parentNode.insertBefore(js, fjs);
+                    }(document, 'script', 'facebook-jssdk'));
+                    function postToFeed(title, desc, url, image){
+                        var obj = {method: 'feed',link: url, picture: 'http://www.url.com/images/'+image,name: title,description: desc};
+                        function callback(response){}
+                        FB.ui(obj, callback);
+                    }
+                    $(window).load(function () {
+                        $('.btnShare').click(function(){
+                            elem = $(this);
+                            postToFeed('', '', elem.prop('href'), '');
+                            return false;
+                        });
+                    });
                 </script>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-5 nopadding-left-sm">
@@ -273,7 +302,7 @@ if ($query_reccommend->execute()) {
                                 <span class="text-pink">ON AIR</span> : ทุกวันอาทิตย์ , 16:00น. - 17:30น.
                                 <div class="pull-right text-right">
                                     <a href="#" class="btn btn-pink">ทั่วไป</a>
-                                    <a href="#" class="btn btn-gray">แชร์</a>
+                                    <a data-href="<?php echo $vidRecommend[0]['url']; ?>" class="btn btn-gray btnShare">แชร์</a>
                                 </div>
                             </div>
                             <hr/>

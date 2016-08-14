@@ -21,7 +21,7 @@ define('SYSTEM_DB_NAME','mydb'); // database name
 define('SYSTEM_DB_PREFIX','tv'); // Use for 2 or more website in one database
 
 ## Website Config -----------------------------------------------------
-define('SYSTEM_WEB_DOMAIN','allfashionthai.com');
+define('SYSTEM_WEB_DOMAIN','localhost');
 define('SYSTEM_WEB_PATH_FULL','www.allfashionthai.com');
 define('SYSTEM_WEBPATH_ROOT','/withlovetv'); // default use blank '' 
 define('SYSTEM_WEB_TITLE','ด้วยรักทีวี');
