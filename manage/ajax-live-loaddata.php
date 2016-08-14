@@ -141,18 +141,40 @@ if($task=="load-edit" && $myAjaxID>0) {
 		?>
 		</div>
 		<!--------------------------->
-		<?php $myField=TABLE_LIVE."_Datetime"; ?>
+		<?php $myField=TABLE_LIVE."_StartTime"; ?>
 		<label class="col-xs-12 col-sm-4 col-md-4 col-lg-4 control-label">
-		<span class="label-main">Play Time</span>
+		<span class="label-main">Start Time</span>
 		</label>
 		<div class="col-xs-12 col-sm-8 col-md-8 col-lg-8 custom-text-position">
 		<?php
 		//--------------------------------------------
 		$Config_UniqueID=$myField.$myID;
-		$Config_DefaultValue=$Row[$myField];
+		$Config_DefaultValue=date("Y/m/d G:i",strtotime($Row[$myField]));
 		$Config_DB="UPDATE#".$myTable."#SET#".$myField."#=xxx#WHERE#".$myKeyField."#=#".$myID;
 		//--------------------------------------------
-		$Config_MaxChar=15;
+		$Config_MaxChar=19;
+		$Config_Width="200px";
+		$Config_TextAlign="center";
+		//--------------------------------------------
+		include(SYSTEM_DOC_ROOT."object/oneinput/obj_oneinput_text.php");
+		?>
+		<script>
+			$('#input<?=$Config_UniqueID?>').datetimepicker();
+		</script>
+		</div>
+		<!--------------------------->
+		<?php $myField=TABLE_LIVE."_EndTime"; ?>
+		<label class="col-xs-12 col-sm-4 col-md-4 col-lg-4 control-label">
+		<span class="label-main">End Time</span>
+		</label>
+		<div class="col-xs-12 col-sm-8 col-md-8 col-lg-8 custom-text-position">
+		<?php
+		//--------------------------------------------
+		$Config_UniqueID=$myField.$myID;
+		$Config_DefaultValue=date("Y/m/d G:i",strtotime($Row[$myField]));
+		$Config_DB="UPDATE#".$myTable."#SET#".$myField."#=xxx#WHERE#".$myKeyField."#=#".$myID;
+		//--------------------------------------------
+		$Config_MaxChar=19;
 		$Config_Width="200px";
 		$Config_TextAlign="center";
 		//--------------------------------------------
@@ -284,9 +306,9 @@ if($task=="load-add") {
 		?>
 		</div>
 		<!--------------------------->
-		<?php $myField=TABLE_LIVE."_Datetime"; ?>
+		<?php $myField=TABLE_LIVE."_StartTime"; ?>
 		<label class="col-xs-12 col-sm-4 col-md-4 col-lg-4 control-label">
-		<span class="label-main">Play Time</span>
+		<span class="label-main">Start Time</span>
 		</label>
 		<div class="col-xs-12 col-sm-8 col-md-8 col-lg-8 custom-text-position">
 		<?php
@@ -295,7 +317,30 @@ if($task=="load-add") {
 		$Config_DefaultValue=$Row[$myField];
 		$Config_DB="UPDATE#".$myTable."#SET#".$myField."#=xxx#WHERE#".$myKeyField."#=#".$myID;
 		//--------------------------------------------
-		$Config_MaxChar=10;
+		$Config_MaxChar=19;
+		$Config_Width="250px";
+		$Config_TextAlign="center";
+		//--------------------------------------------
+		include(SYSTEM_DOC_ROOT."object/oneinput/obj_oneinput_text.php");
+		$datetimeId = $Config_UniqueID;
+		?>
+		<script>
+			$('#input<?=$Config_UniqueID?>').datetimepicker();
+		</script>
+		</div>
+		<!--------------------------->
+		<?php $myField=TABLE_LIVE."_EndTime"; ?>
+		<label class="col-xs-12 col-sm-4 col-md-4 col-lg-4 control-label">
+		<span class="label-main">End Time</span>
+		</label>
+		<div class="col-xs-12 col-sm-8 col-md-8 col-lg-8 custom-text-position">
+		<?php
+		//--------------------------------------------
+		$Config_UniqueID=$myField.$myID;
+		$Config_DefaultValue=$Row[$myField];
+		$Config_DB="UPDATE#".$myTable."#SET#".$myField."#=xxx#WHERE#".$myKeyField."#=#".$myID;
+		//--------------------------------------------
+		$Config_MaxChar=19;
 		$Config_Width="250px";
 		$Config_TextAlign="center";
 		//--------------------------------------------
@@ -336,7 +381,8 @@ if($doaction=="result") {
 		<td><?php echo $Row[TABLE_LIVE."_Link"];?></td>
 		<td><?php echo $Row[TABLE_LIVE."_LinkMobile"];?></td>
 		<td><?php echo $Row[TABLE_LIVE."_Resolution"];?>k</td>
-		<td><?php echo $Row[TABLE_LIVE."_Datetime"];?></td>
+		<td><?php echo date("Y-m-d G:i",strtotime($Row[TABLE_LIVE."_StartTime"]));?></td>
+		<td><?php echo date("Y-m-d G:i",strtotime($Row[TABLE_LIVE."_EndTime"]));?></td>
 		<td style=" width:60px; padding: 0px; ">
 		<div id="idActionBT<?php echo $Row[TABLE_LIVE."_ID"];?>"
 		style=" height: 30px; padding: 4px; width: 140px; position: absolute; margin-top: -14px; margin-left: -80px; text-align: right; display: none; ">

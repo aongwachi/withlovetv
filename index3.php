@@ -31,6 +31,7 @@ if ($query_reccommend->execute()) {
                 <div id="homeVideo"></div>
                 <script>
                     $(window).load(function () {
+                        //alert(checkChannelDate('2016-08-15 00:30:00','2016-08-15 01:49:00'));
                         getLiveListVideo();
                     });
                     function getLiveListVideo() {
@@ -39,33 +40,104 @@ if ($query_reccommend->execute()) {
                             method: "POST",
                             url: "lib/ajax/ajax_return_live_video.php"
                         }).done(function (data) {
-                            var list_live = '<li class="active">'+
-                                                '<a><div class="label">'+
-                                                data[0].title+
-                                                '</div>'+
-                                                '<div class="desc">'+
-                                                    ''+
-                                                '</div>'+
-                                                '<div class="clearfix"></div>'+
-                                                '</a>'+
-                                                '</li>';
-                            $('.list-playlist').append(list_live);
-                            $('.header-title').find('h1').text(data[0].title);
-                            jwplayer("homeVideo").setup({
-                                sources: [
-                                    {file: data[0].link},
-                                    {file: data[0].link_mobile}
-                                ],
-                                <?php if(0) { ?>image: "./images/video.png",<?php } ?>
-                                width: "100%",
-                                autostart: true,
-                                aspectratio: "16:10",
-                                fallback: false,
-                                skin: {
-                                    name: "seven"
+                            //set main live
+                            var setLive = false;
+                            var nextIndex = 0;
+                            var nextChannelDate = null;
+                            $.each(data, function (i, v) {
+                                if (checkChannelDate(v.starttime, v.endtime) && setLive == false) {
+                                    jwplayer("homeVideo").setup({
+                                        sources: [
+                                            {file: v.link},
+                                            {file: v.link_mobile}
+                                        ],
+                                        <?php if(0) { ?>image: "./images/video.png",<?php } ?>
+                                        width: "100%",
+                                        autostart: true,
+                                        aspectratio: "16:10",
+                                        fallback: false,
+                                        skin: {
+                                            name: "seven"
+                                        }
+                                    });
+                                    $('.header-title').find('h1').text(v.title);
+                                    setLive = true;
+                                    nextIndex = i;
+                                }
+                                var list_live = '<li class="' + '' + '">' +
+                                    '<a><div class="label">' +
+                                    v.title +
+                                    '</div>' +
+                                    '<div class="desc">' +
+                                    '' +
+                                    '</div>' +
+                                    '<div class="clearfix"></div>' +
+                                    '</a>' +
+                                    '</li>';
+                                var firstNext = 0;
+                                if (setLive && i > nextIndex) {
+                                    nextChannelDate = data[nextIndex+1].starttime;
+                                    $('.list-playlist').append(list_live);
+                                }
+                                else if(nowAndNextChannel(v.starttime)){
+                                    firstNext++;
+                                    if(firstNext==1) nextChannelDate = v.starttime;
+                                    $('.list-playlist').append(list_live);
                                 }
                             });
+                            //set diff
+                            var now = new Date();
+                            now = strToDateTime(now.getFullYear() + '-' + (now.getMonth() + 1) + '-' + now.getDate()
+                                + ' ' + now.getHours() + ':' + now.getMinutes() + ':' + now.getSeconds());
+                            var nextTime = strToDateTime(nextChannelDate);
+                            var diffSec = Math.abs((nextTime.getTime() - now.getTime())/1000);
+                            var display = $('#time');
+                            startTimer(diffSec, display);
                         });
+                    }
+                    function startTimer(duration, display) {
+                        var timer = duration, minutes, seconds;
+                        setInterval(function () {
+                            minutes = parseInt(timer / 60, 10);
+                            seconds = parseInt(timer % 60, 10);
+
+                            minutes = minutes < 10 ? "0" + minutes : minutes;
+                            seconds = seconds < 10 ? "0" + seconds : seconds;
+
+                            display.text(minutes + ":" + seconds);
+
+                            if (--timer < 0) {
+                                location.reload();
+                            }
+                        }, 1000);
+                    }
+                    function checkChannelDate(from, to) {
+                        var now = new Date();
+                        now = strToDateTime(now.getFullYear() + '-' + (now.getMonth() + 1) + '-' + now.getDate()
+                            + ' ' + now.getHours() + ':' + now.getMinutes() + ':' + now.getSeconds());
+                        from = strToDateTime(from);
+                        to = strToDateTime(to);
+                        var returnVal = false;
+                        if (now > from && now < to) {
+                            returnVal = true;
+                        }
+                        return returnVal;
+                    }
+                    function nowAndNextChannel(next)
+                    {
+                        var now = new Date();
+                        now = strToDateTime(now.getFullYear() + '-' + (now.getMonth() + 1) + '-' + now.getDate()
+                            + ' ' + now.getHours() + ':' + now.getMinutes() + ':' + now.getSeconds());
+                        next = strToDateTime(next);
+                        var returnVal = false;
+                        if (now < next) {
+                            returnVal = true;
+                        }
+                        return returnVal;
+                    }
+                    function strToDateTime(dateString) {
+                        var dt = dateString.split(/\-|\s/);
+                        return new Date(dt.slice(0, 3).join('-') + ' ' + dt[3]);
                     }
                 </script>
             </div>
@@ -82,76 +154,82 @@ if ($query_reccommend->execute()) {
                         <label><span aria-hidden="true" class="glyphicon glyphicon-play text-pink"></span> Auto
                             Play</label> ความละเอียด : <?php echo $myLiveResolution; ?>k
                         <br/>
-                    </div>
-                </div>
-                <div class="video-playlist bg-darkgray">
-                    <div class="header-title">
-                        <div class="row">
-                            <div class="col-xs-5 nopadding-right">
-                                <h2>รายการต่อไป</h2>
-                            </div>
-                            <div class="col-xs-7 nopadding-left text-right">
-                                <h3>วันอาทิตย์ที่ 29 พฤษภาคม พ.ศ. 2559</h3>
-                            </div>
+                        <div> อีก <span id="time"></span> นาที จะฉายรายการถัดไป
                         </div>
                     </div>
-                    <ul class="list-playlist">
-                        <li class="active">
-                            <a><div class="label">
-                                    17:58
+                    <div class="video-playlist bg-darkgray">
+                        <div class="header-title">
+                            <div class="row">
+                                <div class="col-xs-5 nopadding-right">
+                                    <h2>รายการต่อไป</h2>
                                 </div>
-                                <div class="desc">
-                                    Express News
-                                </div>
-                                <div class="clearfix"></div>
-                            </a>
-                        </li>
-                        <li>
-                            <a><div class="label">
-                                    18:00
-                                </div>
-                                <div class="desc">
-                                    เพลงชาติไทยรัฐทีวี
-                                </div>
-                                <div class="clearfix"></div>
-                            </a>
-                        </li>
-                        <li>
-                            <a><div class="label">
-                                    18:01
-                                </div>
-                                <div class="desc">
-                                    เดินหน้าประเทศไทย
-                                </div>
-                                <div class="clearfix"></div>
-                            </a>
-                        </li>
-                        <li>
-                            <a><div class="label">
-                                    18:30
-                                </div>
-                                <div class="desc">
-                                    เจ้าแม่กวนอิม
-                                </div>
-                                <div class="clearfix"></div>
-                            </a>
-                        </li>
-                        <li>
-                            <a><div class="label">
-                                    19:30
-                                </div>
-                                <div class="desc">
-                                    ไทยรัฐ นิวส์โชว์
-                                </div>
-                                <div class="clearfix"></div>
-                            </a>
-                        </li>
-                    </ul>
+                                <!--                            <div class="col-xs-7 nopadding-left text-right">-->
+                                <!--                                <h3>วันอาทิตย์ที่ 29 พฤษภาคม พ.ศ. 2559</h3>-->
+                                <!--                            </div>-->
+                            </div>
+                        </div>
+                        <ul class="list-playlist">
+                            <li class="active">
+                                <a>
+                                    <div class="label">
+                                        17:58
+                                    </div>
+                                    <div class="desc">
+                                        Express News
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </a>
+                            </li>
+                            <li>
+                                <a>
+                                    <div class="label">
+                                        18:00
+                                    </div>
+                                    <div class="desc">
+                                        เพลงชาติไทยรัฐทีวี
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </a>
+                            </li>
+                            <li>
+                                <a>
+                                    <div class="label">
+                                        18:01
+                                    </div>
+                                    <div class="desc">
+                                        เดินหน้าประเทศไทย
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </a>
+                            </li>
+                            <li>
+                                <a>
+                                    <div class="label">
+                                        18:30
+                                    </div>
+                                    <div class="desc">
+                                        เจ้าแม่กวนอิม
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </a>
+                            </li>
+                            <li>
+                                <a>
+                                    <div class="label">
+                                        19:30
+                                    </div>
+                                    <div class="desc">
+                                        ไทยรัฐ นิวส์โชว์
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </a>
+                            </li>
+                        </ul>
 
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 </header>
 <!-- Content -->
 <div class="container container-padding">
@@ -199,9 +277,9 @@ if ($query_reccommend->execute()) {
                                 </div>
                             </div>
                             <hr/>
-                            <h2><?php echo $vidRecommend[0]['title'];?></h2>
+                            <h2><?php echo $vidRecommend[0]['title']; ?></h2>
                             <div class="tags">
-                                <a href="#"><?php echo $vidRecommend[0]['detail'];?></a>
+                                <a href="#"><?php echo $vidRecommend[0]['detail']; ?></a>
                             </div>
                         </div>
                     </div>
@@ -222,7 +300,7 @@ if ($query_reccommend->execute()) {
                                     var rec2 = 0;
                                     function play_rec2() {
                                         rec2++;
-                                        if(rec2==1){
+                                        if (rec2 == 1) {
                                             $('#img_rec2').hide();
                                             $('#play_button_rec2').hide();
                                             jwplayer("video_rec2").setup({
@@ -243,9 +321,9 @@ if ($query_reccommend->execute()) {
                                         <span class="text-pink">ON AIR</span> : ทุกวันอาทิตย์ , 16:00น. - 17:30น.
                                     </div>
                                     <hr/>
-                                    <h2><?php echo $vidRecommend[1]['title'];?></h2>
+                                    <h2><?php echo $vidRecommend[1]['title']; ?></h2>
                                     <div class="tags">
-                                        <a href="#"><?php echo $vidRecommend[1]['detail'];?></a>
+                                        <a href="#"><?php echo $vidRecommend[1]['detail']; ?></a>
                                     </div>
                                 </div>
                             </div>
@@ -265,8 +343,7 @@ if ($query_reccommend->execute()) {
                                     var rec3 = 0;
                                     function play_rec3() {
                                         rec3++;
-                                        if(rec3==1)
-                                        {
+                                        if (rec3 == 1) {
                                             $('#img_rec3').hide();
                                             $('#play_button_rec3').hide();
                                             jwplayer("video_rec3").setup({
@@ -287,9 +364,9 @@ if ($query_reccommend->execute()) {
                                         <span class="text-pink">ON AIR</span> : ทุกวันอาทิตย์ , 16:00น. - 17:30น.
                                     </div>
                                     <hr/>
-                                    <h2><?php echo $vidRecommend[2]['title'];?></h2>
+                                    <h2><?php echo $vidRecommend[2]['title']; ?></h2>
                                     <div class="tags">
-                                        <a href="#"><?php echo $vidRecommend[2]['detail'];?></a>
+                                        <a href="#"><?php echo $vidRecommend[2]['detail']; ?></a>
                                     </div>
                                 </div>
                             </div>
