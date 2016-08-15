@@ -85,6 +85,10 @@ if ($query_reccommend->execute()) {
                                     $('.list-playlist').append(list_live);
                                 }
                             });
+                            //blank video
+                            if ($('#homeVideo').is(':empty')){
+                                $('#homeVideo').prepend('<img id="theImg" src="imgweb/wait.png" />');
+                            }
                             //set diff
                             var now = new Date();
                             now = strToDateTime(now.getFullYear() + '-' + (now.getMonth() + 1) + '-' + now.getDate()
