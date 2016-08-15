@@ -5,10 +5,10 @@ $sql_recommend_video = " SELECT * FROM ".TABLE_LIVE." t
                             where DATE(t.tv_livelink_StartTime) = DATE(now()) 
                             ORDER By t.tv_livelink_StartTime ASC";
 $query_reccommend = $dbh->prepare($sql_recommend_video);
-$vidRecommend = [];
+$vidRecommend = array();
 if ($query_reccommend->execute()) {
     while ($row = $query_reccommend->fetch()) {
-        $res = [];
+        $res = array();
         $res['title'] = $row[TABLE_LIVE . "_Title"];
         $res['link'] = $row[TABLE_LIVE . "_Link"];
         $res['link_mobile'] = $row[TABLE_LIVE . "_LinkMobile"];
