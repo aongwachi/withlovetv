@@ -15,6 +15,7 @@ if($query1->execute()) {
 ####################################################################################
 ?>
 <?php
+$url = (isset($_GET['url']) ? $_GET['url'] : "https://www.youtube.com/watch?v=B4z7loNm_kw");
 ####################################################################################
 include_once("shared/header".$myThemeKey.".php");
 ?>
@@ -39,7 +40,7 @@ include_once("shared/header".$myThemeKey.".php");
                                 $('#img_rec1').hide();
                                 $('#play_button_rec1').hide();
                                 jwplayer("video_rec1").setup({
-                                    file: "https://www.youtube.com/watch?v=B4z7loNm_kw",
+                                    file: "<?=$url ?>",
                                     width: "100%",
                                     aspectratio: "16:10",
                                     autostart: true,
