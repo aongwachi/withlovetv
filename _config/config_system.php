@@ -15,9 +15,9 @@ define('SS','BB'); // Site Session Name , Leave blank for use one session for mu
  
 ## Database Definition #################################################
 define('SYSTEM_DB_HOSTNAME','localhost'); // host
-define('SYSTEM_DB_USERNAME','root'); // user
-define('SYSTEM_DB_PASSWORD',''); // password
-define('SYSTEM_DB_NAME','mydb'); // database name
+define('SYSTEM_DB_USERNAME','aong'); // user
+define('SYSTEM_DB_PASSWORD','vUsxgXyr17'); // password
+define('SYSTEM_DB_NAME','padapupp_test'); // database name
 define('SYSTEM_DB_PREFIX','tv'); // Use for 2 or more website in one database
 
 ## Website Config -----------------------------------------------------
