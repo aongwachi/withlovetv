@@ -26,14 +26,20 @@ if(!isset($Config_EndWord)) { $Config_EndWord=""; }
 if(!isset($Config_PlaceHolder)) { $Config_PlaceHolder="Input text"; }
 if(!isset($Config_OnChangeFunction)) { $Config_OnChangeFunction=""; }
 if(!isset($Config_OnFocusFunction)) { $Config_OnFocusFunction=""; }
+$Config_Type_Input=isset($Config_Type_Input)&&$Config_Type_Input=="file"?$Config_Type_Input:"text";
 $Config_DBx=System_Encode($Config_DB);
 ?>
 <div style=" display: table; padding: 0px; " class="width-100">
 <div style=" float: none; display: table-cell; vertical-align: top; padding: 0px; width:<?php echo $Config_Width; ?>; ">
-    <input id="input<?php echo $Config_UniqueID; ?>" type="text" class="form-control border-default inputSize" placeholder="<?php echo $Config_PlaceHolder; ?>"
+    <input id="input<?php echo $Config_UniqueID; ?>" type="<?=$Config_Type_Input?>" class="form-control border-default inputSize" placeholder="<?php echo $Config_PlaceHolder; ?>"
     maxlength="<?php echo $Config_MaxChar; ?>" style=" width:<?php echo $Config_Width; ?>; text-align:<?php echo $Config_TextAlign; ?>; " 
     value="<?php echo $Config_DefaultValue; ?>"
-    onchange=" <?php echo $Config_OnChangeFunction; ?> OneInput_DoSaveText('<?php echo $Config_UniqueID; ?>','<?php echo $Config_DBx; ?>',$('#input<?php echo $Config_UniqueID; ?>').val()); "
+    onchange=" <?php if($Config_Type_Input == "text") {?>
+                <?php echo $Config_OnChangeFunction; ?> OneInput_DoSaveText('<?php echo $Config_UniqueID; ?>','<?php echo $Config_DBx; ?>',$('#input<?php echo $Config_UniqueID; ?>').val());
+               <?php }else{ ?>
+                    AjaxUploadFile('<?php echo $Config_UniqueID; ?>','<?php echo $Config_DBx; ?>');
+               <?php } ?>
+             "
     onfocus=" <?php echo $Config_OnFocusFunction; ?> " 
      />
 </div>

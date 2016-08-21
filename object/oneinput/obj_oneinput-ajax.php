@@ -439,6 +439,41 @@ if($myAjaxAction=="data-update-icon") {
 	echo "Save!"; // : ".$myID;
 	//--------------------------------------------------------
 	exit;
+}############################################################################
+if($myAjaxAction == 'ajax-upload-file') {
+    //--------------------------------------------------------
+	$imageFileType = pathinfo(basename($_FILES["fileData"]["name"]),PATHINFO_EXTENSION);
+	$nameFile =
+	$buff = "manage/uploads/".generateRandomString().".".$imageFileType;
+	$target_file = "../../".$buff;
+    while (file_exists($target_file)) {
+    	$buff = "manage/uploads/".generateRandomString().".".$imageFileType;
+		$target_file = "../../".$buff;
+		$path_save = $buff;
+    }
+	$path_save = $buff;
+    if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
+        && $imageFileType != "gif" ) {
+        echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
+    }
+    else {
+        if (move_uploaded_file($_FILES["fileData"]["tmp_name"], $target_file)) {
+			$myAjaxKeys=System_Decode($myAjaxKey);
+			$arTmp=explode("#",$myAjaxKeys);
+			$myTable=$arTmp[1];
+			$myField=$arTmp[3];
+			$myKeyField=$arTmp[6];
+			$myID=$arTmp[8];
+			//--------------------------------------------------------
+			$sql = " UPDATE ".$myTable." SET ".$myField."='".$path_save."' WHERE ".$myKeyField."='".$myID."' ";
+			$Query=MYSQL_QUERY($sql,$System_Connection1) OR DIE("Error: ".$sql."<br>\n");
+			echo "Save !";
+        } else {
+            echo "Have A Problem!";
+        }
+    }
+    //--------------------------------------------------------
+    exit;
 }
 ############################################################################
 if($myAjaxAction=="data-update") {
@@ -503,4 +538,13 @@ if($myAjaxAction=="save-icon") {
 }
 ############################################################################
 //MYSQL_CLOSE();
+function generateRandomString($length = 10) {
+	$characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+	$charactersLength = strlen($characters);
+	$randomString = '';
+	for ($i = 0; $i < $length; $i++) {
+		$randomString .= $characters[rand(0, $charactersLength - 1)];
+	}
+	return $randomString;
+}
 ?>

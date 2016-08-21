@@ -84,10 +84,10 @@ if($SystemSession_Staff_ID>0 && $SystemSession_Staff_Level=="Admin") {
                                 <i class="glyphicon glyphicon-chevron-up font-10 padding-4"></i>#</a></th>
                         <th><a href="javascript:void(0)" class="Link_FooTable" data-sort="<?php echo TABLE_PROGRAM."_Name"; ?>"><i></i>Name</a></th>
                         <th><a href="javascript:void(0)" class="Link_FooTable" data-sort="<?php echo TABLE_PROGRAM."_Detail"; ?>"><i></i>Detail</a></th>
+                        <th><a href="javascript:void(0)" class="Link_FooTable" data-sort="<?php echo TABLE_PROGRAM."_Image_Url"; ?>"><i></i>IMAGE URL</a></th>
                         <th><a href="javascript:void(0)" class="Link_FooTable" data-sort="<?php echo TABLE_PROGRAM."_URL"; ?>"><i></i>URL</a></th>
-                        <th><a href="javascript:void(0)" class="Link_FooTable" data-sort="<?php echo TABLE_PROGRAM."_WeekDay"; ?>"><i></i>WeekDay</a></th>
-                        <th><a href="javascript:void(0)" class="Link_FooTable" data-sort="<?php echo TABLE_PROGRAM."_Start"; ?>"><i></i>Start</a></th>
-                        <th><a href="javascript:void(0)" class="Link_FooTable" data-sort="<?php echo TABLE_PROGRAM."_End"; ?>"><i></i>End</a></th>
+                        <th><a href="javascript:void(0)" class="Link_FooTable" data-sort="<?php echo TABLE_PROGRAM."_StartTime"; ?>"><i></i>Start Time</a></th>
+                        <th><a href="javascript:void(0)" class="Link_FooTable" data-sort="<?php echo TABLE_PROGRAM."_EndTime"; ?>"><i></i>End Time</a></th>
                         <th style=" width:60px; padding: 0px; ">&nbsp;</th>
                         <!----------------------------------------------------------------------------------------------------------------------->
                     </tr>

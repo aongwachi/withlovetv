@@ -149,18 +149,16 @@ if($task=="load-edit" && $myAjaxID>0) {
 		<?php
 		//--------------------------------------------
 		$Config_UniqueID=$myField.$myID;
-		$Config_DefaultValue=date("Y/m/d G:i",strtotime($Row[$myField]));
+		$Config_DefaultValue=$Row[$myField];
 		$Config_DB="UPDATE#".$myTable."#SET#".$myField."#=xxx#WHERE#".$myKeyField."#=#".$myID;
 		//--------------------------------------------
 		$Config_MaxChar=19;
 		$Config_Width="200px";
 		$Config_TextAlign="center";
 		//--------------------------------------------
-		include(SYSTEM_DOC_ROOT."object/oneinput/obj_oneinput_text.php");
+		include(SYSTEM_DOC_ROOT."object/oneinput/obj_oneinput_datetime.php");
 		?>
-		<script>
-			$('#input<?=$Config_UniqueID?>').datetimepicker();
-		</script>
+		</div>
 		</div>
 		<!--------------------------->
 		<?php $myField=TABLE_LIVE."_EndTime"; ?>
@@ -171,18 +169,15 @@ if($task=="load-edit" && $myAjaxID>0) {
 		<?php
 		//--------------------------------------------
 		$Config_UniqueID=$myField.$myID;
-		$Config_DefaultValue=date("Y/m/d G:i",strtotime($Row[$myField]));
+		$Config_DefaultValue=$Row[$myField];
 		$Config_DB="UPDATE#".$myTable."#SET#".$myField."#=xxx#WHERE#".$myKeyField."#=#".$myID;
 		//--------------------------------------------
 		$Config_MaxChar=19;
 		$Config_Width="200px";
 		$Config_TextAlign="center";
 		//--------------------------------------------
-		include(SYSTEM_DOC_ROOT."object/oneinput/obj_oneinput_text.php");
+		include(SYSTEM_DOC_ROOT."object/oneinput/obj_oneinput_datetime.php");
 		?>
-		<script>
-			$('#input<?=$Config_UniqueID?>').datetimepicker();
-		</script>
 		</div>
 		<!--------------------------->
 	</div>
@@ -321,12 +316,10 @@ if($task=="load-add") {
 		$Config_Width="250px";
 		$Config_TextAlign="center";
 		//--------------------------------------------
-		include(SYSTEM_DOC_ROOT."object/oneinput/obj_oneinput_text.php");
+		include(SYSTEM_DOC_ROOT."object/oneinput/obj_oneinput_datetime.php");
 		$datetimeId = $Config_UniqueID;
 		?>
-		<script>
-			$('#input<?=$Config_UniqueID?>').datetimepicker();
-		</script>
+		</div>
 		</div>
 		<!--------------------------->
 		<?php $myField=TABLE_LIVE."_EndTime"; ?>
@@ -344,12 +337,9 @@ if($task=="load-add") {
 		$Config_Width="250px";
 		$Config_TextAlign="center";
 		//--------------------------------------------
-		include(SYSTEM_DOC_ROOT."object/oneinput/obj_oneinput_text.php");
+		include(SYSTEM_DOC_ROOT."object/oneinput/obj_oneinput_datetime.php");
 		$datetimeId = $Config_UniqueID;
 		?>
-		<script>
-			$('#input<?=$Config_UniqueID?>').datetimepicker();
-		</script>
 		</div>
 		<!--------------------------->
 	</div>

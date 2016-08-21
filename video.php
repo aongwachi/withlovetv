@@ -46,7 +46,7 @@ if ($TotalRecordCount > 0) {
             //--------------------------------------------
             $arContentID[$looper] = $Row[TABLE_PROGRAM . "_URL"];
             $arContentSubject[$looper] = $Row[TABLE_PROGRAM . "_Name"];
-            $arContentThumb[$looper] = "";
+            $arContentThumb[$looper] = $Row[TABLE_PROGRAM . "_Image_Url"];
             //--------------------------------------------
             $looper++;
         }

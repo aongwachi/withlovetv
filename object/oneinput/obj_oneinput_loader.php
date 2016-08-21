@@ -91,6 +91,31 @@ function OneInput_DoSaveText(myUniqueID,myDB,myValue) {
   });
 }
 //-------------------------------------------
+function AjaxUploadFile(myUniqueID,myDB) {
+//-------------------------------------------
+    var file = $('#input'+myUniqueID)[0].files;
+    var data = new FormData();
+    data.append('myAjaxAction', "ajax-upload-file");
+    data.append('myAjaxKey', myDB);
+    data.append('fileData', file[0]);
+    $.ajax({
+        url: '<?php echo SYSTEM_WEBPATH_ROOT; ?>/object/oneinput/obj_oneinput-ajax.php',
+        data: data,
+        cache: false,
+        contentType: false,
+        processData: false,
+        type: 'POST',
+        success: function(result){
+            if(result=='') {
+                System_Notice('Error : ไม่สามารถบันทึกข้อมูลได้','danger');
+            } else {
+                $('#idAutoSave'+myUniqueID).html('<font color="#00AA00">'+result+'</font>');
+                $('#idAutoSave'+myUniqueID).show("slide", { direction: 'right', easing: 'easeOutCirc' }, 500).delay(1000).fadeOut(1000);
+            }
+        }
+    });
+}
+//-------------------------------------------
 function OneInput_DoSaveSelect(myUniqueID,myDB,myValue,myValue2) {
 //-------------------------------------------
   $.ajax({

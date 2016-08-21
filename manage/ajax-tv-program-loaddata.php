@@ -35,14 +35,6 @@ if($myAjaxAction=="data-delete" && $myAjaxID>0) {
 	echo " </script> ";
 }
 ############################################################################
-if($myAjaxAction=="data-update") {
-	$sql = " UPDATE ".TABLE_PROGRAM." SET ".$myAjaxKey."='".$myAjaxValue."' WHERE ".TABLE_PROGRAM."_ID='".$myAjaxID."' ";
-	$Query=MYSQL_QUERY($sql,$System_Connection1) OR DIE("Error: ".$sql."<br>n");
-	echo " <script> ";
-	echo " window.parent.showSave('".$myAjaxID."','".$myAjaxKey."'); ";
-	echo " </script> ";
-}
-############################################################################
 if($task=="load-confirm" && $myAjaxID>0) {
 
 	?>
@@ -62,34 +54,171 @@ if($task=="load-confirm" && $myAjaxID>0) {
 	<?php
 }
 ############################################################################
-$skipadd=0;
 if($task=="load-edit" && $myAjaxID>0) {
-	$task="load-add";
-	$myUnCompleteID=$myAjaxID;
-	$skipadd=1;
+	// ---------------------------------------
+	$sql=" SELECT * FROM ".TABLE_PROGRAM." WHERE ".TABLE_PROGRAM."_ID='".$myAjaxID."' LIMIT 0,1 ";
+	$Query=MYSQL_QUERY($sql,$System_Connection1) OR DIE("Error: ".$sql."<br>\n");
+	$Row = mysql_fetch_array($Query);
+	// ---------------------------------------
+	$myID=$myAjaxID;
+	$myTable=TABLE_PROGRAM;
+	$myKeyField=TABLE_PROGRAM."_ID";
+	?>
+	<!-------------------------------------------------------------------------------->
+	<div class="form-group width-100">
+		<!--------------------------->
+		<?php $myField=TABLE_PROGRAM."_Name"; ?>
+		<label class="col-xs-12 col-sm-4 col-md-4 col-lg-4 control-label">
+		<span class="label-main">Name</span>
+		</label>
+		<div class="col-xs-12 col-sm-8 col-md-8 col-lg-8 custom-text-position">
+		<?php
+		//--------------------------------------------
+		$Config_UniqueID=$myField.$myID;
+		$Config_DefaultValue=$Row[$myField];
+		$Config_DB="UPDATE#".$myTable."#SET#".$myField."#=xxx#WHERE#".$myKeyField."#=#".$myID;
+		//--------------------------------------------
+		$Config_MaxChar=500;
+		$Config_Width="300px";
+		$Config_TextAlign="left";
+		//--------------------------------------------
+		include(SYSTEM_DOC_ROOT."object/oneinput/obj_oneinput_text.php");
+		?>
+		</div>
+		<!--------------------------->
+		<?php $myField=TABLE_PROGRAM."_Detail"; ?>
+		<label class="col-xs-12 col-sm-4 col-md-4 col-lg-4 control-label">
+		<span class="label-main">Detail</span>
+		</label>
+		<div class="col-xs-12 col-sm-8 col-md-8 col-lg-8 custom-text-position">
+		<?php
+		//--------------------------------------------
+		$Config_UniqueID=$myField.$myID;
+		$Config_DefaultValue=$Row[$myField];
+		$Config_DB="UPDATE#".$myTable."#SET#".$myField."#=xxx#WHERE#".$myKeyField."#=#".$myID;
+		//--------------------------------------------
+		$Config_MaxChar=500;
+		$Config_Width="300px";
+		$Config_TextAlign="left";
+		//--------------------------------------------
+		include(SYSTEM_DOC_ROOT."object/oneinput/obj_oneinput_text.php");
+		?>
+		</div>
+		<!--------------------------->
+		<?php $myField=TABLE_PROGRAM."_Image_Url"; ?>
+		<label class="col-xs-12 col-sm-4 col-md-4 col-lg-4 control-label">
+		<span class="label-main">Image</span>
+		</label>
+		<div class="col-xs-12 col-sm-8 col-md-8 col-lg-8 custom-text-position">
+		<?php
+		//--------------------------------------------
+		$Config_UniqueID=$myField.$myID;
+		$Config_DefaultValue=$Row[$myField];
+		$Config_DB="UPDATE#".$myTable."#SET#".$myField."#=xxx#WHERE#".$myKeyField."#=#".$myID;
+		//--------------------------------------------
+		$Config_MaxChar=500;
+		$Config_Width="300px";
+		$Config_TextAlign="left";
+		//--------------------------------------------
+		$Config_Type_Input="file";
+		include(SYSTEM_DOC_ROOT."object/oneinput/obj_oneinput_text.php");
+		$Config_Type_Input="";
+		?>
+		</div>
+		<!--------------------------->
+		<?php $myField=TABLE_PROGRAM."_URL"; ?>
+		<label class="col-xs-12 col-sm-4 col-md-4 col-lg-4 control-label">
+		<span class="label-main">URL</span>
+		</label>
+		<div class="col-xs-12 col-sm-8 col-md-8 col-lg-8 custom-text-position">
+		<?php
+		//--------------------------------------------
+		$Config_UniqueID=$myField.$myID;
+		$Config_DefaultValue=$Row[$myField];
+		$Config_DB="UPDATE#".$myTable."#SET#".$myField."#=xxx#WHERE#".$myKeyField."#=#".$myID;
+		//--------------------------------------------
+		$Config_MaxChar=500;
+		$Config_Width="300px";
+		$Config_TextAlign="center";
+		//--------------------------------------------
+		include(SYSTEM_DOC_ROOT."object/oneinput/obj_oneinput_text.php");
+		?>
+		</div>
+		<!--------------------------->
+		<?php $myField=TABLE_PROGRAM."_StartTime"; ?>
+		<label class="col-xs-12 col-sm-4 col-md-4 col-lg-4 control-label">
+		<span class="label-main">Start Time</span>
+		</label>
+		<div class="col-xs-12 col-sm-8 col-md-8 col-lg-8 custom-text-position">
+		<?php
+		//--------------------------------------------
+		$Config_UniqueID=$myField.$myID;
+		$Config_DefaultValue=$Row[$myField];
+		$Config_DB="UPDATE#".$myTable."#SET#".$myField."#=xxx#WHERE#".$myKeyField."#=#".$myID;
+		//--------------------------------------------
+		$Config_MaxChar=19;
+		$Config_Width="200px";
+		$Config_TextAlign="center";
+		//--------------------------------------------
+		include(SYSTEM_DOC_ROOT."object/oneinput/obj_oneinput_datetime.php");
+		?>
+		</div>
+		</div>
+		<!--------------------------->
+		<?php $myField=TABLE_PROGRAM."_EndTime"; ?>
+		<label class="col-xs-12 col-sm-4 col-md-4 col-lg-4 control-label">
+		<span class="label-main">End Time</span>
+		</label>
+		<div class="col-xs-12 col-sm-8 col-md-8 col-lg-8 custom-text-position">
+		<?php
+		//--------------------------------------------
+		$Config_UniqueID=$myField.$myID;
+		$Config_DefaultValue=$Row[$myField];
+		$Config_DB="UPDATE#".$myTable."#SET#".$myField."#=xxx#WHERE#".$myKeyField."#=#".$myID;
+		//--------------------------------------------
+		$Config_MaxChar=19;
+		$Config_Width="200px";
+		$Config_TextAlign="center";
+		//--------------------------------------------
+		include(SYSTEM_DOC_ROOT."object/oneinput/obj_oneinput_datetime.php");
+		?>
+		</div>
+		<!--------------------------->
+	</div>
+	<div class="form-group width-100">
+	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 padding-2">
+	<button type="submit" name="inputSubmit" class="btn btn-success btn-block btn-flat" style="height:50px;" onclick=" isNeedRefresh=1; dialogPopWindow.close(); ">
+	<span class="glyphicon glyphicon-ok"></span> OK </button>
+	</div>
+	<?php
+}
+############################################################################
+if($myAjaxAction=="data-update") {
+	$sql = " UPDATE ".TABLE_PROGRAM." SET ".$myAjaxKey."='".$myAjaxValue."' WHERE ".TABLE_PROGRAM."_ID='".$myAjaxID."' ";
+	$Query=MYSQL_QUERY($sql,$System_Connection1) OR DIE("Error: ".$sql."<br>\n");
+	echo " <script> ";
+	echo " window.parent.showSave('".$myAjaxID."','".$myAjaxKey."'); ";
+	echo " </script> ";
 }
 ############################################################################
 if($task=="load-add") {
-	if($skipadd) { } else {
-		// Check uncomplete user ------------------
-		$sql=" SELECT ".TABLE_PROGRAM."_ID FROM ".TABLE_PROGRAM." WHERE ".TABLE_PROGRAM."_Name='' LIMIT 0,1 ";
-		$Query=MYSQL_QUERY($sql,$System_Connection1) OR DIE("Error: ".$sql."<br>n");
+	// Check uncomplete ------------------
+	$sql=" SELECT ".TABLE_PROGRAM."_ID FROM ".TABLE_PROGRAM." WHERE ".TABLE_PROGRAM."_URL='' LIMIT 0,1 ";
+	$Query=MYSQL_QUERY($sql,$System_Connection1) OR DIE("Error: ".$sql."<br>\n");
+	$Row = mysql_fetch_array($Query);
+	$myUnCompleteID=$Row[0];
+	// ---------------------------------------
+	if($myUnCompleteID>0) { } else{ // insert new
+		$sql=" SELECT MAX(".TABLE_PROGRAM."_ID) FROM ".TABLE_PROGRAM." WHERE 1 ";
+		$Query=MYSQL_QUERY($sql,$System_Connection1) OR DIE("Error: ".$sql."<br>\n");
 		$Row = mysql_fetch_array($Query);
-		$myUnCompleteID=$Row[0];
-		// ---------------------------------------
-		if($myUnCompleteID>0) { } else{ // insert new program
-			$sql=" SELECT MAX(".TABLE_PROGRAM."_ID) FROM ".TABLE_PROGRAM." WHERE 1 ";
-			$Query=MYSQL_QUERY($sql,$System_Connection1) OR DIE("Error: ".$sql."<br>n");
-			$Row = mysql_fetch_array($Query);
-			$myUnCompleteID=$Row[0]+1;
-			$sql =" INSERT INTO ".TABLE_PROGRAM."(".TABLE_PROGRAM."_ID,".TABLE_PROGRAM."_Name,".TABLE_PROGRAM."_Detail,".TABLE_PROGRAM."_URL,".TABLE_PROGRAM."_WeekDay,".TABLE_PROGRAM."_Start,".TABLE_PROGRAM."_End) ";
-			$sql.=" VALUES('".$myUnCompleteID."','','','','','','') ";
-			$Query=MYSQL_QUERY($sql,$System_Connection1) OR DIE("Error: ".$sql."<br>n");
-		}
+		$myUnCompleteID=$Row[0]+1;
+		$sql=" INSERT INTO ".TABLE_PROGRAM."(".TABLE_PROGRAM."_ID,".TABLE_PROGRAM."_URL) VALUES('".$myUnCompleteID."','') ";
+		$Query=MYSQL_QUERY($sql,$System_Connection1) OR DIE("Error: ".$sql."<br>\n");
 	}
 	// ---------------------------------------
 	$sql=" SELECT * FROM ".TABLE_PROGRAM." WHERE ".TABLE_PROGRAM."_ID='".$myUnCompleteID."' LIMIT 0,1 ";
-	$Query=MYSQL_QUERY($sql,$System_Connection1) OR DIE("Error: ".$sql."<br>n");
+	$Query=MYSQL_QUERY($sql,$System_Connection1) OR DIE("Error: ".$sql."<br>\n");
 	$Row = mysql_fetch_array($Query);
 	$myUnCompleteID=$Row[TABLE_PROGRAM."_ID"];
 	// ---------------------------------------
@@ -111,7 +240,7 @@ if($task=="load-add") {
 		$Config_DefaultValue=$Row[$myField];
 		$Config_DB="UPDATE#".$myTable."#SET#".$myField."#=xxx#WHERE#".$myKeyField."#=#".$myID;
 		//--------------------------------------------
-		$Config_MaxChar=100;
+		$Config_MaxChar=500;
 		$Config_Width="300px";
 		$Config_TextAlign="left";
 		//--------------------------------------------
@@ -130,11 +259,32 @@ if($task=="load-add") {
 		$Config_DefaultValue=$Row[$myField];
 		$Config_DB="UPDATE#".$myTable."#SET#".$myField."#=xxx#WHERE#".$myKeyField."#=#".$myID;
 		//--------------------------------------------
-		$Config_MaxChar=100;
+		$Config_MaxChar=500;
 		$Config_Width="300px";
 		$Config_TextAlign="left";
 		//--------------------------------------------
 		include(SYSTEM_DOC_ROOT."object/oneinput/obj_oneinput_text.php");
+		?>
+		</div>
+		<!--------------------------->
+		<?php $myField=TABLE_PROGRAM."_Image_Url"; ?>
+		<label class="col-xs-12 col-sm-4 col-md-4 col-lg-4 control-label">
+		<span class="label-main">Image</span>
+		</label>
+		<div class="col-xs-12 col-sm-8 col-md-8 col-lg-8 custom-text-position">
+		<?php
+		//--------------------------------------------
+		$Config_UniqueID=$myField.$myID;
+		$Config_DefaultValue=$Row[$myField];
+		$Config_DB="UPDATE#".$myTable."#SET#".$myField."#=xxx#WHERE#".$myKeyField."#=#".$myID;
+		//--------------------------------------------
+		$Config_MaxChar=500;
+		$Config_Width="300px";
+		$Config_TextAlign="left";
+		//--------------------------------------------
+		$Config_Type_Input="file";
+		include(SYSTEM_DOC_ROOT."object/oneinput/obj_oneinput_text.php");
+		$Config_Type_Input="";
 		?>
 		</div>
 		<!--------------------------->
@@ -149,17 +299,17 @@ if($task=="load-add") {
 		$Config_DefaultValue=$Row[$myField];
 		$Config_DB="UPDATE#".$myTable."#SET#".$myField."#=xxx#WHERE#".$myKeyField."#=#".$myID;
 		//--------------------------------------------
-		$Config_MaxChar=100;
+		$Config_MaxChar=500;
 		$Config_Width="300px";
-		$Config_TextAlign="left";
+		$Config_TextAlign="center";
 		//--------------------------------------------
 		include(SYSTEM_DOC_ROOT."object/oneinput/obj_oneinput_text.php");
 		?>
 		</div>
 		<!--------------------------->
-		<?php $myField=TABLE_PROGRAM."_WeekDay"; ?>
+		<?php $myField=TABLE_PROGRAM."_StartTime"; ?>
 		<label class="col-xs-12 col-sm-4 col-md-4 col-lg-4 control-label">
-		<span class="label-main">WeekDay</span>
+		<span class="label-main">Start Time</span>
 		</label>
 		<div class="col-xs-12 col-sm-8 col-md-8 col-lg-8 custom-text-position">
 		<?php
@@ -168,17 +318,18 @@ if($task=="load-add") {
 		$Config_DefaultValue=$Row[$myField];
 		$Config_DB="UPDATE#".$myTable."#SET#".$myField."#=xxx#WHERE#".$myKeyField."#=#".$myID;
 		//--------------------------------------------
-		$Config_MaxChar=100;
-		$Config_Width="300px";
-		$Config_TextAlign="left";
+		$Config_MaxChar=19;
+		$Config_Width="200px";
+		$Config_TextAlign="center";
 		//--------------------------------------------
-		include(SYSTEM_DOC_ROOT."object/oneinput/obj_oneinput_text.php");
+		include(SYSTEM_DOC_ROOT."object/oneinput/obj_oneinput_datetime.php");
 		?>
 		</div>
+		</div>
 		<!--------------------------->
-		<?php $myField=TABLE_PROGRAM."_Start"; ?>
+		<?php $myField=TABLE_PROGRAM."_EndTime"; ?>
 		<label class="col-xs-12 col-sm-4 col-md-4 col-lg-4 control-label">
-		<span class="label-main">Start</span>
+		<span class="label-main">End Time</span>
 		</label>
 		<div class="col-xs-12 col-sm-8 col-md-8 col-lg-8 custom-text-position">
 		<?php
@@ -187,30 +338,11 @@ if($task=="load-add") {
 		$Config_DefaultValue=$Row[$myField];
 		$Config_DB="UPDATE#".$myTable."#SET#".$myField."#=xxx#WHERE#".$myKeyField."#=#".$myID;
 		//--------------------------------------------
-		$Config_MaxChar=200;
-		$Config_Width="300px";
-		$Config_TextAlign="left";
+		$Config_MaxChar=19;
+		$Config_Width="200px";
+		$Config_TextAlign="center";
 		//--------------------------------------------
-		include(SYSTEM_DOC_ROOT."object/oneinput/obj_oneinput_text.php");
-		?>
-		</div>
-		<!--------------------------->
-		<?php $myField=TABLE_PROGRAM."_End"; ?>
-		<label class="col-xs-12 col-sm-4 col-md-4 col-lg-4 control-label">
-		<span class="label-main">End</span>
-		</label>
-		<div class="col-xs-12 col-sm-8 col-md-8 col-lg-8 custom-text-position">
-		<?php
-		//--------------------------------------------
-		$Config_UniqueID=$myField.$myID;
-		$Config_DefaultValue=$Row[$myField];
-		$Config_DB="UPDATE#".$myTable."#SET#".$myField."#=xxx#WHERE#".$myKeyField."#=#".$myID;
-		//--------------------------------------------
-		$Config_MaxChar=200;
-		$Config_Width="300px";
-		$Config_TextAlign="left";
-		//--------------------------------------------
-		include(SYSTEM_DOC_ROOT."object/oneinput/obj_oneinput_text.php");
+		include(SYSTEM_DOC_ROOT."object/oneinput/obj_oneinput_datetime.php");
 		?>
 		</div>
 		<!--------------------------->
@@ -241,10 +373,10 @@ if($doaction=="result") {
 		<td><?php echo $Row[TABLE_PROGRAM."_ID"];?></td>
 		<td><?php echo $Row[TABLE_PROGRAM."_Name"];?></td>
 		<td><?php echo $Row[TABLE_PROGRAM."_Detail"];?></td>
+		<td><?php echo $Row[TABLE_PROGRAM."_Image_Url"];?></td>
 		<td><?php echo $Row[TABLE_PROGRAM."_URL"];?></td>
-		<td><?php echo System_ShowWeekDayEasy($Row[TABLE_PROGRAM."_WeekDay"]);?></td>
-		<td><?php echo date('H:i:s',strtotime($Row[TABLE_PROGRAM."_Start"])); ?></td>
-		<td><?php echo date('H:i:s',strtotime($Row[TABLE_PROGRAM."_End"])); ?></td>
+		<td><?php echo $Row[TABLE_PROGRAM."_StartTime"]; ?></td>
+		<td><?php echo $Row[TABLE_PROGRAM."_EndTime"]; ?></td>
 		<td style=" width:60px; padding: 0px; ">
 		<div id="idActionBT<?php echo $Row[TABLE_PROGRAM."_ID"];?>"
 		style=" height: 30px; padding: 4px; width: 140px; position: absolute; margin-top: -14px; margin-left: -80px; text-align: right; display: none; ">

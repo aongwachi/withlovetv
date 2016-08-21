@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9262846d-16b5-49e1-8186-2161b3fbc949" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index3.php" afterPath="$PROJECT_DIR$/index3.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/manage/ajax-tv-program-loaddata.php" afterPath="$PROJECT_DIR$/manage/ajax-tv-program-loaddata.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/manage/tv_program.php" afterPath="$PROJECT_DIR$/manage/tv_program.php" />
-    </list>
+    <list default="true" id="9262846d-16b5-49e1-8186-2161b3fbc949" name="Default" comment="" />
     <ignored path="withlovetv.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -17,7 +12,6 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
   </component>
@@ -30,42 +24,15 @@
       <file leaf-file-name="index3.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index3.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.667789">
-              <caret line="40" column="41" selection-start-line="40" selection-start-column="41" selection-end-line="40" selection-end-column="41" />
+            <state relative-caret-position="527">
+              <caret line="496" column="21" selection-start-line="496" selection-start-column="21" selection-end-line="496" selection-end-column="21" />
               <folding>
-                <marker date="1470748702655" expanded="true" signature="101:167" placeholder="SELECT * FRO... ${TABLE_LIVE}" />
-                <marker date="1470748702655" expanded="true" signature="477:521" placeholder="SELECT * FRO... ${TABLE_LIVE}" />
-                <marker date="1470748702655" expanded="true" signature="477:529" placeholder="SELECT * FRO... ${TABLE_PROGRAM}" />
-                <marker date="1470748702655" expanded="true" signature="17273:17385" placeholder="SELECT * FRO... ${TABLE_CATEGORY}" />
-                <marker date="1470748702655" expanded="true" signature="18314:18621" placeholder="SELECT * FRO... ${TABLE_CONTENT}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="tv_program.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/manage/tv_program.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-19.423077">
-              <caret line="73" column="26" selection-start-line="73" selection-start-column="26" selection-end-line="73" selection-end-column="26" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ajax-tv-program-loaddata.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/manage/ajax-tv-program-loaddata.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-1.8181819">
-              <caret line="99" column="57" selection-start-line="99" selection-start-column="57" selection-end-line="99" selection-end-column="57" />
-              <folding>
-                <marker date="1470728008230" expanded="true" signature="1502:1574" placeholder="DELETE FROM " />
-                <marker date="1470728008230" expanded="true" signature="4082:4275" placeholder="INSERT INTO ${TABLE_PROGRAM}... " />
-                <marker date="1470728008230" expanded="true" signature="4480:4570" placeholder="SELECT * FRO... ${TABLE_PROGRAM}" />
-                <marker date="1470728008230" expanded="true" signature="9971:10035" placeholder="SELECT * FRO... ${TABLE_PROGRAM}" />
-                <marker date="1470728008230" expanded="true" signature="10056:10186" placeholder="SELECT * FRO... ${TABLE_PROGRAM}" />
-                <marker date="1470728008230" expanded="true" signature="12110:12212" placeholder="SELECT COUNT... ${TABLE_PROGRAM}" />
-                <marker date="1470728008230" expanded="true" signature="12233:12370" placeholder="SELECT COUNT... ${TABLE_PROGRAM}" />
+                <marker date="1471816572830" expanded="true" signature="101:167" ph="SELECT * FRO... ${TABLE_LIVE}" />
+                <marker date="1471816572830" expanded="true" signature="477:557" ph="SELECT * FRO... ${TABLE_PROGRAM}" />
+                <marker date="1471816572830" expanded="true" signature="24657:24769" ph="SELECT * FRO... ${TABLE_CATEGORY}" />
+                <marker date="1471816572830" expanded="true" signature="25698:26005" ph="SELECT * FRO... ${TABLE_CONTENT}" />
+                <marker date="1471816572830" expanded="true" signature="31744:31750" ph=" " />
+                <marker date="1471816572830" expanded="true" signature="31834:31840" ph=" " />
               </folding>
             </state>
           </provider>
@@ -73,39 +40,73 @@
       </file>
     </leaf>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/shared/header3.php" />
         <option value="$PROJECT_DIR$/index.php" />
-        <option value="$PROJECT_DIR$/_config/config_system.php" />
         <option value="$PROJECT_DIR$/manage/index.php" />
         <option value="$PROJECT_DIR$/manage/staff.php" />
         <option value="$PROJECT_DIR$/_config/config_web.php" />
         <option value="$PROJECT_DIR$/_function/function_system.php" />
-        <option value="$PROJECT_DIR$/manage/ajax-tv-program-loaddata.php" />
+        <option value="$PROJECT_DIR$/system/core-body-home.php" />
+        <option value="$PROJECT_DIR$/aa.html" />
+        <option value="$PROJECT_DIR$/lib/js/live_list.js" />
+        <option value="$PROJECT_DIR$/lib/js/custom_live.js" />
+        <option value="$PROJECT_DIR$/manage/live.php" />
+        <option value="$PROJECT_DIR$/lib/ajax/ajax_return_live_video.php" />
+        <option value="$PROJECT_DIR$/_config/config_system.php" />
+        <option value="$PROJECT_DIR$/test.php" />
+        <option value="$PROJECT_DIR$/object/obj_items_basic.php" />
+        <option value="$PROJECT_DIR$/object/obj_items_big.php" />
+        <option value="$PROJECT_DIR$/object/obj_items_small.php" />
+        <option value="$PROJECT_DIR$/system/core-body.php" />
+        <option value="$PROJECT_DIR$/video_alone.php" />
+        <option value="$PROJECT_DIR$/manage/ajax-live-loaddata.php" />
+        <option value="$PROJECT_DIR$/video2.php" />
+        <option value="$PROJECT_DIR$/video3.php" />
+        <option value="$PROJECT_DIR$/video1.php" />
+        <option value="$PROJECT_DIR$/searchKey3.php" />
+        <option value="$PROJECT_DIR$/list.php" />
+        <option value="$PROJECT_DIR$/searchKey.php" />
+        <option value="$PROJECT_DIR$/shared/header3.php" />
         <option value="$PROJECT_DIR$/manage/tv_program.php" />
+        <option value="$PROJECT_DIR$/manage/ajax-tv-program-loaddata.php" />
+        <option value="$PROJECT_DIR$/object/oneinput/obj_oneinput_text.php" />
+        <option value="$PROJECT_DIR$/object/oneinput/obj_oneinput-ajax.php" />
+        <option value="$PROJECT_DIR$/object/oneinput/obj_oneinput_loader.php" />
         <option value="$PROJECT_DIR$/index3.php" />
+        <option value="$PROJECT_DIR$/video.php" />
+        <option value="$PROJECT_DIR$/object/obj_video_list.php" />
+        <option value="$PROJECT_DIR$/object/obj_items_list.php" />
       </list>
     </option>
   </component>
-  <component name="JsBuildToolGruntFileManager" detection-done="true" />
-  <component name="JsBuildToolPackageJson" detection-done="true" />
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="PhpServers">
     <servers />
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="301" />
-    <option name="y" value="17" />
-    <option name="width" value="1671" />
-    <option name="height" value="1078" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1382" />
+    <option name="height" value="744" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -132,6 +133,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -147,22 +150,35 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="withlovetv" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../web-colhr" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../demo_excel" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js-jscs-nodeInterpreter" value="C:\Program Files\nodejs\node.exe" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="settings.editor.selected.configurable" value="preferences.editor" />
+    <property name="settings.editor.splitter.proportion" value="0.2" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\withlovetv\upload\thumb2\00\30" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\withlovetv" />
+      <recent name="C:\xampp\htdocs\withlovetv\object" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="project" working-dir="">
       <method />
     </configuration>
     <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
@@ -177,6 +193,7 @@
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
       <node-options />
       <gulpfile />
       <tasks />
@@ -187,11 +204,27 @@
     <configuration default="true" type="js.build_tools.npm" factoryName="npm">
       <command value="run-script" />
       <scripts />
+      <node-interpreter value="project" />
       <envs />
       <method />
     </configuration>
+    <configuration default="true" type="mocha-javascript-test-runner" factoryName="Mocha">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <working-directory />
+      <pass-parent-env>true</pass-parent-env>
+      <envs />
+      <ui />
+      <extra-mocha-options />
+      <test-kind>DIRECTORY</test-kind>
+      <test-directory />
+      <recursive>false</recursive>
+      <method />
+    </configuration>
   </component>
-  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -200,21 +233,33 @@
       <changelist id="9262846d-16b5-49e1-8186-2161b3fbc949" name="Default" comment="" />
       <created>1470398714217</created>
       <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
       <updated>1470398714217</updated>
+      <workItem from="1470844900677" duration="10255000" />
+      <workItem from="1470934201343" duration="8541000" />
+      <workItem from="1471194459736" duration="17035000" />
+      <workItem from="1471281671916" duration="3000000" />
+      <workItem from="1471446120841" duration="8149000" />
+      <workItem from="1471463207711" duration="129000" />
+      <workItem from="1471712315843" duration="9337000" />
+      <workItem from="1471790253139" duration="21166000" />
     </task>
     <servers />
   </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="77612000" />
+  </component>
   <component name="ToolWindowManager">
-    <frame x="301" y="17" width="1671" height="1078" extended-state="0" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2638113" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23645681" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329653" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -222,7 +267,7 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.56931216" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.56624603" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
@@ -239,350 +284,428 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/manage/tv_program.php">
+    <entry file="file://$PROJECT_DIR$/templates/bb/imgweb/bg-home.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/bb/imgweb/football1.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/bb/imgweb/interview.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/bb/imgweb/male-model.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/bb/imgweb/man-reading.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/bb/imgweb/phones.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/bb/imgweb/tennis1.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/bb/imgweb/logo-nav.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/bb/imgweb/logo-foot1.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/bb/img/bay.gif">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/bb/img/bbl.gif">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/bb/imgweb/logo1.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/video_alone.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="85" column="152" selection-start-line="85" selection-start-column="152" selection-end-line="85" selection-end-column="152" />
+        <state relative-caret-position="204">
+          <caret line="42" column="50" selection-start-line="42" selection-start-column="50" selection-end-line="42" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/manage/upload-jcorp.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-85">
+          <caret line="10" column="48" selection-start-line="10" selection-start-column="48" selection-end-line="10" selection-end-column="48" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/manage/ajax-tv-program-loaddata.php">
+    <entry file="file://$PROJECT_DIR$/object/oneinput/obj_oneinput_fileupload.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="393">
+          <caret line="45" column="7" selection-start-line="45" selection-start-column="7" selection-end-line="45" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/object/obj_input_onephotoupload.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="14" column="46" selection-start-line="14" selection-start-column="46" selection-end-line="14" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/manage/live.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1321">
+          <caret line="104" column="14" selection-start-line="104" selection-start-column="14" selection-end-line="104" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/manage/ajax-live-loaddata.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="343" column="38" selection-start-line="343" selection-start-column="38" selection-end-line="343" selection-end-column="38" />
           <folding>
-            <marker date="1470728008230" expanded="true" signature="1502:1574" placeholder="DELETE FROM " />
-            <marker date="1470728008230" expanded="true" signature="4082:4275" placeholder="INSERT INTO ${TABLE_PROGRAM}... " />
-            <marker date="1470728008230" expanded="true" signature="4480:4570" placeholder="SELECT * FRO... ${TABLE_PROGRAM}" />
-            <marker date="1470728008230" expanded="true" signature="9971:10035" placeholder="SELECT * FRO... ${TABLE_PROGRAM}" />
-            <marker date="1470728008230" expanded="true" signature="10056:10186" placeholder="SELECT * FRO... ${TABLE_PROGRAM}" />
-            <marker date="1470728008230" expanded="true" signature="12110:12212" placeholder="SELECT COUNT... ${TABLE_PROGRAM}" />
-            <marker date="1470728008230" expanded="true" signature="12233:12370" placeholder="SELECT COUNT... ${TABLE_PROGRAM}" />
+            <marker date="1471715555870" expanded="true" signature="1536:1602" ph="DELETE FROM " />
+            <marker date="1471715555870" expanded="true" signature="2920:2998" ph="SELECT * FRO... ${TABLE_LIVE}" />
+            <marker date="1471715555870" expanded="true" signature="9360:9458" ph="INSERT INTO ${TABLE_LIVE}... " />
+            <marker date="1471715555870" expanded="true" signature="9597:9681" ph="SELECT * FRO... ${TABLE_LIVE}" />
+            <marker date="1471715555870" expanded="true" signature="15181:15239" ph="SELECT * FRO... ${TABLE_LIVE}" />
+            <marker date="1471715555870" expanded="true" signature="15262:15365" ph="SELECT * FRO... ${TABLE_LIVE}" />
+            <marker date="1471715555870" expanded="true" signature="17250:17315" ph="SELECT COUNT... ${TABLE_LIVE}" />
+            <marker date="1471715555870" expanded="true" signature="17336:17446" ph="SELECT COUNT... ${TABLE_LIVE}" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/manage/tv_program.php">
+    <entry file="file://$PROJECT_DIR$/object/obj_input_fileattach-ajax.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="85" column="152" selection-start-line="85" selection-start-column="152" selection-end-line="85" selection-end-column="152" />
+        <state relative-caret-position="-595">
+          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/object/obj_input_text.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="464">
+          <caret line="39" column="104" selection-start-line="39" selection-start-column="104" selection-end-line="39" selection-end-column="104" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/object/obj_input_fileattach.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/manage/ajax-tv-program-loaddata.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1470728008230" expanded="true" signature="1502:1574" placeholder="DELETE FROM " />
-            <marker date="1470728008230" expanded="true" signature="4082:4275" placeholder="INSERT INTO ${TABLE_PROGRAM}... " />
-            <marker date="1470728008230" expanded="true" signature="4480:4570" placeholder="SELECT * FRO... ${TABLE_PROGRAM}" />
-            <marker date="1470728008230" expanded="true" signature="9971:10035" placeholder="SELECT * FRO... ${TABLE_PROGRAM}" />
-            <marker date="1470728008230" expanded="true" signature="10056:10186" placeholder="SELECT * FRO... ${TABLE_PROGRAM}" />
-            <marker date="1470728008230" expanded="true" signature="12110:12212" placeholder="SELECT COUNT... ${TABLE_PROGRAM}" />
-            <marker date="1470728008230" expanded="true" signature="12233:12370" placeholder="SELECT COUNT... ${TABLE_PROGRAM}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="10" column="12" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index3.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1470748702655" expanded="true" signature="101:167" placeholder="SELECT * FRO... ${TABLE_LIVE}" />
-            <marker date="1470748702655" expanded="true" signature="477:521" placeholder="SELECT * FRO... ${TABLE_LIVE}" />
-            <marker date="1470748702655" expanded="true" signature="477:529" placeholder="SELECT * FRO... ${TABLE_PROGRAM}" />
-            <marker date="1470748702655" expanded="true" signature="17273:17385" placeholder="SELECT * FRO... ${TABLE_CATEGORY}" />
-            <marker date="1470748702655" expanded="true" signature="18314:18621" placeholder="SELECT * FRO... ${TABLE_CONTENT}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/shared/header3.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="45" column="18" selection-start-line="45" selection-start-column="18" selection-end-line="45" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_config/config_web.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="17" column="8" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/Facebook/FileUpload/FacebookVideo.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/system/includeall.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.36251402">
-          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/object/obj_show_items_topstory.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.32435465">
-          <caret line="17" column="50" selection-start-line="17" selection-start-column="50" selection-end-line="17" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/shared/header3.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="45" column="18" selection-start-line="45" selection-start-column="18" selection-end-line="45" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/bb/js/layout_index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="7" column="9" selection-start-line="7" selection-start-column="9" selection-end-line="7" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/bb/layout_manage.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.076923">
-          <caret line="20" column="7" selection-start-line="20" selection-start-column="7" selection-end-line="20" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/manage/login.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.17171717">
-          <caret line="9" column="14" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/manage/allcontent-fb.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/manage/allcontent.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.769231">
-          <caret line="201" column="49" selection-start-line="0" selection-start-column="0" selection-end-line="234" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/manage/staff.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.038462">
-          <caret line="121" column="35" selection-start-line="121" selection-start-column="20" selection-end-line="121" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/manage/ajax-staff-loaddata.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.15263748">
-          <caret line="8" column="76" selection-start-line="8" selection-start-column="76" selection-end-line="8" selection-end-column="76" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/manage/rss.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.17171717">
-          <caret line="9" column="9" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/manage/my@dmin/libraries/common.lib.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="44.192307">
-          <caret line="1801" column="52" selection-start-line="1801" selection-start-column="40" selection-end-line="1801" selection-end-column="52" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/_config/config_system.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.99214363">
-          <caret line="52" column="8" selection-start-line="52" selection-start-column="8" selection-end-line="52" selection-end-column="8" />
+        <state relative-caret-position="277">
+          <caret line="55" column="9" selection-start-line="55" selection-start-column="9" selection-end-line="55" selection-end-column="9" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/_function/function_system.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="7.9180694">
-          <caret line="415" column="11" selection-start-line="415" selection-start-column="11" selection-end-line="415" selection-end-column="11" />
+        <state relative-caret-position="202">
+          <caret line="54" column="9" selection-start-line="54" selection-start-column="9" selection-end-line="54" selection-end-column="9" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/system/connect.php">
+    <entry file="file://$PROJECT_DIR$/object/oneinput/obj_oneinput_datetime.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.1335578">
-          <caret line="7" column="2" selection-start-line="7" selection-start-column="2" selection-end-line="7" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_function/function_web.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/object/_obj_register_bar_bk.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.335578">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/object/obj_header.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/object/obj_input_loader.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/object/obj_navbar_easy.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.7171717">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/Facebook/FileUpload/FacebookFile.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/search.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.2929294">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1470379079752" expanded="true" signature="2507:2722" placeholder="SELECT COUNT... ${TABLE_CONTENT}" />
-            <marker date="1470379079752" expanded="true" signature="3302:3577" placeholder="SELECT * FRO... ${TABLE_CONTENT}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets3/lib/jwplayer/jwplayer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="396">
+          <caret line="37" column="12" selection-start-line="37" selection-start-column="12" selection-end-line="37" selection-end-column="12" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.36251402">
-          <caret line="19" column="2" selection-start-line="19" selection-start-column="2" selection-end-line="19" selection-end-column="2" />
+        <state relative-caret-position="255">
+          <caret line="15" column="49" selection-start-line="15" selection-start-column="49" selection-end-line="15" selection-end-column="49" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/manage/index.php">
+    <entry file="file://$PROJECT_DIR$/search.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.03815937">
-          <caret line="2" column="45" selection-start-line="2" selection-start-column="45" selection-end-line="2" selection-end-column="45" />
+        <state relative-caret-position="-2868">
+          <caret line="23" column="2" selection-start-line="23" selection-start-column="2" selection-end-line="23" selection-end-column="2" />
+          <folding>
+            <marker date="1470761141633" expanded="true" signature="2507:2722" ph="SELECT COUNT... ${TABLE_CONTENT}" />
+            <marker date="1470761141633" expanded="true" signature="3302:3577" ph="SELECT * FRO... ${TABLE_CONTENT}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/searchKey2.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="21" selection-start-line="1" selection-start-column="21" selection-end-line="1" selection-end-column="21" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/bb/layout_home.html">
+    <entry file="file://$PROJECT_DIR$/searchKey1.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_config/config_web.php">
+    <entry file="file://$PROJECT_DIR$/video2.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.36251402">
-          <caret line="19" column="8" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="8" />
+        <state relative-caret-position="344">
+          <caret line="40" column="66" selection-start-line="40" selection-start-column="66" selection-end-line="40" selection-end-column="66" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/com/jetbrains/php/lang/psi/stubs/data/PDO.php">
+    <entry file="file://$PROJECT_DIR$/video1.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.342312">
-          <caret line="1009" column="20" selection-start-line="1009" selection-start-column="20" selection-end-line="1009" selection-end-column="20" />
+        <state relative-caret-position="351">
+          <caret line="40" column="66" selection-start-line="40" selection-start-column="66" selection-end-line="40" selection-end-column="66" />
           <folding />
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/list1.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/com/jetbrains/php/lang/psi/stubs/data/standard_1.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="202">
+          <caret line="872" column="9" selection-start-line="872" selection-start-column="9" selection-end-line="872" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/list3.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="14" selection-start-line="17" selection-start-column="14" selection-end-line="17" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/list.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="362">
+          <caret line="80" column="1" selection-start-line="80" selection-start-column="1" selection-end-line="80" selection-end-column="1" />
+          <folding>
+            <marker date="1471800485143" expanded="true" signature="889:966" ph="SELECT * FRO... ${TABLE_CATEGORY}" />
+            <marker date="1471800485143" expanded="true" signature="2141:2357" ph="SELECT COUNT... ${TABLE_CONTENT}" />
+            <marker date="1471800485143" expanded="true" signature="2684:2989" ph="SELECT * FRO... ${TABLE_CONTENT}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/searchKey.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="121">
+          <caret line="15" column="60" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="60" />
+          <folding>
+            <marker date="1471800519447" expanded="true" signature="1699:1788" ph="SELECT * FRO... ${TABLE_CATEGORY}" />
+            <marker date="1471800519447" expanded="true" signature="2461:2857" ph="SELECT * FRO... ${TABLE_CONTENT}" />
+            <marker date="1471800519447" expanded="true" signature="3991:4213" ph="SELECT * FRO... ${TABLE_PROGRAM}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shared/header3.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="746">
+          <caret line="110" column="17" selection-start-line="110" selection-start-column="17" selection-end-line="110" selection-end-column="17" />
+          <folding>
+            <marker date="1471800677261" expanded="true" signature="3040:3287" ph="..." />
+            <marker date="1471800677261" expanded="true" signature="3100:3260" ph="{...}" />
+            <marker date="1471800677261" expanded="true" signature="4459:4559" ph="SELECT * FRO... ${TABLE_CATEGORY}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/com/jetbrains/php/lang/psi/stubs/data/standard_4.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="202">
+          <caret line="814" column="38" selection-start-line="814" selection-start-column="29" selection-end-line="814" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/186728-twilight-bella-and-edward.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/manage/uploads/hmn1eAphVm.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/manage/tv_program.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-19.423077">
-          <caret line="73" column="26" selection-start-line="73" selection-start-column="26" selection-end-line="73" selection-end-column="26" />
+        <state relative-caret-position="340">
+          <caret line="83" column="106" selection-start-line="83" selection-start-column="106" selection-end-line="83" selection-end-column="106" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/object/oneinput/obj_oneinput-ajax.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="472" column="9" selection-start-line="472" selection-start-column="9" selection-end-line="472" selection-end-column="9" />
+          <folding>
+            <marker date="1471816306919" expanded="false" signature="24024:24059" ph="..." />
+            <marker date="1471816306919" expanded="true" signature="24060:24233" ph="..." />
+            <marker date="1471816306919" expanded="false" signature="24164:24205" ph="..." />
+            <marker date="1471816306919" expanded="false" signature="24574:24615" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/bb/css/_layout_index.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="202">
+          <caret line="233" column="1" selection-start-line="233" selection-start-column="1" selection-end-line="233" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/searchKey3.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-372">
+          <caret line="12" column="36" selection-start-line="12" selection-start-column="36" selection-end-line="12" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/video3.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="41" column="22" selection-start-line="41" selection-start-column="22" selection-end-line="41" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/object/obj_video_list.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="4" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="4" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#a#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/object/obj_items_list.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="4" selection-start-line="13" selection-start-column="4" selection-end-line="13" selection-end-column="4" />
+          <folding>
+            <element signature="n#style#0;n#div#1;n#a#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/manage/ajax-tv-program-loaddata.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.8181819">
-          <caret line="99" column="57" selection-start-line="99" selection-start-column="57" selection-end-line="99" selection-end-column="57" />
+        <state relative-caret-position="242">
+          <caret line="129" column="74" selection-start-line="129" selection-start-column="74" selection-end-line="129" selection-end-column="74" />
           <folding>
-            <marker date="1470728008230" expanded="true" signature="1502:1574" placeholder="DELETE FROM " />
-            <marker date="1470728008230" expanded="true" signature="4082:4275" placeholder="INSERT INTO ${TABLE_PROGRAM}... " />
-            <marker date="1470728008230" expanded="true" signature="4480:4570" placeholder="SELECT * FRO... ${TABLE_PROGRAM}" />
-            <marker date="1470728008230" expanded="true" signature="9971:10035" placeholder="SELECT * FRO... ${TABLE_PROGRAM}" />
-            <marker date="1470728008230" expanded="true" signature="10056:10186" placeholder="SELECT * FRO... ${TABLE_PROGRAM}" />
-            <marker date="1470728008230" expanded="true" signature="12110:12212" placeholder="SELECT COUNT... ${TABLE_PROGRAM}" />
-            <marker date="1470728008230" expanded="true" signature="12233:12370" placeholder="SELECT COUNT... ${TABLE_PROGRAM}" />
+            <marker date="1471802364314" expanded="true" signature="1502:1574" ph="DELETE FROM " />
+            <marker date="1471802364314" expanded="true" signature="2884:2906" ph="SELECT * FRO... ${TABLE_LIVE}" />
+            <marker date="1471802364314" expanded="true" signature="2884:2968" ph="SELECT * FRO... ${TABLE_PROGRAM}" />
+            <marker date="1471802364314" expanded="true" signature="9409:9515" ph="INSERT INTO ${TABLE_PROGRAM}... " />
+            <marker date="1471802364314" expanded="true" signature="9654:9744" ph="SELECT * FRO... ${TABLE_PROGRAM}" />
+            <marker date="1471802364314" expanded="true" signature="15239:15303" ph="SELECT * FRO... ${TABLE_PROGRAM}" />
+            <marker date="1471802364314" expanded="true" signature="15324:15454" ph="SELECT * FRO... ${TABLE_PROGRAM}" />
+            <marker date="1471802364314" expanded="true" signature="17314:17416" ph="SELECT COUNT... ${TABLE_PROGRAM}" />
+            <marker date="1471802364314" expanded="true" signature="17437:17574" ph="SELECT COUNT... ${TABLE_PROGRAM}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/object/oneinput/obj_oneinput_text.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="379">
+          <caret line="39" column="92" selection-start-line="39" selection-start-column="81" selection-end-line="39" selection-end-column="92" />
+          <folding>
+            <element signature="e#177#828#0#PHP" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/object/oneinput/obj_oneinput_loader.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="223">
+          <caret line="100" column="12" selection-start-line="100" selection-start-column="12" selection-end-line="100" selection-end-column="12" />
+          <folding>
+            <marker date="1471816358002" expanded="true" signature="6599:6631" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/video.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="34" column="25" selection-start-line="34" selection-start-column="25" selection-end-line="34" selection-end-column="25" />
+          <folding>
+            <marker date="1471816862257" expanded="true" signature="1003:1024" ph="SELECT COUNT... ${TABLE_PROGRAM}" />
+            <marker date="1471816862257" expanded="true" signature="1355:1457" ph="SELECT * FRO... ${TABLE_PROGRAM}" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index3.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.667789">
-          <caret line="40" column="41" selection-start-line="40" selection-start-column="41" selection-end-line="40" selection-end-column="41" />
+        <state relative-caret-position="527">
+          <caret line="496" column="21" selection-start-line="496" selection-start-column="21" selection-end-line="496" selection-end-column="21" />
           <folding>
-            <marker date="1470748702655" expanded="true" signature="101:167" placeholder="SELECT * FRO... ${TABLE_LIVE}" />
-            <marker date="1470748702655" expanded="true" signature="477:521" placeholder="SELECT * FRO... ${TABLE_LIVE}" />
-            <marker date="1470748702655" expanded="true" signature="477:529" placeholder="SELECT * FRO... ${TABLE_PROGRAM}" />
-            <marker date="1470748702655" expanded="true" signature="17273:17385" placeholder="SELECT * FRO... ${TABLE_CATEGORY}" />
-            <marker date="1470748702655" expanded="true" signature="18314:18621" placeholder="SELECT * FRO... ${TABLE_CONTENT}" />
+            <marker date="1471816572830" expanded="true" signature="101:167" ph="SELECT * FRO... ${TABLE_LIVE}" />
+            <marker date="1471816572830" expanded="true" signature="477:557" ph="SELECT * FRO... ${TABLE_PROGRAM}" />
+            <marker date="1471816572830" expanded="true" signature="24657:24769" ph="SELECT * FRO... ${TABLE_CATEGORY}" />
+            <marker date="1471816572830" expanded="true" signature="25698:26005" ph="SELECT * FRO... ${TABLE_CONTENT}" />
+            <marker date="1471816572830" expanded="true" signature="31744:31750" ph=" " />
+            <marker date="1471816572830" expanded="true" signature="31834:31840" ph=" " />
           </folding>
         </state>
       </provider>

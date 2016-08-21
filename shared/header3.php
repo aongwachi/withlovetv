@@ -41,7 +41,7 @@
     <div class="container">
         <div class="row">
             <div class="col-xs-4 col-sm-6">
-                <a class="navbar-brand" href="/"><img style="margin-left: -5px;" src="assets3/images/logo.png" /></a>
+                <a class="navbar-brand" href="<?= SYSTEM_WEBPATH_ROOT?>"><img style="margin-left: -5px;" src="assets3/images/logo.png" /></a>
                 <div class="top-text hidden-xs">วันอาทิตย์ที่ 29 พฤษภาคม พ.ศ. 2559</div>
             </div>
             <div class="col-xs-8 col-sm-6">
@@ -53,13 +53,21 @@
                         <i class="fa fa-facebook"></i>
                     </a>
                 </div>
-                <form class="form-inline pull-right">
+                <form id="form_search" class="form-inline pull-right">
                     <div class="inner-addon right-addon">
-                        <input type="text" class="form-control" placeholder="">
+                        <input type="text" id="searchKey"
+                               class="form-control" placeholder=""
+                                value="<?= (isset($_GET['searchKey'])?$_GET['searchKey']:'')?>">
                         <i class="glyphicon glyphicon-search text-pink"></i>
                     </div>
                     <span class="text-pink hidden-xs">ค้นหารายการทีวี</span>
                 </form>
+                <script>
+                    $('#form_search').submit(function(ev) {
+                        ev.preventDefault();
+                        window.location = 'searchKey.php?searchKey='+$('#searchKey').val();
+                    });
+                </script>
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-nav">
                         <span class="sr-only">Toggle navigation</span>

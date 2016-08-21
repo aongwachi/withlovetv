@@ -17,6 +17,7 @@ if ($query_reccommend->execute()) {
         $res['url'] = $row[TABLE_PROGRAM . "_URL"];
         $res['title'] = $row[TABLE_PROGRAM . "_Name"];
         $res['detail'] = $row[TABLE_PROGRAM . "_Detail"];
+        $res['image_url'] = $row[TABLE_PROGRAM . "_Image_Url"];
         $vidRecommend[] = $res;
     }
 }
@@ -277,7 +278,7 @@ if ($query_reccommend->execute()) {
                 <div class="box-inner bg-darkgray">
                     <div class="item item-pad">
                         <a class="thumb" id="rec_1" onclick="play_rec1()">
-                            <img src="./images/thumb1.jpg" id="img_rec1"/>
+                            <img src="<?php echo $vidRecommend[0]['image_url']; ?>" id="img_rec1"/>
                             <div id="video_rec1"></div>
                             <div class="img-hover" id="play_button_rec1">PLAY</div>
                         </a>
@@ -325,7 +326,7 @@ if ($query_reccommend->execute()) {
                         <div class="box-inner bg-darkgray">
                             <div class="item">
                                 <a class="thumb" onclick="play_rec2()">
-                                    <img src="./images/thumb2.jpg" id="img_rec2"/>
+                                    <img src="<?php echo $vidRecommend[1]['image_url']; ?>" id="img_rec2"/>
                                     <div id="video_rec2"></div>
                                     <div class="img-hover" id="play_button_rec2">PLAY</div>
                                 </a>
@@ -368,7 +369,7 @@ if ($query_reccommend->execute()) {
                         <div class="box-inner bg-darkgray">
                             <div class="item">
                                 <a class="thumb" onclick="play_rec3()">
-                                    <img src="./images/thumb3.jpg" id="img_rec3"/>
+                                    <img src="<?php echo $vidRecommend[2]['image_url']; ?>" id="img_rec3"/>
                                     <div id="video_rec3"></div>
                                     <div class="img-hover" id="play_button_rec3">PLAY</div>
                                 </a>
