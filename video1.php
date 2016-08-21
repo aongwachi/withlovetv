@@ -2,7 +2,7 @@
     <div class="row">
         <div class="col-xs-12 col-sm-12">
             <div class="title-playlist">
-                <h2 style=" margin-top: 5px; margin-bottom: 5px; "><?php echo $myCategoryName; ?></h2>
+                <h2 style=" margin-top: 5px; margin-bottom: 5px; ">ดูย้อนหลัง</h2>
                 <div class="row-1"></div>
                 <br class="clear" />
             </div>
@@ -10,14 +10,14 @@
                 <div class="row">
                     <!---------------------------------------------->
                     <?php for($i=1;$i<=12;$i++) { if($arContentSubject[$i]<>"") { ?>
-                        <div class="col-xs-6 col-sm-4 col-md-3"><?php $cindex=$i; include("object/obj_items_list.php"); ?></div>
+                        <div class="col-xs-6 col-sm-4 col-md-3"><?php $cindex=$i; include("object/obj_video_list.php"); ?></div>
                     <?php } } ?>
                     <!---------------------------------------------->
                 </div>
             </div>
         </div>
     </div>
-    <!--Paging------------------------------------------>
+    <!------------------------------------------------->
     <?php
     $maxpage=ceil($TotalRecordCount/$Config_PageSize);
     $pagestart=$page-$pagepadding;
@@ -46,5 +46,5 @@
 </div>
 <style>
     .title-playlist { margin-bottom: 5px; }
-    .title-playlist .row-1 { height: 10px; }
+    .title-playlist .row-1 { margin: 0; padding: 0; color: #fff; height: 10px; border-bottom: 0px; border-top: 1px solid #555555; }
 </style>

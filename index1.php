@@ -1,13 +1,28 @@
 ﻿<?php
 ####################################################################################
-$sql1=" SELECT * FROM ".TABLE_LIVE." WHERE 1 ORDER BY RAND() LIMIT 0,1 ";
-$query1=$dbh->prepare($sql1);
-if($query1->execute()) {
-    $Row1=$query1->fetch();
-    $myLiveLink=$Row1[TABLE_LIVE."_Link"];
-    $myLiveResolution=$Row1[TABLE_LIVE."_Resolution"];
+$sql1 = " SELECT * FROM " . TABLE_LIVE . " WHERE 1 ORDER BY RAND() LIMIT 0,1 ";
+$query1 = $dbh->prepare($sql1);
+if ($query1->execute()) {
+    $Row1 = $query1->fetch();
+    $myLiveLink = $Row1[TABLE_LIVE . "_Link"];
+    $myLiveResolution = $Row1[TABLE_LIVE . "_Resolution"];
 }
 ####################################################################################
+$sql_recommend_video = " SELECT * FROM " . TABLE_PROGRAM . " WHERE 1  ORDER BY tv_program_ID DESC LIMIT 3 ";
+$query_reccommend = $dbh->prepare($sql_recommend_video);
+$vidRecommend = array();
+if ($query_reccommend->execute()) {
+    while ($row = $query_reccommend->fetch()) {
+        $res = array();
+        $res['url'] = $row[TABLE_PROGRAM . "_URL"];
+        $res['title'] = $row[TABLE_PROGRAM . "_Name"];
+        $res['detail'] = $row[TABLE_PROGRAM . "_Detail"];
+        $res['image_url'] = $row[TABLE_PROGRAM . "_Image_Url"];
+        $vidRecommend[] = $res;
+    }
+}
+####################################################################################
+?>
 ?><header>
     <div class="container">
         <br>
@@ -15,46 +30,180 @@ if($query1->execute()) {
             <div class="col-xs-12 col-sm-7">
                 <div id="homeVideo"></div>
                 <script>
-                    jwplayer("homeVideo").setup({
-                      file: "<?php echo $myLiveLink; ?>",
-                      <?php if(0) { ?>image: "./images/video.png",<?php } ?>
-                      width: "100%",
-                      autostart: true,
-                      aspectratio: "16:10",
-                      skin: {
-                        name: "seven"
-                      }
+                    $(window).load(function () {
+                        //alert(checkChannelDate('2016-08-15 00:30:00','2016-08-15 01:49:00'));
+                        getLiveListVideo();
+                    });
+                    function getLiveListVideo() {
+                        $('.list-playlist').empty();
+                        $.ajax({
+                            method: "POST",
+                            url: "lib/ajax/ajax_return_live_video.php"
+                        }).done(function (data) {
+                            //set main live
+                            var setLive = false;
+                            var nextIndex = 0;
+                            var nextChannelDate = null;
+                            $.each(data, function (i, v) {
+                                if (checkChannelDate(v.starttime, v.endtime) && setLive == false) {
+                                    jwplayer("homeVideo").setup({
+                                        sources: [
+                                            {file: v.link},
+                                            {file: v.link_mobile}
+                                        ],
+                                        <?php if(0) { ?>image: "./images/video.png",<?php } ?>
+                                        width: "100%",
+                                        autostart: true,
+                                        aspectratio: "16:10",
+                                        fallback: false,
+                                        skin: {
+                                            name: "seven"
+                                        }
+                                    });
+                                    $('.header-title').find('h1').text(v.title);
+                                    setLive = true;
+                                    nextIndex = i;
+                                }
+                                var list_live = '<li class="' + '' + '">' +
+                                    '<a><div class="label">' +
+                                    v.title +
+                                    '</div>' +
+                                    '<div class="desc">' +
+                                    '' +
+                                    '</div>' +
+                                    '<div class="clearfix"></div>' +
+                                    '</a>' +
+                                    '</li>';
+                                var firstNext = 0;
+                                if (setLive && i > nextIndex) {
+                                    nextChannelDate = data[nextIndex+1].starttime;
+                                    $('.list-playlist').append(list_live);
+                                }
+                                else if(nowAndNextChannel(v.starttime)){
+                                    firstNext++;
+                                    if(firstNext==1) nextChannelDate = v.starttime;
+                                    $('.list-playlist').append(list_live);
+                                }
+                            });
+                            //blank video
+                            if ($('#homeVideo').is(':empty')){
+                                $('#homeVideo').prepend('<img id="theImg" src="imgweb/wait.png" />');
+                            }
+                            //set diff
+                            var now = new Date();
+                            now = strToDateTime(now.getFullYear() + '-' + (now.getMonth() + 1) + '-' + now.getDate()
+                                + ' ' + now.getHours() + ':' + now.getMinutes() + ':' + now.getSeconds());
+                            var nextTime = strToDateTime(nextChannelDate);
+                            var diffSec = Math.abs((nextTime.getTime() - now.getTime())/1000);
+                            var display = $('#time');
+                            startTimer(diffSec, display);
+                        });
+                    }
+                    function startTimer(duration, display) {
+                        var timer = duration, minutes, seconds;
+                        setInterval(function () {
+                            minutes = parseInt(timer / 60, 10);
+                            seconds = parseInt(timer % 60, 10);
+
+                            minutes = minutes < 10 ? "0" + minutes : minutes;
+                            seconds = seconds < 10 ? "0" + seconds : seconds;
+
+                            display.text(minutes + ":" + seconds);
+
+                            if (--timer < 0) {
+                                location.reload();
+                            }
+                        }, 1000);
+                    }
+                    function checkChannelDate(from, to) {
+                        var now = new Date();
+                        now = strToDateTime(now.getFullYear() + '-' + (now.getMonth() + 1) + '-' + now.getDate()
+                            + ' ' + now.getHours() + ':' + now.getMinutes() + ':' + now.getSeconds());
+                        from = strToDateTime(from);
+                        to = strToDateTime(to);
+                        var returnVal = false;
+                        if (now > from && now < to) {
+                            returnVal = true;
+                        }
+                        return returnVal;
+                    }
+                    function nowAndNextChannel(next)
+                    {
+                        var now = new Date();
+                        now = strToDateTime(now.getFullYear() + '-' + (now.getMonth() + 1) + '-' + now.getDate()
+                            + ' ' + now.getHours() + ':' + now.getMinutes() + ':' + now.getSeconds());
+                        next = strToDateTime(next);
+                        var returnVal = false;
+                        if (now < next) {
+                            returnVal = true;
+                        }
+                        return returnVal;
+                    }
+                    function strToDateTime(dateString) {
+                        var dt = dateString.split(/\-|\s/);
+                        return new Date(dt.slice(0, 3).join('-') + ' ' + dt[3]);
+                    }
+                </script>
+                <script>
+                    window.fbAsyncInit = function() {
+                        FB.init({
+                            appId      : '1110589729021131',
+                            xfbml      : true,
+                            version    : 'v2.5'
+                        });
+                    };
+
+                    (function(d, s, id){
+                        var js, fjs = d.getElementsByTagName(s)[0];
+                        if (d.getElementById(id)) {return;}
+                        js = d.createElement(s); js.id = id;
+                        js.src = "//connect.facebook.net/en_US/sdk.js";
+                        fjs.parentNode.insertBefore(js, fjs);
+                    }(document, 'script', 'facebook-jssdk'));
+                    function postToFeed(title, desc, url, image){
+                        var obj = {method: 'feed',link: url, picture: image,name: title,description: desc};
+                        function callback(response){}
+                        FB.ui(obj, callback);
+                    }
+                    $(window).load(function () {
+                        $('.btnShare').click(function(){
+                            elem = $(this);
+                            postToFeed('', '', elem.attr('data-href'), '');
+                            return false;
+                        });
                     });
                 </script>
             </div>
             <div class="col-xs-12 col-sm-5">
                 <div class="video-info">
                     <div class="header-title">
-                        <h1>AIS Futsal Thailand Leaque 2016</h1>
-                        <h4><span class="text-yellow">LIVE!</span> &nbsp; วันที่ <?php echo System_ShowDateLongTh(SYSTEM_DATENOW); ?> เวลา <?php echo substr(SYSTEM_TIMENOW,0,5); ?></h4>
+                        <h1></h1>
+                        <h4><span class="text-yellow">LIVE!</span> &nbsp;
+                            วันที่ <?php echo System_ShowDateLongTh(SYSTEM_DATENOW); ?>
+                            เวลา <?php echo substr(SYSTEM_TIMENOW, 0, 5); ?></h4>
                     </div>
                     <div class="desc">
-                        <label><span aria-hidden="true" class="glyphicon glyphicon-play"></span> Auto Play</label> ความละเอียด :  <?php echo $myLiveResolution; ?>k
-                        <br />
-                        <br />
-                        <br />
-                        <br />
+                        <label><span aria-hidden="true" class="glyphicon glyphicon-play text-pink"></span> Auto
+                            Play</label> ความละเอียด : <?php echo $myLiveResolution; ?>k
+                        <br/>
+                        <div> อีก <span id="time"></span> นาที จะฉายรายการถัดไป
+                        </div>
                     </div>
                 </div>
                 <div class="video-playlist">
                     <div class="header-title">
                         <div class="row">
-                            <div class="col-xs-4">
+                            <div class="col-xs-5 nopadding-right">
                                 <h2>รายการต่อไป</h2>
                             </div>
-                            <div class="col-xs-8 text-right">
-                                <h3>วันอาทิตย์ที่ 29 พฤษภาคม พ.ศ. 2559</h3>
-                            </div>
+                            <!--                            <div class="col-xs-7 nopadding-left text-right">-->
+                            <!--                                <h3>วันอาทิตย์ที่ 29 พฤษภาคม พ.ศ. 2559</h3>-->
+                            <!--                            </div>-->
                         </div>
                     </div>
                     <ul class="list-playlist">
                         <li class="active">
-                            <a href="#">
+                            <a>
                                 <div class="label">
                                     17:58
                                 </div>
@@ -65,7 +214,7 @@ if($query1->execute()) {
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a>
                                 <div class="label">
                                     18:00
                                 </div>
@@ -76,7 +225,7 @@ if($query1->execute()) {
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a>
                                 <div class="label">
                                     18:01
                                 </div>
@@ -87,7 +236,7 @@ if($query1->execute()) {
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a>
                                 <div class="label">
                                     18:30
                                 </div>
@@ -98,7 +247,7 @@ if($query1->execute()) {
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a>
                                 <div class="label">
                                     19:30
                                 </div>
@@ -126,22 +275,43 @@ if($query1->execute()) {
                 </div>
                 <div class="box-inner bg-darkgray">
                     <div class="item item-pad">
-                        <a href="#" class="thumb">
-                            <img src="./images/thumb1.jpg" />
-                            <div class="img-hover">PLAY</div>
+                        <a class="thumb" id="rec_1" onclick="play_rec1()">
+                            <img style="width:270px; height:270px;" src="<?php echo $vidRecommend[0]['image_url']; ?>" id="img_rec1"/>
+                            <div id="video_rec1"></div>
+                            <div class="img-hover" id="play_button_rec1">PLAY</div>
                         </a>
+                        <script>
+                            var rec1 = 0;
+                            function play_rec1() {
+                                rec1++;
+                                if (rec1 == 1) {
+                                    $('#img_rec1').hide();
+                                    $('#play_button_rec1').hide();
+                                    jwplayer("video_rec1").setup({
+                                        file: "<?php echo $vidRecommend[0]['url']; ?>",
+                                        width: "100%",
+                                        aspectratio: "16:10",
+                                        autostart: true,
+                                        fallback: false,
+                                        skin: {
+                                            name: "seven"
+                                        }
+                                    });
+                                }
+                            }
+                        </script>
                         <div class="desc">
                             <div class="text">
                                 <span class="text-pink">ON AIR</span> : ทุกวันอาทิตย์ , 16:00น. - 17:30น.
                                 <div class="pull-right text-right">
                                     <a href="#" class="btn btn-pink">ทั่วไป</a>
-                                    <a href="#" class="btn btn-gray">แชร์</a>
+                                    <a data-href="<?php echo $vidRecommend[0]['url']; ?>" class="btn btn-gray btnShare">แชร์</a>
                                 </div>
                             </div>
-                            <hr />
-                            <h2>เมนูเส้นนานาชาติจากร้านพ่อค้า-แม่ค้าสุดแซ่บ</h2>
+                            <hr/>
+                            <h2><?php echo $vidRecommend[0]['title']; ?></h2>
                             <div class="tags">
-                                <a href="#">รายการเล่าเส้นเป็นเรื่อง</a>
+                                <a href="#"><?php echo $vidRecommend[0]['detail']; ?></a>
                             </div>
                         </div>
                     </div>
@@ -153,18 +323,39 @@ if($query1->execute()) {
                     <div class="box">
                         <div class="box-inner bg-darkgray">
                             <div class="item">
-                                <a href="#" class="thumb">
-                                    <img src="./images/thumb2.jpg" />
-                                    <div class="img-hover">PLAY</div>
+                                <a class="thumb" onclick="play_rec2()">
+                                    <img style="width:270px; height:270px;" src="<?php echo $vidRecommend[1]['image_url']; ?>" id="img_rec2"/>
+                                    <div id="video_rec2"></div>
+                                    <div class="img-hover" id="play_button_rec2">PLAY</div>
                                 </a>
+                                <script>
+                                    var rec2 = 0;
+                                    function play_rec2() {
+                                        rec2++;
+                                        if (rec2 == 1) {
+                                            $('#img_rec2').hide();
+                                            $('#play_button_rec2').hide();
+                                            jwplayer("video_rec2").setup({
+                                                file: "<?php echo $vidRecommend[1]['url']; ?>",
+                                                width: "100%",
+                                                aspectratio: "16:10",
+                                                autostart: true,
+                                                fallback: false,
+                                                skin: {
+                                                    name: "seven"
+                                                }
+                                            });
+                                        }
+                                    }
+                                </script>
                                 <div class="desc">
                                     <div class="text">
                                         <span class="text-pink">ON AIR</span> : ทุกวันอาทิตย์ , 16:00น. - 17:30น.
                                     </div>
-                                    <hr />
-                                    <h2>รายการตอบปัญหาทดสอบความจำและการตัดสินใจ</h2>
+                                    <hr/>
+                                    <h2><?php echo $vidRecommend[1]['title']; ?></h2>
                                     <div class="tags">
-                                        <a href="#">รายการปริศนาฟ้าแลบ</a>
+                                        <a href="#"><?php echo $vidRecommend[1]['detail']; ?></a>
                                     </div>
                                 </div>
                             </div>
@@ -175,18 +366,39 @@ if($query1->execute()) {
                     <div class="box">
                         <div class="box-inner bg-darkgray">
                             <div class="item">
-                                <a href="#" class="thumb">
-                                    <img src="./images/thumb3.jpg" />
-                                    <div class="img-hover">PLAY</div>
+                                <a class="thumb" onclick="play_rec3()">
+                                    <img style="width:270px; height:270px;" src="<?php echo $vidRecommend[2]['image_url']; ?>" id="img_rec3"/>
+                                    <div id="video_rec3"></div>
+                                    <div class="img-hover" id="play_button_rec3">PLAY</div>
                                 </a>
+                                <script>
+                                    var rec3 = 0;
+                                    function play_rec3() {
+                                        rec3++;
+                                        if (rec3 == 1) {
+                                            $('#img_rec3').hide();
+                                            $('#play_button_rec3').hide();
+                                            jwplayer("video_rec3").setup({
+                                                file: "<?php echo $vidRecommend[2]['url']; ?>",
+                                                width: "100%",
+                                                aspectratio: "16:10",
+                                                autostart: true,
+                                                fallback: false,
+                                                skin: {
+                                                    name: "seven"
+                                                }
+                                            });
+                                        }
+                                    }
+                                </script>
                                 <div class="desc">
                                     <div class="text">
                                         <span class="text-pink">ON AIR</span> : ทุกวันอาทิตย์ , 16:00น. - 17:30น.
                                     </div>
-                                    <hr />
-                                    <h2>รายการวาไรตี้ท่องเที่ยงกับสามพิธีกรสุดแซ่บ</h2>
+                                    <hr/>
+                                    <h2><?php echo $vidRecommend[2]['title']; ?></h2>
                                     <div class="tags">
-                                        <a href="#">รายการเทยเที่ยวไทย</a>
+                                        <a href="#"><?php echo $vidRecommend[2]['detail']; ?></a>
                                     </div>
                                 </div>
                             </div>

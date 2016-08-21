@@ -326,7 +326,7 @@ if ($query_reccommend->execute()) {
                         <div class="box-inner bg-darkgray">
                             <div class="item">
                                 <a class="thumb" onclick="play_rec2()">
-                                    <img src="<?php echo $vidRecommend[1]['image_url']; ?>" id="img_rec2"/>
+                                    <img style="width:270px; height:270px;" src="<?php echo $vidRecommend[1]['image_url']; ?>" id="img_rec2"/>
                                     <div id="video_rec2"></div>
                                     <div class="img-hover" id="play_button_rec2">PLAY</div>
                                 </a>
@@ -369,7 +369,7 @@ if ($query_reccommend->execute()) {
                         <div class="box-inner bg-darkgray">
                             <div class="item">
                                 <a class="thumb" onclick="play_rec3()">
-                                    <img src="<?php echo $vidRecommend[2]['image_url']; ?>" id="img_rec3"/>
+                                    <img style="width:270px; height:270px;" src="<?php echo $vidRecommend[2]['image_url']; ?>" id="img_rec3"/>
                                     <div id="video_rec3"></div>
                                     <div class="img-hover" id="play_button_rec3">PLAY</div>
                                 </a>
