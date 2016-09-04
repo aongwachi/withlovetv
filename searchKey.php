@@ -15,10 +15,10 @@ if ($query1->execute()) {
 ####################################################################################
 $searchKey=(isset($_GET['searchKey'])?$_GET['searchKey']:'');
 //$catid = 3;
-$arrMyCategoryName = [];
-$listArContentId = [];
-$listArContentSubject = [];
-$listArContentThumb = [];
+$arrMyCategoryName = array();
+$listArContentId = array();
+$listArContentSubject = array();
+$listArContentThumb = array();
 for($i=1;$i<=6;$i++){
     searchContent($dbh,$i,$searchKey,
         $arrMyCategoryName[$i],
