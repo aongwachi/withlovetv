@@ -33,6 +33,8 @@ if ($TotalRecordCount > 0) {
     $looper = 1;
     $arContentSubject = "";
     $arContentThumb = "";
+    $arContentType = "";
+    $arContentDetail = "";
     //--------------------------------------------
     $sql = "SELECT * FROM " . TABLE_PROGRAM . " ORDER BY " . TABLE_PROGRAM . "_ID DESC LIMIT " . $RecordStart . "," . $Config_PageSize . " ";
     $query = $dbh->prepare($sql);
@@ -46,7 +48,9 @@ if ($TotalRecordCount > 0) {
             //--------------------------------------------
             $arContentID[$looper] = $Row[TABLE_PROGRAM . "_URL"];
             $arContentSubject[$looper] = $Row[TABLE_PROGRAM . "_Name"];
+            $arContentDetail[$looper] = $Row[TABLE_PROGRAM . "_Detail"];
             $arContentThumb[$looper] = $Row[TABLE_PROGRAM . "_Image_Url"];
+            $arContentType[$looper] = $Row[TABLE_PROGRAM . "_Type"];
             //--------------------------------------------
             $looper++;
         }
