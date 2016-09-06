@@ -8,7 +8,7 @@ if ($query1->execute()) {
     $myLiveResolution = $Row1[TABLE_LIVE . "_Resolution"];
 }
 ####################################################################################
-$sql_recommend_video = " SELECT * FROM " . TABLE_PROGRAM . " WHERE 1  ORDER BY tv_program_ID DESC LIMIT 3 ";
+$sql_recommend_video = " SELECT * FROM " . TABLE_PROGRAM . " WHERE ".TABLE_PROGRAM."_Type = 1  ORDER BY tv_program_ID DESC LIMIT 3 ";
 $query_reccommend = $dbh->prepare($sql_recommend_video);
 $vidRecommend = array();
 if ($query_reccommend->execute()) {
@@ -19,6 +19,20 @@ if ($query_reccommend->execute()) {
         $res['detail'] = $row[TABLE_PROGRAM . "_Detail"];
         $res['image_url'] = $row[TABLE_PROGRAM . "_Image_Url"];
         $vidRecommend[] = $res;
+    }
+}
+####################################################################################
+$sql_most_video = " SELECT * FROM " . TABLE_PROGRAM . " WHERE ".TABLE_PROGRAM."_Type = 2  ORDER BY tv_program_ID DESC LIMIT 3 ";
+$query_most = $dbh->prepare($sql_most_video);
+$vidMost = array();
+if ($query_most->execute()) {
+    while ($row = $query_most->fetch()) {
+        $res = array();
+        $res['url'] = $row[TABLE_PROGRAM . "_URL"];
+        $res['title'] = $row[TABLE_PROGRAM . "_Name"];
+        $res['detail'] = $row[TABLE_PROGRAM . "_Detail"];
+        $res['image_url'] = $row[TABLE_PROGRAM . "_Image_Url"];
+        $vidMost[] = $res;
     }
 }
 ####################################################################################
@@ -410,18 +424,38 @@ if ($query_reccommend->execute()) {
                 </div>
                 <div class="box-inner bg-lightgray">
                     <div class="item item-pad">
-                        <a href="#" class="thumb">
-                            <img src="./images/thumb8.jpg"/>
-                            <div class="img-hover">PLAY</div>
+                        <a class="thumb" onclick="play_most1()">
+                            <div style="width: 300px;height: 250px" id="play_most1">
+                                <img style="background-size: 100%;width: 400px" src="<?php echo $vidMost[0]['image_url']; ?>"/>
+                            </div>
+                            <div class="img-hover" id="play_button_rec3">PLAY</div>
                         </a>
+                        <script>
+                            var rec3 = 0;
+                            function play_most1() {
+                                rec3++;
+                                if (rec3 == 1) {
+                                    $('#play_button_most1').hide();
+                                    jwplayer("play_most1").setup({
+                                        file: "<?php echo $vidMost[0]['url']; ?>",
+                                        width: "100%",
+                                        aspectratio: "16:10",
+                                        autostart: true,
+                                        fallback: false,
+                                        skin: {
+                                            name: "seven"
+                                        }
+                                    });
+                                }
+                            }
+                        </script>
                         <div class="desc">
                             <div class="text">
                                 <div class="tags">
-                                    <a href="#">รายการเล่าเส้นเป็นเรื่อง</a>
+                                    <a href="#"><?php echo $vidMost[0]['title']; ?></a>
                                 </div>
                                 <div class="pull-right text-right">
-                                    <a href="#" class="btn btn-pink">ทั่วไป</a>
-                                    <a href="#" class="btn btn-gray">แชร์</a>
+
                                 </div>
                             </div>
                             <span class="text-pink">ON AIR</span> : ทุกวันอาทิตย์ , 16:00น. - 17:30น.
@@ -429,18 +463,37 @@ if ($query_reccommend->execute()) {
                         <hr class="gap"/>
                     </div>
                     <div class="item item-pad">
-                        <a href="#" class="thumb">
-                            <img src="./images/thumb9.jpg"/>
-                            <div class="img-hover">PLAY</div>
+                        <a class="thumb" onclick="play_most2()">
+                            <div style="width: 300px;height: 250px" id="play_most2">
+                                <img  style="background-size: 100%;width: 400px"  src="<?php echo $vidMost[1]['image_url']; ?>"/>
+                            </div>
+                            <div class="img-hover" id="play_button_most2">PLAY</div>
                         </a>
+                        <script>
+                            var rec3 = 0;
+                            function play_most2() {
+                                rec3++;
+                                if (rec3 == 1) {
+                                    $('#play_button_most2').hide();
+                                    jwplayer("play_most2").setup({
+                                        file: "<?php echo $vidMost[1]['url']; ?>",
+                                        width: "100%",
+                                        aspectratio: "16:10",
+                                        autostart: true,
+                                        fallback: false,
+                                        skin: {
+                                            name: "seven"
+                                        }
+                                    });
+                                }
+                            }
+                        </script>
                         <div class="desc">
                             <div class="text">
                                 <div class="tags">
-                                    <a href="#">Club Friday The Series</a>
+                                    <a href="#"><?php echo $vidMost[1]['title']; ?></a>
                                 </div>
                                 <div class="pull-right text-right">
-                                    <a href="#" class="btn btn-pink">ทั่วไป</a>
-                                    <a href="#" class="btn btn-gray">แชร์</a>
                                 </div>
                             </div>
                             <span class="text-pink">ON AIR</span> : ทุกวันอาทิตย์ , 16:00น. - 17:30น.
@@ -448,18 +501,38 @@ if ($query_reccommend->execute()) {
                         <hr class="gap"/>
                     </div>
                     <div class="item item-pad">
-                        <a href="#" class="thumb">
-                            <img src="./images/thumb10.jpg"/>
-                            <div class="img-hover">PLAY</div>
+                        <a class="thumb" onclick="play_most3()">
+                            <div style="width: 300px;height: 250px" id="play_most3">
+                                <img  style="background-size: 100%;width: 400px" src="<?php echo $vidMost[2]['image_url']; ?>"/>
+                            </div>
+                            <div class="img-hover" id="play_button_most3">PLAY</div>
                         </a>
+                        <script>
+                            var rec3 = 0;
+                            function play_most3() {
+                                rec3++;
+                                if (rec3 == 1) {
+                                    $('#play_button_most3').hide();
+                                    jwplayer("play_most3").setup({
+                                        file: "<?php echo $vidMost[2]['url']; ?>",
+                                        width: "100%",
+                                        aspectratio: "16:10",
+                                        autostart: true,
+                                        fallback: false,
+                                        skin: {
+                                            name: "seven"
+                                        }
+                                    });
+                                }
+                            }
+                        </script>
                         <div class="desc">
                             <div class="text">
                                 <div class="tags">
-                                    <a href="#">รายการเล่าเส้นเป็นเรื่อง</a>
+                                    <a href="#"><?php echo $vidMost[2]['title']; ?></a>
                                 </div>
                                 <div class="pull-right text-right">
-                                    <a href="#" class="btn btn-pink">ทั่วไป</a>
-                                    <a href="#" class="btn btn-gray">แชร์</a>
+
                                 </div>
                             </div>
                             <span class="text-pink">ON AIR</span> : ทุกวันอาทิตย์ , 16:00น. - 17:30น.

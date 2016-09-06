@@ -432,9 +432,9 @@ if ($query_most->execute()) {
                     <div class="item item-pad">
                         <a class="thumb" onclick="play_most1()">
                             <div style="width: 300px;height: 250px" id="play_most1">
-                                <img  style="background-size: 100%;width: 500px" src="<?php echo $vidMost[0]['image_url']; ?>"/>
+                                <img style="background-size: 100%;width: 400px" src="<?php echo $vidMost[0]['image_url']; ?>"/>
                             </div>
-                            <div class="img-hover" id="play_button_most1">PLAY</div>
+                            <div class="img-hover" id="play_button_rec3">PLAY</div>
                         </a>
                         <script>
                             var rec3 = 0;
@@ -470,7 +470,7 @@ if ($query_most->execute()) {
                     <div class="item item-pad">
                         <a class="thumb" onclick="play_most2()">
                             <div style="width: 300px;height: 250px" id="play_most2">
-                                <img  style="background-size: 100%;width: 500px" src="<?php echo $vidMost[1]['image_url']; ?>"/>
+                                <img  style="background-size: 100%;width: 400px"  src="<?php echo $vidMost[1]['image_url']; ?>"/>
                             </div>
                             <div class="img-hover" id="play_button_most2">PLAY</div>
                         </a>
@@ -508,7 +508,7 @@ if ($query_most->execute()) {
                     <div class="item item-pad">
                         <a class="thumb" onclick="play_most3()">
                             <div style="width: 300px;height: 250px" id="play_most3">
-                                <img  style="background-size: 100%;width: 500px" src="<?php echo $vidMost[2]['image_url']; ?>"/>
+                                <img  style="background-size: 100%;width: 400px" src="<?php echo $vidMost[2]['image_url']; ?>"/>
                             </div>
                             <div class="img-hover" id="play_button_most3">PLAY</div>
                         </a>
