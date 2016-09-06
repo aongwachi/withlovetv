@@ -50,13 +50,21 @@
                         <i class="fa fa-facebook"></i>
                     </a>
                 </div>
-                <form class="form-inline pull-right">
+                <form id="form_search" class="form-inline pull-right">
                     <div class="inner-addon right-addon">
-                        <input type="text" class="form-control" placeholder="">
+                        <input type="text" id="searchKey"
+                               class="form-control" placeholder=""
+                               value="<?= (isset($_GET['searchKey'])?$_GET['searchKey']:'')?>">
                         <i class="glyphicon glyphicon-search text-pink"></i>
                     </div>
                     <span class="text-pink hidden-xs">ค้นหารายการทีวี</span>
                 </form>
+                <script>
+                    $('#form_search').submit(function(ev) {
+                        ev.preventDefault();
+                        window.location = 'searchKey.php?searchKey='+$('#searchKey').val();
+                    });
+                </script>
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-nav">
                         <span class="sr-only">Toggle navigation</span>
@@ -75,8 +83,9 @@
 
         <div class="collapse navbar-collapse" id="main-nav">
             <ul class="nav navbar-nav nav-justified">
-		<li <?php if($catid==-1) { echo ' class="active" '; } ?>><a href="live.php">Live</a></li>
-		<li <?php if($catid==-2) { echo ' class="active" '; } ?>><a href="video.php">ดูย้อนหลัง</a></li>
+                <li><a href="live.php?cat_name=Live">Live</a></li>
+                <li><a href="video_schedule.php?cat_name=Live">ผังรายการ</a></li>
+                <li><a href="video.php?cat_name=ดูย้อนหลัง">ดูย้อนหลัง</a></li>
                 <?php
                 $index=0; $index1=0;
                 $arTopMenuCatID=""; $arTopMenuCatName=""; $arTopMenuCatNameByID="";
@@ -91,7 +100,7 @@
                                 $arTopMenuCatName[$index]=$Row[TABLE_CATEGORY."_Name"];
                                 $arTopMenuCatNameByID[$Row[TABLE_CATEGORY."_ID"]]=$Row[TABLE_CATEGORY."_Name"];
                                 ?>
-                                <li <?php if($catid==$Row[TABLE_CATEGORY."_ID"]) { echo ' class="active" '; } ?>><a href="list.php?catid=<?php echo $Row[TABLE_CATEGORY."_ID"]; ?>&page=1"><?php echo $Row[TABLE_CATEGORY."_Name"]; ?></a></li>
+                                <li <?php if($catid==$Row[TABLE_CATEGORY."_ID"]) { echo ' class="active" '; } ?>><a href="list.php?catid=<?php echo $Row[TABLE_CATEGORY."_ID"]; ?>&page=1&page=1&cat_name=<?=$Row[TABLE_CATEGORY."_Name"];?>"><?php echo $Row[TABLE_CATEGORY."_Name"]; ?></a></li>
                                 <?php
                                 $index++;
                         }
@@ -114,7 +123,7 @@
             $query=$dbh->prepare($sql);
             if($query->execute()) {
                 while($Row=$query->fetch()) {
-                    ?><li><a href="tags.php?tagid=<?php echo $Row[TABLE_TAGS."_ID"]; ?>">#<?php echo $Row[TABLE_TAGS."_Name"]; ?></a></li><?php
+                    ?><li><a href="tags.php?tagid=<?php echo $Row[TABLE_TAGS."_ID"]; ?>&tag_name=<?=$Row[TABLE_TAGS."_Name"];?>">#<?php echo $Row[TABLE_TAGS."_Name"]; ?></a></li><?php
                 }
             } else { print_r($query->errorInfo()); }
             ?>

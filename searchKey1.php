@@ -41,26 +41,30 @@
                     <br class="clear"/>
                 </div>
                 <div class="box-list">
-                    <div class="row">
-                        <!---------------------------------------------->
-                        <?php for ($i = 1; $i <= count($videoSubject); $i++) {
-                            if ($videoSubject[$i] <> "") { ?>
+                    <?php for ($i = 1; $i <= count($videoSubject); $i++) {
+                        if ($videoSubject[$i] <> "") { ?>
+                            <div class="row" style="margin-top: 25px">
                                 <div class="col-xs-6 col-sm-4 col-md-3">
-                                    <?php
-                                    $cindex = $i;
-                                    $arContentID[$cindex] = $videoId[$i];
-                                    $arContentThumb[$cindex] = $videoThumb[$i];
-                                    $arContentSubject[$cindex] = $videoSubject[$i];
-                                    $urlVideo[$cindex] = $videoUrl[$i];
-                                    $typeVideo = "video";
-                                    include("object/obj_items_list.php");
-                                    $typeVideo = "";
-                                    ?>
+                                    <div style="width: 150px;height: 23px;border-style: solid;
+                                        border-color: grey;background-color: grey;
+                                        margin-left: 10px;float: left">
+                                        <p style="color: white"><?= date('g:i, j F Y',strtotime($videoDate[$i]))?></p>
+                                    </div>
                                 </div>
-                            <?php }
-                        } ?>
-                        <!---------------------------------------------->
-                    </div>
+                                <div class="col-xs-6 col-sm-4 col-md-5">
+                                    <div>
+                                        <h5 style="margin-top: 0;font-weight: bold;"><?=$videoSubject[$i]?></h5>
+                                        <p style="width: 450px;word-wrap: break-word"><?=$videoDetail[$i]?></p>
+                                        <a href="video_alone.php?url=<?php echo $videoUrl[$i]; ?>"> ดูรายการย้อนหลัง</a>
+                                    </div>
+                                </div>
+                                <div class="col-xs-6 col-sm-4 col-md-4">
+                                    <img style="height: 100px;width: 160px"
+                                         src="<?= !empty($videoThumb[$i])&&$videoThumb[$i]?$videoThumb[$i]:'upload/thumb2/00/30/default-thumbnail.jpg'?>" />
+                                </div>
+                            </div>
+                        <?php }
+                    } ?>
                 </div>
                 <?php
             }

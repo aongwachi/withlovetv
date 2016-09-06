@@ -35,6 +35,9 @@ if($myAjaxAction=="data-delete" && $myAjaxID>0) {
 	echo " </script> ";
 }
 ############################################################################
+$arDataID=array('1','2');
+$arDataText=array('รายการแนะนำ','Most Wanted');
+############################################################################
 if($task=="load-confirm" && $myAjaxID>0) {
 
 	?>
@@ -183,7 +186,29 @@ if($task=="load-edit" && $myAjaxID>0) {
 		include(SYSTEM_DOC_ROOT."object/oneinput/obj_oneinput_datetime.php");
 		?>
 		</div>
+		</div>
 		<!--------------------------->
+		<?php $myField=TABLE_PROGRAM."_Type"; $myFieldText=""; ?>
+		<label class="col-xs-12 col-sm-4 col-md-4 col-lg-4 control-label">
+		<span class="label-main">ประเภทของรายการ</span>
+		</label>
+		<div class="col-xs-12 col-sm-8 col-md-8 col-lg-8 custom-text-position">
+		<?php
+		//--------------------------------------------
+		$Config_DataSourceArrayID=$arDataID; // your data id array
+		$Config_DataSourceArrayText=$arDataText; // your data text array
+		$Config_BlankID=""; // not select state (set blank '' for not use)
+		$Config_isShowUnselectValue=false;
+		//--------------------------------------------
+		$Config_UniqueID=$myField.$myID;
+		$Config_DefaultValue=$Row[$myField];
+		$Config_DB="UPDATE#".$myTable."#SET#".$myField."#=xxx#WHERE#".$myKeyField."#=#".$myID;
+		//--------------------------------------------
+		include(SYSTEM_DOC_ROOT."object/oneinput/obj_oneinput_radio_bootstrap.php");
+		?>
+		</div>
+		<!--------------------------->
+
 	</div>
 	<div class="form-group width-100">
 	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 padding-2">
@@ -345,7 +370,29 @@ if($task=="load-add") {
 		include(SYSTEM_DOC_ROOT."object/oneinput/obj_oneinput_datetime.php");
 		?>
 		</div>
+		</div>
 		<!--------------------------->
+		<?php $myField=TABLE_PROGRAM."_Type"; $myFieldText=""; ?>
+		<label class="col-xs-12 col-sm-4 col-md-4 col-lg-4 control-label">
+		<span class="label-main">ประเภทของรายการ</span>
+		</label>
+		<div class="col-xs-12 col-sm-8 col-md-8 col-lg-8 custom-text-position">
+		<?php
+		//--------------------------------------------
+		$Config_DataSourceArrayID=$arDataID; // your data id array
+		$Config_DataSourceArrayText=$arDataText; // your data text array
+		$Config_BlankID=""; // not select state (set blank '' for not use)
+		$Config_isShowUnselectValue=false;
+		//--------------------------------------------
+		$Config_UniqueID=$myField.$myID;
+		$Config_DefaultValue=$Row[$myField];
+		$Config_DB="UPDATE#".$myTable."#SET#".$myField."#=xxx#WHERE#".$myKeyField."#=#".$myID;
+		//--------------------------------------------
+		include(SYSTEM_DOC_ROOT."object/oneinput/obj_oneinput_radio_bootstrap.php");
+		?>
+		</div>
+		<!--------------------------->
+
 	</div>
 	<div class="form-group width-100">
 	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 padding-2">
@@ -377,6 +424,7 @@ if($doaction=="result") {
 		<td><?php echo $Row[TABLE_PROGRAM."_URL"];?></td>
 		<td><?php echo $Row[TABLE_PROGRAM."_StartTime"]; ?></td>
 		<td><?php echo $Row[TABLE_PROGRAM."_EndTime"]; ?></td>
+		<td><?php echo $Row[TABLE_PROGRAM."_Type"] == 1?'รายการแนะนำ':'Most Wanted'; ?></td>
 		<td style=" width:60px; padding: 0px; ">
 		<div id="idActionBT<?php echo $Row[TABLE_PROGRAM."_ID"];?>"
 		style=" height: 30px; padding: 4px; width: 140px; position: absolute; margin-top: -14px; margin-left: -80px; text-align: right; display: none; ">

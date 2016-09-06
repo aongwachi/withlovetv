@@ -84,6 +84,8 @@ if ($query_reccommend->execute()) {
                                     if(firstNext==1) nextChannelDate = v.starttime;
                                     $('.list-playlist').append(list_live);
                                 }
+                                //resolution
+                                $('#resolution').text(v.resolution+'k');
                             });
                             //blank video
                             if ($('#homeVideo').is(':empty')){
@@ -184,7 +186,7 @@ if ($query_reccommend->execute()) {
                     </div>
                     <div class="desc">
                         <label><span aria-hidden="true" class="glyphicon glyphicon-play text-pink"></span> Auto
-                            Play</label> ความละเอียด : <?php echo $myLiveResolution; ?>k
+                            Play</label> ความละเอียด : <label id="resolution"></label>
                         <br/>
                         <div> อีก <span id="time"></span> นาที จะฉายรายการถัดไป
                         </div>
@@ -269,7 +271,7 @@ if ($query_reccommend->execute()) {
                 <div class="box-inner bg-lightgray">
                     <div class="item item-pad">
                         <a class="thumb" id="rec_1" onclick="play_rec1()">
-                            <img style="width:270px; height:270px;" src="<?php echo $vidRecommend[0]['image_url']; ?>" id="img_rec1"/>
+                            <img src="<?php echo $vidRecommend[0]['image_url']; ?>" id="img_rec1"/>
                             <div id="video_rec1"></div>
                             <div class="img-hover" id="play_button_rec1">PLAY</div>
                         </a>
@@ -317,8 +319,9 @@ if ($query_reccommend->execute()) {
                         <div class="box-inner bg-lightgray">
                             <div class="item">
                                 <a class="thumb" onclick="play_rec2()">
-                                    <img style="width:270px; height:270px;" src="<?php echo $vidRecommend[1]['image_url']; ?>" id="img_rec2"/>
-                                    <div id="video_rec2"></div>
+                                    <div style="width: 300px;height: 250px" id="img_rec2">
+                                        <img  style="background-size: 100%;width: 500px" src="<?php echo $vidRecommend[1]['image_url']; ?>"/>
+                                    </div>
                                     <div class="img-hover" id="play_button_rec2">PLAY</div>
                                 </a>
                                 <script>
@@ -326,9 +329,8 @@ if ($query_reccommend->execute()) {
                                     function play_rec2() {
                                         rec2++;
                                         if (rec2 == 1) {
-                                            $('#img_rec2').hide();
                                             $('#play_button_rec2').hide();
-                                            jwplayer("video_rec2").setup({
+                                            jwplayer("img_rec2").setup({
                                                 file: "<?php echo $vidRecommend[1]['url']; ?>",
                                                 width: "100%",
                                                 aspectratio: "16:10",
@@ -360,8 +362,9 @@ if ($query_reccommend->execute()) {
                         <div class="box-inner bg-lightgray">
                             <div class="item">
                                 <a class="thumb" onclick="play_rec3()">
-                                    <img style="width:270px; height:270px;" src="<?php echo $vidRecommend[2]['image_url']; ?>" id="img_rec3"/>
-                                    <div id="video_rec3"></div>
+                                    <div style="width: 300px;height: 250px" id="img_rec3">
+                                        <img  style="background-size: 100%;width: 500px" src="<?php echo $vidRecommend[2]['image_url']; ?>"/>
+                                    </div>
                                     <div class="img-hover" id="play_button_rec3">PLAY</div>
                                 </a>
                                 <script>
@@ -369,9 +372,8 @@ if ($query_reccommend->execute()) {
                                     function play_rec3() {
                                         rec3++;
                                         if (rec3 == 1) {
-                                            $('#img_rec3').hide();
                                             $('#play_button_rec3').hide();
-                                            jwplayer("video_rec3").setup({
+                                            jwplayer("img_rec3").setup({
                                                 file: "<?php echo $vidRecommend[2]['url']; ?>",
                                                 width: "100%",
                                                 aspectratio: "16:10",

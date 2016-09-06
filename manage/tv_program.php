@@ -40,7 +40,7 @@ if($SystemSession_Staff_ID>0 && $SystemSession_Staff_Level=="Admin") {
         <div class="panel panel-custom" style=" border-width:0px; ">
             <div class="panel-heading panel-custom-heading font-white" style=" background-color:<?php echo $myBGColor; ?>; color:#FFFFFF; text-align:left; height:80px; position:relative; ">
                 <i class="fa fa-film pull-left padding-10" style="font-size:40px; padding-right:20px;"></i>
-                <h2 class="font-white"><strong>Recommend Video</strong></h2> <span> รายการแนะนำ</span>
+                <h2 class="font-white"><strong>Uploaded Video</strong></h2> <span> รายการย้อนหลัง</span>
                 <div class="pull-right" style=" color:#FFFF00; "><span class="hidden-xs">ค้นพบ</span>
                     <!--------------------------------------------------------------------------------------------->
                     <!--- 2/5 Total record will display here ------------------------------------------------------>
@@ -88,6 +88,7 @@ if($SystemSession_Staff_ID>0 && $SystemSession_Staff_Level=="Admin") {
                         <th><a href="javascript:void(0)" class="Link_FooTable" data-sort="<?php echo TABLE_PROGRAM."_URL"; ?>"><i></i>URL</a></th>
                         <th><a href="javascript:void(0)" class="Link_FooTable" data-sort="<?php echo TABLE_PROGRAM."_StartTime"; ?>"><i></i>Start Time</a></th>
                         <th><a href="javascript:void(0)" class="Link_FooTable" data-sort="<?php echo TABLE_PROGRAM."_EndTime"; ?>"><i></i>End Time</a></th>
+                        <th><a href="javascript:void(0)" class="Link_FooTable" data-sort="<?php echo TABLE_PROGRAM."_Type"; ?>"><i></i>Type</a></th>
                         <th style=" width:60px; padding: 0px; ">&nbsp;</th>
                         <!----------------------------------------------------------------------------------------------------------------------->
                     </tr>

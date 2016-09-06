@@ -6,6 +6,7 @@
                 <div class="title-playlist">
                     <h2 style=" margin-top: 5px; margin-bottom: 0px; "><?php echo $mySubject; ?></h2>
                     <div class="row-1"></div>
+                    <a class="btn btn-pink btnShareDetail" style="float: right">แชร์</a>
                     <br class="clear" />
                 </div>
                 <div class="box-inner bg-white text-justify">
@@ -63,6 +64,40 @@
     </div>
     
 </div>
+<script>
+    var newurl = "";
+    if (history.pushState) {
+        newurl = window.location.protocol + "//" + window.location.host + window.location.pathname + '?p=<?=$p?>&title=<?=$mySubject?>';
+        window.history.pushState({path:newurl},'',newurl);
+    }
+    window.fbAsyncInit = function() {
+        FB.init({
+            appId      : '1110589729021131',
+            xfbml      : true,
+            version    : 'v2.5'
+        });
+    };
+
+    (function(d, s, id){
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) {return;}
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/en_US/sdk.js";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+    function postToFeed(title, desc, url, image){
+        var obj = {method: 'feed',link: url, picture: image,name: title,description: desc};
+        function callback(response){}
+        FB.ui(obj, callback);
+    }
+    $(window).load(function () {
+        $('.btnShareDetail').click(function(){
+            elem = $(this);
+            postToFeed('', '', newurl, '');
+            return false;
+        });
+    });
+</script>
 <style>
 .title-playlist { margin-bottom: 5px; }
 .title-playlist .row-1 { height: 10px; }

@@ -84,8 +84,9 @@
     <div class="container nopadding">
         <div class="collapse navbar-collapse" id="main-nav">
             <ul class="nav navbar-nav nav-justified">
-		<li <?php if($catid==-1) { echo ' class="active" '; } ?>><a href="live.php">Live</a></li>
-		<li <?php if($catid==-2) { echo ' class="active" '; } ?>><a href="video.php">ดูย้อนหลัง</a></li>
+                <li><a href="live.php?cat_name=Live">Live</a></li>
+                <li><a href="video_schedule.php?cat_name=Live">ผังรายการ</a></li>
+                <li><a href="video.php?cat_name=ดูย้อนหลัง">ดูย้อนหลัง</a></li>
                 <?php
                 $index=0; $index1=0;
                 $arTopMenuCatID=""; $arTopMenuCatName=""; $arTopMenuCatNameByID="";
@@ -100,7 +101,7 @@
                                 $arTopMenuCatName[$index]=$Row[TABLE_CATEGORY."_Name"];
                                 $arTopMenuCatNameByID[$Row[TABLE_CATEGORY."_ID"]]=$Row[TABLE_CATEGORY."_Name"];
                                 ?>
-                                <li <?php if($catid==$Row[TABLE_CATEGORY."_ID"]) { echo ' class="active" '; } ?>><a href="list.php?catid=<?php echo $Row[TABLE_CATEGORY."_ID"]; ?>&page=1"><?php echo $Row[TABLE_CATEGORY."_Name"]; ?></a></li>
+                                <li <?php if($catid==$Row[TABLE_CATEGORY."_ID"]) { echo ' class="active" '; } ?>><a href="list.php?catid=<?php echo $Row[TABLE_CATEGORY."_ID"]; ?>&page=1&page=1&cat_name=<?=$Row[TABLE_CATEGORY."_Name"];?>"><?php echo $Row[TABLE_CATEGORY."_Name"]; ?></a></li>
                                 <?php
                                 $index++;
                         }
@@ -112,3 +113,23 @@
         </div>
     </div>
 </nav>
+<div class="hashtag-line">
+    <div class="bg"></div>
+    <div class="container">
+        <h1>HASHTAG <span>></span></h1>
+        <ul class="list-inline">
+            <?php
+            $sql=" SELECT * FROM ".TABLE_TAGS." WHERE ".TABLE_TAGS."_Name<>'' AND ".TABLE_TAGS."_NoOfUse>0 ";
+            $sql.=" ORDER BY ".TABLE_TAGS."_NoOfUse DESC LIMIT 0,16 ";
+            $query=$dbh->prepare($sql);
+            if($query->execute()) {
+                while($Row=$query->fetch()) {
+                    ?><li><a href="tags.php?tagid=<?php echo $Row[TABLE_TAGS."_ID"]; ?>&tag_name=<?=$Row[TABLE_TAGS."_Name"];?>">#<?php echo $Row[TABLE_TAGS."_Name"]; ?></a></li><?php
+                }
+            } else { print_r($query->errorInfo()); }
+            ?>
+        </ul>
+        <br class="clear" />
+    </div>
+    <br class="clear" />
+</div>

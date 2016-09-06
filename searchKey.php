@@ -15,21 +15,23 @@ if ($query1->execute()) {
 ####################################################################################
 $searchKey=(isset($_GET['searchKey'])?$_GET['searchKey']:'');
 //$catid = 3;
-$arrMyCategoryName = array();
-$listArContentId = array();
-$listArContentSubject = array();
-$listArContentThumb = array();
-for($i=1;$i<=6;$i++){
-    searchContent($dbh,$i,$searchKey,
-        $arrMyCategoryName[$i],
-        $myFolderName,$listArContentId,
-        $listArContentSubject, $listArContentThumb);
-}
+//$arrMyCategoryName = array();
+//$listArContentId = array();
+//$listArContentSubject = array();
+//$listArContentThumb = array();
+//for($i=1;$i<=6;$i++){
+//    searchContent($dbh,$i,$searchKey,
+//        $arrMyCategoryName[$i],
+//        $myFolderName,$listArContentId,
+//        $listArContentSubject, $listArContentThumb);
+//}
 $videoId = "";
 $videoSubject = "";
 $videoThumb ="";
 $videoUrl = "";
-searchVideo($dbh,$searchKey,$videoId,$videoSubject,$videoThumb,$videoUrl);
+$videoDetail = "";
+$videoDate = "";
+searchVideo($dbh,$searchKey,$videoId,$videoSubject,$videoDetail,$videoDate,$videoThumb,$videoUrl);
 ####################################################################################
 include_once("shared/header" . $myThemeKey . ".php");
 include_once("searchKey" . $myThemeKey . ".php");
@@ -86,7 +88,7 @@ function searchContent($dbh,$catid,$searchKey,
         $listArContentSubject[] = $arContentSubject;
     }
 }
-function searchVideo($dbh,$searchKey,&$videoId,&$videoSubject,&$videoThumb,&$videoUrl)
+function searchVideo($dbh,$searchKey,&$videoId,&$videoSubject,&$videoDetail,&$videoDate,&$videoThumb,&$videoUrl)
 {
     $sql =  " SELECT * FROM " . TABLE_PROGRAM .
             " WHERE " . TABLE_PROGRAM . "_Name LIKE '%".$searchKey."%' OR " . TABLE_PROGRAM . "_Detail LIKE '%".$searchKey."%'".
@@ -95,12 +97,16 @@ function searchVideo($dbh,$searchKey,&$videoId,&$videoSubject,&$videoThumb,&$vid
     $looper = 1;
     $videoId = "";
     $videoSubject = "";
+    $videoDetail = "";
+    $videoDate = "";
     $videoThumb = "";
     $videoUrl = "";
     if ($query->execute()) {
         while ($Row = $query->fetch()) {
             $videoId[$looper] = $Row[TABLE_PROGRAM . "_ID"];
             $videoSubject[$looper] = $Row[TABLE_PROGRAM . "_Name"];
+            $videoDetail[$looper] = $Row[TABLE_PROGRAM . "_Detail"];
+            $videoDate[$looper] = $Row[TABLE_PROGRAM . "_StartTime"];
             $videoThumb[$looper] = $Row[TABLE_PROGRAM . "_Image_Url"];
             $videoUrl[$looper] = $Row[TABLE_PROGRAM . "_URL"];
             //--------------------------------------------
