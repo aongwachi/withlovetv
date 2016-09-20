@@ -37,7 +37,7 @@ if ($query_most->execute()) {
 }
 ####################################################################################
 ?>
-?><header>
+<header>
     <div class="container">
         <br>
         <div class="row">

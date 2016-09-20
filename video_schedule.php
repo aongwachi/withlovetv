@@ -14,7 +14,7 @@ if ($query1->execute()) {
 }
 ####################################################################################
 $searchKey=(isset($_GET['day'])?$_GET['day']:'');
-$searchKey = getDateFromWeekDay($searchKey);
+//$searchKey = getDateFromWeekDay($searchKey);
 $videoId = "";
 $videoSubject = "";
 $videoThumb ="";
@@ -29,11 +29,11 @@ include_once("shared/footer" . $myThemeKey . ".php");
 ####################################################################################
 function searchVideo($dbh,$searchKey,&$videoId,&$videoSubject,&$videoDetail,&$videoDate,&$videoThumb,&$videoUrl)
 {
-    $day = date('Y-m-d',strtotime($searchKey));
-    $tomorrow = date('Y-m-d', strtotime($day. ' + 1 days'));
+    //$day = date('Y-m-d',strtotime($searchKey));
+    //$tomorrow = date('Y-m-d', strtotime($day. ' + 1 days'));
     $sql =  " SELECT * FROM " . TABLE_PROGRAM .
-            " WHERE " . TABLE_PROGRAM . "_StartTime >= '".$day."' AND ". TABLE_PROGRAM . "_StartTime < '".$tomorrow."' ".
-            " ";
+            " WHERE DAYOFWEEK(" . TABLE_PROGRAM . "_StartTime) = ".$searchKey;
+
     $query = $dbh->prepare($sql);
     $looper = 1;
     $videoId = "";

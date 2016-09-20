@@ -1,7 +1,7 @@
 <?php  if(0) { ?><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><?php }
 $System_LayoutUse="layout_manage.html";
 $myMenuKey="Tv_Show";
-$System_AjaxFileAction="ajax-tv-program-loaddata.php";
+$System_AjaxFileAction="ajax-tv-show-loaddata.php";
 $System_ShowAjaxIFrame=0;
 
 include_once("../_config/config_system.php");
@@ -23,7 +23,7 @@ if($SystemSession_Staff_ID>0 && $SystemSession_Staff_Level=="Admin") {
     $FooTableAjaxFile=$System_AjaxFileAction;
     $FooTablePageSize=CONFIG_PAGESIZE;
     $FooTableASCDESC='DESC';
-    $FooTableOrderBy=TABLE_PROGRAM."_ID";
+    $FooTableOrderBy=TABLE_SHOW."_ID";
     //----------------------------------------------------------------------------------------------------------------
     ?>
     <!---###############################################################################--->
@@ -40,7 +40,7 @@ if($SystemSession_Staff_ID>0 && $SystemSession_Staff_Level=="Admin") {
         <div class="panel panel-custom" style=" border-width:0px; ">
             <div class="panel-heading panel-custom-heading font-white" style=" background-color:<?php echo $myBGColor; ?>; color:#FFFFFF; text-align:left; height:80px; position:relative; ">
                 <i class="fa fa-film pull-left padding-10" style="font-size:40px; padding-right:20px;"></i>
-                <h2 class="font-white"><strong>TV SHOW</strong></h2> <span> รายการ</span>
+                <h2 class="font-white"><strong>Uploaded Video</strong></h2> <span> รายการย้อนหลัง</span>
                 <div class="pull-right" style=" color:#FFFF00; "><span class="hidden-xs">ค้นพบ</span>
                     <!--------------------------------------------------------------------------------------------->
                     <!--- 2/5 Total record will display here ------------------------------------------------------>
@@ -80,15 +80,13 @@ if($SystemSession_Staff_ID>0 && $SystemSession_Staff_Level=="Admin") {
                         <!---------------------------------------------------------------------------------------------------------------->
                         <!--- 4/5 Create your table header ------------------------------------------------------------------------------>
                         <!---------------------------------------------------------------------------------------------------------------->
-                        <th data-toggle="true" style="max-width:60px;"><a href="javascript:void(0)" class="Link_FooTableActive" data-sort="<?php echo TABLE_PROGRAM."_ID"; ?>">
+                        <th data-toggle="true" style="max-width:60px;"><a href="javascript:void(0)" class="Link_FooTableActive" data-sort="<?php echo TABLE_SHOW."_ID"; ?>">
                                 <i class="glyphicon glyphicon-chevron-up font-10 padding-4"></i>#</a></th>
-                        <th><a href="javascript:void(0)" class="Link_FooTable" data-sort="<?php echo TABLE_PROGRAM."_Name"; ?>"><i></i>Name</a></th>
-                        <th><a href="javascript:void(0)" class="Link_FooTable" data-sort="<?php echo TABLE_PROGRAM."_Detail"; ?>"><i></i>Detail</a></th>
-                        <th><a href="javascript:void(0)" class="Link_FooTable" data-sort="<?php echo TABLE_PROGRAM."_Image_Url"; ?>"><i></i>IMAGE URL</a></th>
-                        <th><a href="javascript:void(0)" class="Link_FooTable" data-sort="<?php echo TABLE_PROGRAM."_URL"; ?>"><i></i>URL</a></th>
-                        <th><a href="javascript:void(0)" class="Link_FooTable" data-sort="<?php echo TABLE_PROGRAM."_StartTime"; ?>"><i></i>Start Time</a></th>
-                        <th><a href="javascript:void(0)" class="Link_FooTable" data-sort="<?php echo TABLE_PROGRAM."_EndTime"; ?>"><i></i>End Time</a></th>
-                        <th><a href="javascript:void(0)" class="Link_FooTable" data-sort="<?php echo TABLE_PROGRAM."_Type"; ?>"><i></i>Type</a></th>
+                        <th><a href="javascript:void(0)" class="Link_FooTable" data-sort="<?php echo TABLE_SHOW."_Name"; ?>"><i></i>Name</a></th>
+                        <th><a href="javascript:void(0)" class="Link_FooTable" data-sort="<?php echo TABLE_SHOW."_Detail"; ?>"><i></i>Detail</a></th>
+                        <th><a href="javascript:void(0)" class="Link_FooTable" data-sort="<?php echo TABLE_SHOW."_Image_Url"; ?>"><i></i>IMAGE URL</a></th>
+                        <th><a href="javascript:void(0)" class="Link_FooTable" data-sort="<?php echo TABLE_SHOW."_StartTime"; ?>"><i></i>Start Time</a></th>
+                        <th><a href="javascript:void(0)" class="Link_FooTable" data-sort="<?php echo TABLE_SHOW."_EndTime"; ?>"><i></i>End Time</a></th>
                         <th style=" width:60px; padding: 0px; ">&nbsp;</th>
                         <!----------------------------------------------------------------------------------------------------------------------->
                     </tr>

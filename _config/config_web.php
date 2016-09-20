@@ -18,4 +18,5 @@ define('TABLE_HTML',SYSTEM_DB_PREFIX."_html");
 define('TABLE_THEME',SYSTEM_DB_PREFIX."_theme");
 define('TABLE_LIVE',SYSTEM_DB_PREFIX."_livelink");
 define('TABLE_PROGRAM',SYSTEM_DB_PREFIX."_program");
+define('TABLE_SHOW',SYSTEM_DB_PREFIX."_show");
 ?>
