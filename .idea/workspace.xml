@@ -2,14 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9262846d-16b5-49e1-8186-2161b3fbc949" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/manage/ajax-tv-show-loaddata.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/manage/tv_show.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/ic_arrow_down.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/manage/get_show_video.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_config/config_system.php" afterPath="$PROJECT_DIR$/_config/config_system.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_config/config_web.php" afterPath="$PROJECT_DIR$/_config/config_web.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index1.php" afterPath="$PROJECT_DIR$/index1.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/manage/ajax-tv-program-loaddata.php" afterPath="$PROJECT_DIR$/manage/ajax-tv-program-loaddata.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/manage/tv_program.php" afterPath="$PROJECT_DIR$/manage/tv_program.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/video_schedule.php" afterPath="$PROJECT_DIR$/video_schedule.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/manage/tv_show.php" afterPath="$PROJECT_DIR$/manage/tv_show.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/video.php" afterPath="$PROJECT_DIR$/video.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/video3.php" afterPath="$PROJECT_DIR$/video3.php" />
     </list>
     <ignored path="withlovetv.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -30,88 +31,51 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="video_schedule.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/video_schedule.php">
+      <file leaf-file-name="video.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/video.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="39" column="23" selection-start-line="39" selection-start-column="23" selection-end-line="39" selection-end-column="23" />
+            <state relative-caret-position="328">
+              <caret line="40" column="45" selection-start-line="40" selection-start-column="45" selection-end-line="40" selection-end-column="45" />
               <folding>
-                <marker date="1474377275937" expanded="true" signature="1496:1595" ph="SELECT * FRO... ${TABLE_PROGRAM}" />
-                <marker date="1474377275937" expanded="true" signature="1496:1607" ph="SELECT * FRO... ${TABLE_PROGRAM}" />
+                <marker date="1474397861296" expanded="true" signature="1003:1024" ph="SELECT COUNT... ${TABLE_PROGRAM}" />
+                <marker date="1474397861296" expanded="true" signature="1432:1603" ph="SELECT * FRO... *" />
+                <marker date="1474397861296" expanded="true" signature="1432:1604" ph="SELECT * FRO... *" />
+                <marker date="1474397861296" expanded="true" signature="1432:1618" ph="SELECT * FRO... *" />
+                <marker date="1474397861296" expanded="true" signature="1432:1649" ph="SELECT * FRO... *" />
+                <marker date="1474397861296" expanded="true" signature="1432:1650" ph="SELECT * FRO... *" />
+                <marker date="1474397861296" expanded="true" signature="1447:1516" ph="SELECT * FRO... ${TABLE_PROGRAM}" />
+                <marker date="1474397861296" expanded="true" signature="1447:1574" ph="SELECT * FRO... ${TABLE_PROGRAM}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="tv_program.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/manage/tv_program.php">
+      <file leaf-file-name="video3.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/video3.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="58" selection-start-line="10" selection-start-column="58" selection-end-line="10" selection-end-column="58" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="tv_show.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/manage/tv_show.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3315">
-              <caret line="195" column="73" selection-start-line="195" selection-start-column="73" selection-end-line="195" selection-end-column="73" />
+            <state relative-caret-position="444">
+              <caret line="54" column="68" selection-start-line="54" selection-start-column="68" selection-end-line="54" selection-end-column="68" />
               <folding>
-                <element signature="e#2270#2290#0#HTML" expanded="true" />
-                <element signature="e#2471#2498#0#HTML" expanded="true" />
-                <element signature="e#3761#3834#0#HTML" expanded="true" />
-                <element signature="e#7576#7611#0#HTML" expanded="true" />
+                <element signature="n#style#0;n#h2#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#h2#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#h2#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#h2#0;n#div#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#h2#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#h2#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ajax-tv-show-loaddata.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/manage/ajax-tv-show-loaddata.php">
+      <file leaf-file-name="obj_video_list.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/object/obj_video_list.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="184">
-              <caret line="187" column="23" selection-start-line="187" selection-start-column="23" selection-end-line="187" selection-end-column="23" />
+            <state relative-caret-position="136">
+              <caret line="8" column="79" selection-start-line="8" selection-start-column="79" selection-end-line="8" selection-end-column="79" />
               <folding>
-                <element signature="e#2341#2361#0#HTML" expanded="true" />
-                <element signature="e#2690#2710#0#HTML" expanded="true" />
-                <element signature="e#7476#7496#0#HTML" expanded="true" />
-                <element signature="e#13519#13539#0#HTML" expanded="true" />
-                <element signature="e#14834#14869#0#HTML" expanded="true" />
-                <element signature="e#14932#15076#0#HTML" expanded="true" />
-                <element signature="e#15139#15217#0#HTML" expanded="true" />
-                <element signature="e#15404#15482#0#HTML" expanded="true" />
-                <marker date="1474380669856" expanded="true" signature="1499:1565" ph="DELETE FROM " />
-                <marker date="1474380669856" expanded="true" signature="3026:3104" ph="SELECT * FRO... ${TABLE_SHOW}" />
-                <marker date="1474380669856" expanded="true" signature="8740:8843" ph="INSERT INTO ${TABLE_SHOW}... " />
-                <marker date="1474380669856" expanded="true" signature="8982:9066" ph="SELECT * FRO... ${TABLE_SHOW}" />
-                <marker date="1474380669856" expanded="true" signature="13802:13860" ph="SELECT * FRO... ${TABLE_SHOW}" />
-                <marker date="1474380669856" expanded="true" signature="13881:14002" ph="SELECT * FRO... ${TABLE_SHOW}" />
-                <marker date="1474380669856" expanded="true" signature="15771:15864" ph="SELECT COUNT... ${TABLE_SHOW}" />
-                <marker date="1474380669856" expanded="true" signature="15885:16013" ph="SELECT COUNT... ${TABLE_SHOW}" />
-                <marker date="1474380669856" expanded="true" signature="15983:16013" ph="SELECT COUNT... ${TABLE_PROGRAM}" />
+                <element signature="n#style#0;n#div#1;n#a#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#0;n#div#1;n#a#0;n#!!top" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="config_web.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/_config/config_web.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="20" column="43" selection-start-line="20" selection-start-column="43" selection-end-line="20" selection-end-column="43" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="video_schedule_result.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/video_schedule_result.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="544">
-              <caret line="32" column="76" selection-start-line="32" selection-start-column="76" selection-end-line="32" selection-end-column="76" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -123,6 +87,7 @@
       <list>
         <option value="HTML File" />
         <option value="JavaScript File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -132,8 +97,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/index.php" />
-        <option value="$PROJECT_DIR$/manage/index.php" />
         <option value="$PROJECT_DIR$/manage/staff.php" />
         <option value="$PROJECT_DIR$/_function/function_system.php" />
         <option value="$PROJECT_DIR$/system/core-body-home.php" />
@@ -153,7 +116,6 @@
         <option value="$PROJECT_DIR$/object/oneinput/obj_oneinput-ajax.php" />
         <option value="$PROJECT_DIR$/object/oneinput/obj_oneinput_loader.php" />
         <option value="$PROJECT_DIR$/object/obj_items_list.php" />
-        <option value="$PROJECT_DIR$/manage/ajax-tv-program-loaddata.php" />
         <option value="$PROJECT_DIR$/detail1.php" />
         <option value="$PROJECT_DIR$/detail3.php" />
         <option value="$PROJECT_DIR$/detail2.php" />
@@ -165,21 +127,27 @@
         <option value="$PROJECT_DIR$/shared/header2.php" />
         <option value="$PROJECT_DIR$/shared/header3.php" />
         <option value="$PROJECT_DIR$/test.php" />
-        <option value="$PROJECT_DIR$/video_schedule_result.php" />
         <option value="$PROJECT_DIR$/index2.php" />
         <option value="$PROJECT_DIR$/index3.php" />
-        <option value="$PROJECT_DIR$/video.php" />
         <option value="$PROJECT_DIR$/object/obj_video_list.php" />
-        <option value="$PROJECT_DIR$/video3.php" />
         <option value="$PROJECT_DIR$/video2.php" />
         <option value="$PROJECT_DIR$/video1.php" />
         <option value="$PROJECT_DIR$/_config/config_system.php" />
         <option value="$PROJECT_DIR$/index1.php" />
-        <option value="$PROJECT_DIR$/video_schedule.php" />
         <option value="$PROJECT_DIR$/_config/config_web.php" />
-        <option value="$PROJECT_DIR$/manage/tv_program.php" />
-        <option value="$PROJECT_DIR$/manage/tv_show.php" />
         <option value="$PROJECT_DIR$/manage/ajax-tv-show-loaddata.php" />
+        <option value="$PROJECT_DIR$/video_schedule_result.php" />
+        <option value="$PROJECT_DIR$/manage/tv_show.php" />
+        <option value="$PROJECT_DIR$/lib/js/form-select.js" />
+        <option value="$PROJECT_DIR$/lib/js/form-select.css" />
+        <option value="$PROJECT_DIR$/manage/my@dmin/js/form-select.js" />
+        <option value="$PROJECT_DIR$/manage/my@dmin/js/form-select.css" />
+        <option value="$PROJECT_DIR$/video_schedule.php" />
+        <option value="$PROJECT_DIR$/manage/get_show_video.php" />
+        <option value="$PROJECT_DIR$/manage/tv_program.php" />
+        <option value="$PROJECT_DIR$/manage/ajax-tv-program-loaddata.php" />
+        <option value="$PROJECT_DIR$/video3.php" />
+        <option value="$PROJECT_DIR$/video.php" />
       </list>
     </option>
   </component>
@@ -252,21 +220,7 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="manage" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="withlovetv" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="withlovetv" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="_config" />
+              <option name="myItemId" value="object" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -277,20 +231,23 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../web-nai-in" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js-jscs-nodeInterpreter" value="C:\Program Files\nodejs\node.exe" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="settings.editor.selected.configurable" value="preferences.editor" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\withlovetv\img" />
       <recent name="C:\xampp\htdocs\withlovetv\manage" />
       <recent name="C:\xampp\htdocs\withlovetv" />
       <recent name="C:\xampp\htdocs\withlovetv\object" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\withlovetv\manage\my@dmin\js" />
       <recent name="C:\xampp\htdocs\withlovetv\upload\thumb2\00\30" />
     </key>
   </component>
@@ -369,12 +326,12 @@
       <workItem from="1473152382968" duration="4096000" />
       <workItem from="1473345836939" duration="101000" />
       <workItem from="1473957083295" duration="72000" />
-      <workItem from="1474374649680" duration="5625000" />
+      <workItem from="1474374649680" duration="20181000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="109763000" />
+    <option name="totallyTimeSpent" value="124319000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
@@ -384,6 +341,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329653" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5652842" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -394,7 +352,6 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.56624603" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
@@ -417,84 +374,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/manage/uploads/hmn1eAphVm.jpg" />
-    <entry file="file://$PROJECT_DIR$/object/oneinput/obj_oneinput-ajax.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="472" column="9" selection-start-line="472" selection-start-column="9" selection-end-line="472" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/bb/css/_layout_index.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="202">
-          <caret line="233" column="1" selection-start-line="233" selection-start-column="1" selection-end-line="233" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/object/obj_items_list.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="4" selection-start-line="13" selection-start-column="4" selection-end-line="13" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/object/oneinput/obj_oneinput_text.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="379">
-          <caret line="39" column="92" selection-start-line="39" selection-start-column="81" selection-end-line="39" selection-end-column="92" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/object/oneinput/obj_oneinput_loader.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="223">
-          <caret line="100" column="12" selection-start-line="100" selection-start-column="12" selection-end-line="100" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/manage/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/object/oneinput/obj_oneinput_select.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="334">
-          <caret line="38" column="53" selection-start-line="38" selection-start-column="53" selection-end-line="38" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/manage/menu-setting.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/object/oneinput/obj_oneinput_datetime.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="555">
-          <caret line="41" column="9" selection-start-line="41" selection-start-column="9" selection-end-line="41" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/object/oneinput/obj_oneinput_radio_bootstrap.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-179">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/shared/footer3.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets1/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="215">
@@ -558,13 +437,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="49" selection-start-line="15" selection-start-column="49" selection-end-line="15" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/ajax/ajax_return_live_video.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
@@ -607,13 +479,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/shared/header1.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="258">
-          <caret line="70" column="39" selection-start-line="70" selection-start-column="25" selection-end-line="70" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/searchKey.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -649,32 +514,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/lib/phpstorm.jar!/resources/html5-schema/html5/phrase.rnc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="328" column="16" selection-start-line="328" selection-start-column="16" selection-end-line="328" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index2.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="36" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/object/obj_video_list.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/video3.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="680">
-          <caret line="40" column="56" selection-start-line="0" selection-start-column="0" selection-end-line="70" selection-end-column="8" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -694,17 +537,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/video.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="263">
-          <caret line="24" column="68" selection-start-line="24" selection-start-column="68" selection-end-line="24" selection-end-column="68" />
-          <folding>
-            <marker date="1473157758651" expanded="true" signature="1003:1024" ph="SELECT COUNT... ${TABLE_PROGRAM}" />
-            <marker date="1473157758651" expanded="true" signature="1407:1509" ph="SELECT * FRO... ${TABLE_PROGRAM}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/_config/config_system.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="226">
@@ -721,84 +553,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index1.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="22" column="1" selection-start-line="22" selection-start-column="1" selection-end-line="22" selection-end-column="1" />
-          <folding>
-            <marker date="1474375829392" expanded="true" signature="101:167" ph="SELECT * FRO... ${TABLE_LIVE}" />
-            <marker date="1474375829392" expanded="true" signature="477:582" ph="SELECT * FRO... ${TABLE_PROGRAM}" />
-            <marker date="1474375829392" expanded="true" signature="1150:1255" ph="SELECT * FRO... ${TABLE_PROGRAM}" />
-            <marker date="1474375829392" expanded="true" signature="28074:28174" ph="SELECT * FRO... ${TABLE_CATEGORY}" />
-            <marker date="1474375829392" expanded="true" signature="28934:29209" ph="SELECT * FRO... ${TABLE_CONTENT}" />
-            <marker date="1474375829392" expanded="true" signature="33230:33236" ph=" " />
-            <marker date="1474375829392" expanded="true" signature="33312:33318" ph=" " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/_config/config_web.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
           <caret line="20" column="43" selection-start-line="20" selection-start-column="43" selection-end-line="20" selection-end-column="43" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/video_schedule_result.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="32" column="76" selection-start-line="32" selection-start-column="76" selection-end-line="32" selection-end-column="76" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/video_schedule.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="39" column="23" selection-start-line="39" selection-start-column="23" selection-end-line="39" selection-end-column="23" />
-          <folding>
-            <marker date="1474377275937" expanded="true" signature="1496:1595" ph="SELECT * FRO... ${TABLE_PROGRAM}" />
-            <marker date="1474377275937" expanded="true" signature="1496:1607" ph="SELECT * FRO... ${TABLE_PROGRAM}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/manage/ajax-tv-program-loaddata.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4387">
-          <caret line="426" column="76" selection-start-line="426" selection-start-column="76" selection-end-line="426" selection-end-column="76" />
-          <folding>
-            <marker date="1473097524197" expanded="true" signature="1502:1574" ph="DELETE FROM " />
-            <marker date="1473097524197" expanded="true" signature="3035:3119" ph="SELECT * FRO... ${TABLE_PROGRAM}" />
-            <marker date="1473097524197" expanded="true" signature="10512:10618" ph="INSERT INTO ${TABLE_PROGRAM}... " />
-            <marker date="1473097524197" expanded="true" signature="10757:10847" ph="SELECT * FRO... ${TABLE_PROGRAM}" />
-            <marker date="1473097524197" expanded="true" signature="17294:17358" ph="SELECT * FRO... ${TABLE_PROGRAM}" />
-            <marker date="1473097524197" expanded="true" signature="17379:17509" ph="SELECT * FRO... ${TABLE_PROGRAM}" />
-            <marker date="1473097524197" expanded="true" signature="19456:19558" ph="SELECT COUNT... ${TABLE_PROGRAM}" />
-            <marker date="1473097524197" expanded="true" signature="19579:19716" ph="SELECT COUNT... ${TABLE_PROGRAM}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/manage/tv_program.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="58" selection-start-line="10" selection-start-column="58" selection-end-line="10" selection-end-column="58" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/manage/tv_show.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3315">
-          <caret line="195" column="73" selection-start-line="195" selection-start-column="73" selection-end-line="195" selection-end-column="73" />
-          <folding>
-            <element signature="e#2270#2290#0#HTML" expanded="true" />
-            <element signature="e#2471#2498#0#HTML" expanded="true" />
-            <element signature="e#3761#3834#0#HTML" expanded="true" />
-            <element signature="e#7576#7611#0#HTML" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -824,6 +583,274 @@
             <marker date="1474380669856" expanded="true" signature="15771:15864" ph="SELECT COUNT... ${TABLE_SHOW}" />
             <marker date="1474380669856" expanded="true" signature="15885:16013" ph="SELECT COUNT... ${TABLE_SHOW}" />
             <marker date="1474380669856" expanded="true" signature="15983:16013" ph="SELECT COUNT... ${TABLE_PROGRAM}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/video_schedule_result.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="53" column="41" selection-start-line="53" selection-start-column="41" selection-end-line="53" selection-end-column="41" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <marker date="1474383040503" expanded="true" signature="3067:3553" ph="..." />
+            <marker date="1474383040503" expanded="true" signature="3109:3514" ph="..." />
+            <marker date="1474383040503" expanded="true" signature="3626:3810" ph="..." />
+            <marker date="1474383040503" expanded="true" signature="3703:3810" ph="..." />
+            <marker date="1474383040503" expanded="true" signature="4232:4756" ph="..." />
+            <marker date="1474383040503" expanded="true" signature="4254:4289" ph="{...}" />
+            <marker date="1474383040503" expanded="true" signature="4318:4474" ph="{...}" />
+            <marker date="1474383040503" expanded="true" signature="4489:4640" ph="{...}" />
+            <marker date="1474383040503" expanded="true" signature="4661:4693" ph="{...}" />
+            <marker date="1474383040503" expanded="true" signature="4706:4748" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/manage/tv_show.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="39" column="68" selection-start-line="39" selection-start-column="68" selection-end-line="39" selection-end-column="68" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets1/js/script.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/bb/js/jquery.responsiveVideo.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1472997059825" expanded="true" signature="1170:1250" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/img/ic_arrow_down.svg">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index1.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-10110">
+          <caret line="22" column="1" selection-start-line="22" selection-start-column="1" selection-end-line="22" selection-end-column="1" />
+          <folding>
+            <marker date="1474375829392" expanded="true" signature="101:167" ph="SELECT * FRO... ${TABLE_LIVE}" />
+            <marker date="1474375829392" expanded="true" signature="477:582" ph="SELECT * FRO... ${TABLE_PROGRAM}" />
+            <marker date="1474375829392" expanded="true" signature="1150:1255" ph="SELECT * FRO... ${TABLE_PROGRAM}" />
+            <marker date="1474375829392" expanded="true" signature="28074:28174" ph="SELECT * FRO... ${TABLE_CATEGORY}" />
+            <marker date="1474375829392" expanded="true" signature="28934:29209" ph="SELECT * FRO... ${TABLE_CONTENT}" />
+            <marker date="1474375829392" expanded="true" signature="33230:33236" ph=" " />
+            <marker date="1474375829392" expanded="true" signature="33312:33318" ph=" " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shared/header1.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="49" selection-start-line="15" selection-start-column="49" selection-end-line="15" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/manage/my@dmin/js/form-select.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="69" selection-start-line="3" selection-start-column="69" selection-end-line="3" selection-end-column="69" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/manage/my@dmin/js/form-select.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="714">
+          <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/object/oneinput/obj_oneinput_loader.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="682">
+          <caret line="100" column="12" selection-start-line="100" selection-start-column="12" selection-end-line="100" selection-end-column="12" />
+          <folding>
+            <marker date="1472997057309" expanded="true" signature="6599:6631" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/object/obj_input_text.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/manage/ajax-ads-loaddata.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="76" column="8" selection-start-line="76" selection-start-column="8" selection-end-line="76" selection-end-column="8" />
+          <folding>
+            <marker date="1472997044492" expanded="true" signature="1535:1599" ph="DELETE FROM " />
+            <marker date="1472997044492" expanded="true" signature="2910:2986" ph="SELECT * FRO... ${TABLE_ADS}" />
+            <marker date="1472997044492" expanded="true" signature="9113:9352" ph="INSERT INTO ${TABLE_ADS}... " />
+            <marker date="1472997044492" expanded="true" signature="9491:9573" ph="SELECT * FRO... ${TABLE_ADS}" />
+            <marker date="1472997044492" expanded="true" signature="13829:13917" ph="SELECT * FRO... ${TABLE_ADS}" />
+            <marker date="1472997044492" expanded="true" signature="13940:14072" ph="SELECT * FRO... ${TABLE_ADS}" />
+            <marker date="1472997044492" expanded="true" signature="15674:15769" ph="SELECT COUNT... ${TABLE_ADS}" />
+            <marker date="1472997044492" expanded="true" signature="15790:15929" ph="SELECT COUNT... ${TABLE_ADS}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/object/oneinput/obj_oneinput_text.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="70">
+          <caret line="25" column="69" selection-start-line="25" selection-start-column="69" selection-end-line="25" selection-end-column="69" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/object/oneinput/obj_oneinput_select.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="226">
+          <caret line="33" column="51" selection-start-line="33" selection-start-column="26" selection-end-line="33" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/manage/ajax-staff-loaddata.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="203" column="8" selection-start-line="203" selection-start-column="8" selection-end-line="215" selection-end-column="75" />
+          <folding>
+            <marker date="1472997044882" expanded="true" signature="1501:1569" ph="DELETE FROM " />
+            <marker date="1472997044882" expanded="true" signature="4093:4231" ph="INSERT INTO ${TABLE_STAFF}... " />
+            <marker date="1472997044882" expanded="true" signature="4458:4544" ph="SELECT * FRO... ${TABLE_STAFF}" />
+            <marker date="1472997044882" expanded="true" signature="10258:10347" ph="SELECT * FRO... ${TABLE_STAFF}" />
+            <marker date="1472997044882" expanded="true" signature="10370:10505" ph="SELECT * FRO... ${TABLE_STAFF}" />
+            <marker date="1472997044882" expanded="true" signature="12248:12344" ph="SELECT COUNT... ${TABLE_STAFF}" />
+            <marker date="1472997044882" expanded="true" signature="12367:12509" ph="SELECT COUNT... ${TABLE_STAFF}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/manage/get_show_video.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="595">
+          <caret line="35" column="18" selection-start-line="35" selection-start-column="18" selection-end-line="35" selection-end-column="18" />
+          <folding>
+            <marker date="1474391224690" expanded="true" signature="174:188" ph="SELECT * FRO... ${TABLE_SHOW}" />
+            <marker date="1474391224690" expanded="true" signature="174:202" ph="SELECT * FRO... ${TABLE_SHOW}" />
+            <marker date="1474391224690" expanded="true" signature="636:650" ph="SELECT * FRO... ${TABLE_SHOW}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/phpstorm.jar!/resources/html5-schema/html5/phrase.rnc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="167" column="16" selection-start-line="167" selection-start-column="16" selection-end-line="167" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/video_schedule.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="46" selection-start-line="16" selection-start-column="46" selection-end-line="16" selection-end-column="46" />
+          <folding>
+            <marker date="1474390418002" expanded="true" signature="1508:1601" ph="SELECT * FRO... ${TABLE_SHOW}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/video3.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="444">
+          <caret line="54" column="68" selection-start-line="54" selection-start-column="68" selection-end-line="54" selection-end-column="68" />
+          <folding>
+            <element signature="n#style#0;n#h2#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h2#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h2#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h2#0;n#div#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h2#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h2#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/manage/ajax-tv-program-loaddata.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="217" column="54" selection-start-line="217" selection-start-column="54" selection-end-line="217" selection-end-column="54" />
+          <folding>
+            <marker date="1474391867675" expanded="true" signature="1502:1574" ph="DELETE FROM " />
+            <marker date="1474391867675" expanded="true" signature="3035:3119" ph="SELECT * FRO... ${TABLE_PROGRAM}" />
+            <marker date="1474391867675" expanded="true" signature="11664:11770" ph="INSERT INTO ${TABLE_PROGRAM}... " />
+            <marker date="1474391867675" expanded="true" signature="11909:11999" ph="SELECT * FRO... ${TABLE_PROGRAM}" />
+            <marker date="1474391867675" expanded="true" signature="19533:19597" ph="SELECT * FRO... ${TABLE_PROGRAM}" />
+            <marker date="1474391867675" expanded="true" signature="19618:19748" ph="SELECT * FRO... ${TABLE_PROGRAM}" />
+            <marker date="1474391867675" expanded="true" signature="21853:21955" ph="SELECT COUNT... ${TABLE_PROGRAM}" />
+            <marker date="1474391867675" expanded="true" signature="21976:22113" ph="SELECT COUNT... ${TABLE_PROGRAM}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/manage/tv_program.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="25" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/object/obj_video_list.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="79" selection-start-line="8" selection-start-column="79" selection-end-line="8" selection-end-column="79" />
+          <folding>
+            <element signature="n#style#0;n#div#1;n#a#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#div#1;n#a#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/video.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="328">
+          <caret line="40" column="45" selection-start-line="40" selection-start-column="45" selection-end-line="40" selection-end-column="45" />
+          <folding>
+            <marker date="1474397861296" expanded="true" signature="1003:1024" ph="SELECT COUNT... ${TABLE_PROGRAM}" />
+            <marker date="1474397861296" expanded="true" signature="1432:1603" ph="SELECT * FRO... *" />
+            <marker date="1474397861296" expanded="true" signature="1432:1604" ph="SELECT * FRO... *" />
+            <marker date="1474397861296" expanded="true" signature="1432:1618" ph="SELECT * FRO... *" />
+            <marker date="1474397861296" expanded="true" signature="1432:1649" ph="SELECT * FRO... *" />
+            <marker date="1474397861296" expanded="true" signature="1432:1650" ph="SELECT * FRO... *" />
+            <marker date="1474397861296" expanded="true" signature="1447:1516" ph="SELECT * FRO... ${TABLE_PROGRAM}" />
+            <marker date="1474397861296" expanded="true" signature="1447:1574" ph="SELECT * FRO... ${TABLE_PROGRAM}" />
           </folding>
         </state>
       </provider>

@@ -207,7 +207,32 @@ if($task=="load-edit" && $myAjaxID>0) {
 		include(SYSTEM_DOC_ROOT."object/oneinput/obj_oneinput_radio_bootstrap.php");
 		?>
 		</div>
+		</div>
 		<!--------------------------->
+		<?php $myField=TABLE_PROGRAM."_ShowID"; ?>
+		<label class="col-xs-12 col-sm-4 col-md-4 col-lg-4 control-label">
+		<span class="label-main">Video Show</span>
+		</label>
+		<div class="col-xs-12 col-sm-8 col-md-8 col-lg-8 custom-text-position">
+		<?php
+		//--------------------------------------------
+		include(SYSTEM_DOC_ROOT."manage/get_show_video.php");
+		$tv_show = getTvShow($dbh);
+		$arDataID=$tv_show['id'];
+		$arDataText=$tv_show['name'];
+		//--------------------------------------------
+		$Config_DataSourceArrayID=$arDataID; // your data id array
+		$Config_DataSourceArrayText=$arDataText; // your data text array
+		$Config_BlankID=""; // not select state (set blank '' for not use)
+		$Config_BlankText=""; // not select state (set blank '' for not use)
+		//--------------------------------------------
+		$Config_UniqueID=$myField.$myID;
+		$Config_DefaultValue=$Row[$myField];
+		$Config_DB="UPDATE#".$myTable."#SET#".$myField."#=SelectID#".$myFieldText."#=SelectText#WHERE#".$myKeyField."#=#".$myID;
+		//--------------------------------------------
+		include(SYSTEM_DOC_ROOT."object/oneinput/obj_oneinput_select.php");
+		?>
+		</div>
 
 	</div>
 	<div class="form-group width-100">
@@ -392,6 +417,29 @@ if($task=="load-add") {
 		?>
 		</div>
 		<!--------------------------->
+		<?php $myField=TABLE_PROGRAM."_ShowID"; ?>
+		<label class="col-xs-12 col-sm-4 col-md-4 col-lg-4 control-label">
+		<span class="label-main">Video Show</span>
+		</label>
+		<div class="col-xs-12 col-sm-8 col-md-8 col-lg-8 custom-text-position">
+		<?php
+		//--------------------------------------------
+		$tv_show = getTvShow($dbh);
+		$arDataID=$tv_show['id'];
+		$arDataText=$tv_show['name'];
+		//--------------------------------------------
+		$Config_DataSourceArrayID=$arDataID; // your data id array
+		$Config_DataSourceArrayText=$arDataText; // your data text array
+		$Config_BlankID=""; // not select state (set blank '' for not use)
+		$Config_BlankText=""; // not select state (set blank '' for not use)
+		//--------------------------------------------
+		$Config_UniqueID=$myField.$myID;
+		$Config_DefaultValue=$Row[$myField];
+		$Config_DB="UPDATE#".$myTable."#SET#".$myField."#=SelectID#".$myFieldText."#=SelectText#WHERE#".$myKeyField."#=#".$myID;
+		//--------------------------------------------
+		include(SYSTEM_DOC_ROOT."object/oneinput/obj_oneinput_select.php");
+		?>
+		</div>
 
 	</div>
 	<div class="form-group width-100">
@@ -410,6 +458,8 @@ if($doaction=="result") {
 	}
 	$sql.=" ORDER BY ".$orderby." ".$ascdesc." LIMIT ".$recordstart.",".$recordsize." ";
 	$Query=MYSQL_QUERY($sql,$System_Connection1) OR DIE("Error: ".$sql."<br>n");
+	include(SYSTEM_DOC_ROOT."manage/get_show_video.php");
+	$showName = getKeyValTvShow($dbh);
 	while($Row = mysql_fetch_array($Query)) {
 		?>
 		<tr
@@ -425,6 +475,7 @@ if($doaction=="result") {
 		<td><?php echo $Row[TABLE_PROGRAM."_StartTime"]; ?></td>
 		<td><?php echo $Row[TABLE_PROGRAM."_EndTime"]; ?></td>
 		<td><?php echo $Row[TABLE_PROGRAM."_Type"] == 1?'รายการแนะนำ':'Most Wanted'; ?></td>
+		<td><?php echo $showName[$Row[TABLE_PROGRAM."_ShowID"]]; ?></td>
 		<td style=" width:60px; padding: 0px; ">
 		<div id="idActionBT<?php echo $Row[TABLE_PROGRAM."_ID"];?>"
 		style=" height: 30px; padding: 4px; width: 140px; position: absolute; margin-top: -14px; margin-left: -80px; text-align: right; display: none; ">

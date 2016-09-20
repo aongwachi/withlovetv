@@ -1,3 +1,4 @@
+<?php $arrValTvShow = getKeyValTvShow($dbh);?>
 <div class="container">
     <div class="row">
         <div class="col-xs-12 col-sm-12">
@@ -9,9 +10,19 @@
             <div class="box-list">
                 <div class="row">
                     <!---------------------------------------------->
-                    <?php for($i=1;$i<=12;$i++) { if($arContentSubject[$i]<>"") {
+                    <?php
+                    $keepType = $arContentShow[1];
+                    $headFirst = $arrValTvShow[$arContentShow[1]];
+                    for($i=1;$i<=12;$i++) { if($arContentSubject[$i]<>"") {
                         if($arContentType[$i] == 1){ ?>
-                        <div class="col-xs-6 col-sm-4 col-md-3"><?php $cindex=$i; include("object/obj_video_list.php"); ?></div>
+                            <?php if($i==1){?>
+                                <h2 style="margin-left: 10px;margin-top: 5px; margin-bottom: 5px"><?=$headFirst?></h2>
+                            <?php $keepType=$arContentShow[$i]; }?>
+                            <?php if($keepType != $arContentShow[$i]){?>
+                                </div><div class="row">
+                                <h2 style="margin-left: 10px;margin-top: 5px; margin-bottom: 5px"><?= $arrValTvShow[$arContentShow[$i]]?></h2>
+                            <?php $keepType=$arContentShow[$i]; }?>
+                            <div class="col-xs-6 col-sm-4 col-md-3"><?php $cindex=$i; include("object/obj_video_list.php"); ?></div>
                     <?php } } } ?>
                     <!---------------------------------------------->
                 </div>
@@ -29,9 +40,19 @@
             <div class="box-list">
                 <div class="row">
                     <!---------------------------------------------->
-                    <?php for($i=1;$i<=12;$i++) { if($arContentSubject[$i]<>"") {
-                        if($arContentType[$i] == 2) {?>
-                        <div class="col-xs-6 col-sm-4 col-md-3"><?php $cindex=$i; include("object/obj_video_list.php"); ?></div>
+                    <?php
+                    $keepType = $arContentShow[1];
+                    $headFirst = $arrValTvShow[$arContentShow[1]];
+                    for($i=1;$i<=12;$i++) { if($arContentSubject[$i]<>"") {
+                    if($arContentType[$i] == 1){ ?>
+                    <?php if($i==1){?>
+                        <h2 style="margin-left: 10px;margin-top: 5px; margin-bottom: 5px"><?=$headFirst?></h2>
+                    <?php $keepType=$arContentShow[$i]; }?>
+                    <?php if($keepType != $arContentShow[$i]){?>
+                        </div><div class="row">
+                        <h2 style="margin-left: 10px;margin-top: 5px; margin-bottom: 5px"><?= $arrValTvShow[$arContentShow[$i]]?></h2>
+                    <?php $keepType=$arContentShow[$i]; }?>
+                    <div class="col-xs-6 col-sm-4 col-md-3"><?php $cindex=$i; include("object/obj_video_list.php"); ?></div>
                     <?php } } } ?>
                     <!---------------------------------------------->
                 </div>

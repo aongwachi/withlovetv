@@ -6,6 +6,7 @@ $System_ShowAjaxIFrame=0;
 
 include_once("../_config/config_system.php");
 include_once(SYSTEM_DOC_ROOT."system/core-start-ajax.php");
+
 if($SystemSession_Staff_ID>0 && $SystemSession_Staff_Level=="Admin") {
     //----------------------------------------------------------------------------------------------------------------
     include_once(SYSTEM_DOC_ROOT."system/core-start.php");
@@ -89,6 +90,7 @@ if($SystemSession_Staff_ID>0 && $SystemSession_Staff_Level=="Admin") {
                         <th><a href="javascript:void(0)" class="Link_FooTable" data-sort="<?php echo TABLE_PROGRAM."_StartTime"; ?>"><i></i>Start Time</a></th>
                         <th><a href="javascript:void(0)" class="Link_FooTable" data-sort="<?php echo TABLE_PROGRAM."_EndTime"; ?>"><i></i>End Time</a></th>
                         <th><a href="javascript:void(0)" class="Link_FooTable" data-sort="<?php echo TABLE_PROGRAM."_Type"; ?>"><i></i>Type</a></th>
+                        <th><a href="javascript:void(0)" class="Link_FooTable" data-sort="<?php echo TABLE_PROGRAM."_ShowID"; ?>"><i></i>รายการ</a></th>
                         <th style=" width:60px; padding: 0px; ">&nbsp;</th>
                         <!----------------------------------------------------------------------------------------------------------------------->
                     </tr>

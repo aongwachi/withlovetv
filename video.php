@@ -35,8 +35,10 @@ if ($TotalRecordCount > 0) {
     $arContentThumb = "";
     $arContentType = "";
     $arContentDetail = "";
+    $arContentShow = "";
     //--------------------------------------------
-    $sql = "SELECT * FROM " . TABLE_PROGRAM . " ORDER BY " . TABLE_PROGRAM . "_ID DESC LIMIT " . $RecordStart . "," . $Config_PageSize . " ";
+    $sql = "SELECT * FROM (SELECT * FROM " . TABLE_PROGRAM . " ORDER BY " . TABLE_PROGRAM . "_ID,".TABLE_PROGRAM."_ShowID DESC LIMIT " . $RecordStart . "," . $Config_PageSize . " ) tv".
+            " ORDER BY tv.tv_program_ShowID";
     $query = $dbh->prepare($sql);
     if ($query->execute($params)) {
         while ($Row = $query->fetch()) {
@@ -51,11 +53,13 @@ if ($TotalRecordCount > 0) {
             $arContentDetail[$looper] = $Row[TABLE_PROGRAM . "_Detail"];
             $arContentThumb[$looper] = $Row[TABLE_PROGRAM . "_Image_Url"];
             $arContentType[$looper] = $Row[TABLE_PROGRAM . "_Type"];
+            $arContentShow[$looper] = $Row[TABLE_PROGRAM . "_ShowID"];
             //--------------------------------------------
             $looper++;
         }
     }
 }
+include(SYSTEM_DOC_ROOT."manage/get_show_video.php");
 ####################################################################################
 include_once("shared/header" . $myThemeKey . ".php");
 include_once("video" . $myThemeKey . ".php");
