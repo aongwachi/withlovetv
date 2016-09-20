@@ -18,21 +18,21 @@ $searchKey=(isset($_GET['day'])?$_GET['day']:'');
 $videoId = "";
 $videoSubject = "";
 $videoThumb ="";
-$videoUrl = "";
 $videoDetail = "";
 $videoDate = "";
-searchVideo($dbh,$searchKey,$videoId,$videoSubject,$videoDetail,$videoDate,$videoThumb,$videoUrl);
+$videoEndDate = "";
+searchVideo($dbh,$searchKey,$videoId,$videoSubject,$videoDetail,$videoDate,$videoEndDate,$videoThumb);
 ####################################################################################
 include_once("shared/header" . $myThemeKey . ".php");
 include_once("video_schedule_result.php");
 include_once("shared/footer" . $myThemeKey . ".php");
 ####################################################################################
-function searchVideo($dbh,$searchKey,&$videoId,&$videoSubject,&$videoDetail,&$videoDate,&$videoThumb,&$videoUrl)
+function searchVideo($dbh,$searchKey,&$videoId,&$videoSubject,&$videoDetail,&$videoDate,&$videoEndDate,&$videoThumb)
 {
     //$day = date('Y-m-d',strtotime($searchKey));
     //$tomorrow = date('Y-m-d', strtotime($day. ' + 1 days'));
-    $sql =  " SELECT * FROM " . TABLE_PROGRAM .
-            " WHERE DAYOFWEEK(" . TABLE_PROGRAM . "_StartTime) = ".$searchKey;
+    $sql =  " SELECT * FROM " . TABLE_SHOW .
+            " WHERE DAYOFWEEK(" . TABLE_SHOW . "_StartTime) = ".$searchKey;
 
     $query = $dbh->prepare($sql);
     $looper = 1;
@@ -40,16 +40,16 @@ function searchVideo($dbh,$searchKey,&$videoId,&$videoSubject,&$videoDetail,&$vi
     $videoSubject = "";
     $videoDetail = "";
     $videoDate = "";
+    $videoEndDate = "";
     $videoThumb = "";
-    $videoUrl = "";
     if ($query->execute()) {
         while ($Row = $query->fetch()) {
-            $videoId[$looper] = $Row[TABLE_PROGRAM . "_ID"];
-            $videoSubject[$looper] = $Row[TABLE_PROGRAM . "_Name"];
-            $videoDetail[$looper] = $Row[TABLE_PROGRAM . "_Detail"];
-            $videoDate[$looper] = $Row[TABLE_PROGRAM . "_StartTime"];
-            $videoThumb[$looper] = $Row[TABLE_PROGRAM . "_Image_Url"];
-            $videoUrl[$looper] = $Row[TABLE_PROGRAM . "_URL"];
+            $videoId[$looper] = $Row[TABLE_SHOW . "_ID"];
+            $videoSubject[$looper] = $Row[TABLE_SHOW . "_Name"];
+            $videoDetail[$looper] = $Row[TABLE_SHOW . "_Detail"];
+            $videoDate[$looper] = $Row[TABLE_SHOW . "_StartTime"];
+            $videoEndDate[$looper] = $Row[TABLE_SHOW . "_EndTime"];
+            $videoThumb[$looper] = $Row[TABLE_SHOW . "_Image_Url"];
             //--------------------------------------------
             $looper++;
         }

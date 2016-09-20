@@ -41,18 +41,20 @@
                     <?php for ($i = 1; $i <= count($videoSubject); $i++) {
                         if ($videoSubject[$i] <> "") { ?>
                             <div class="row" style="margin-top: 25px">
-                                <div class="col-xs-6 col-sm-4 col-md-3">
-                                    <div style="width: 150px;height: 23px;border-style: solid;
+                                <div class="col-xs-6 col-sm-4 col-md-4">
+                                    <div style="width: 123px;height: 23px;border-style: solid;
                                         border-color: grey;background-color: grey;
                                         margin-left: 10px;float: left">
-                                        <p style="color: white"><?= date('g:i a, j F Y',strtotime($videoDate[$i]))?></p>
+                                        <p style="color: white">
+                                            <?=date('g:i a',strtotime($videoDate[$i])).' - '.date('g:i a',strtotime($videoEndDate[$i]))?>
+                                        </p>
                                     </div>
                                 </div>
-                                <div class="col-xs-6 col-sm-4 col-md-5">
+                                <div class="col-xs-6 col-sm-4 col-md-4">
                                     <div>
                                         <h5 style="margin-top: 0;font-weight: bold;"><?=$videoSubject[$i]?></h5>
                                         <p style="width: 450px;word-wrap: break-word"><?=$videoDetail[$i]?></p>
-                                        <a href="video_alone.php?url=<?php echo $videoUrl[$i]; ?>"> ดูรายการย้อนหลัง</a>
+<!--                                        <a href="video_alone.php?url=--><?php //echo $videoUrl[$i]; ?><!--"> ดูรายการย้อนหลัง</a>-->
                                     </div>
                                 </div>
                                 <div class="col-xs-6 col-sm-4 col-md-4">
